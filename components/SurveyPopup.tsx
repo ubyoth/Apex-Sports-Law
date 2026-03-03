@@ -46,7 +46,7 @@ const SurveyPopup: React.FC = () => {
         className="absolute inset-0 bg-black/40 backdrop-blur-sm"
         onClick={closeSurvey}
       />
-      <div className="relative bg-white/95 dark:bg-black/95 backdrop-blur-xl w-full max-w-sm rounded-2xl shadow-lg overflow-hidden border border-accent-gold/10 border-b-4 border-b-accent-gold p-8">
+      <div className="relative bg-white/95 text-black dark:bg-black/95 backdrop-blur-xl w-full max-w-sm rounded-2xl shadow-lg overflow-hidden border border-accent-gold/10 border-b-4 border-b-accent-gold p-8">
         <button
           onClick={closeSurvey}
           className="absolute top-5 right-5 text-slate-400 hover:text-accent-gold p-1"
