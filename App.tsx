@@ -17,6 +17,7 @@ import BridgeTransfers from "./content/knowledge/bridge-transfers-in-football";
 import FIFALicensing from "./content/knowledge/fifa-club-licensing-regulations";
 import FakeAgents from "./content/knowledge/fake-agent-nightmare";
 import ThankYou from "./pages/ThankYou";
+import WhatsAppButton from "./components/WhatsAppButton";
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
@@ -69,6 +70,7 @@ const App: React.FC = () => {
         <Footer />
         <LegalAssistant />
         <SurveyPopup />
+        <WhatsAppButton />
       </div>
     </Router>
   );
