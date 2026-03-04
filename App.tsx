@@ -16,6 +16,7 @@ import PostDetail from "./pages/PostDetail";
 import BridgeTransfers from "./content/knowledge/bridge-transfers-in-football";
 import FIFALicensing from "./content/knowledge/fifa-club-licensing-regulations";
 import FakeAgents from "./content/knowledge/fake-agent-nightmare";
+import ThankYou from "./pages/ThankYou";
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
@@ -53,6 +54,7 @@ const App: React.FC = () => {
             <Route path="/knowledge/fifa-club-licensing-regulations" element={<FIFALicensing/>} />
             <Route path="/knowledge/fake-agent-nightmare" element={<FakeAgents/>} />
             <Route path="/knowledge/:slug" element={<PostDetail />} />
+            <Route path="/thank-you" element={<ThankYou />} />
           </Routes>
         </main>
         <Footer />
