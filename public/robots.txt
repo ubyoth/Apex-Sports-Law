@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /thank-you
+Allow: /
+
+Sitemap: https://apexsportslaw.com/sitemap.xml
+Host: apexsportslaw.com

@@ -112,38 +112,24 @@ export const SUCCESS_STORIES: SuccessStory[] = [
     id: 'ss4',
     category: 'Sports Law',
     title: 'Ballers Support & LawInSport Mentorship',
-    challenge: 'Amateur athletes transitioning to professional sports lacked adequate legal protection and contract navigation expertise.',
-    result: 'Established partnership with Ballers Support for pro bono services; Partner participated in LawInSport Global Mentoring Scheme (2023).',
+    challenge: 'Amateur athletes transitioning to professional sports usually lack adequate legal protection and contract navigation expertise.',
+    result: 'Established partnership with Ballers Support for pro bono services. Also, our founding partner participated in LawInSport Global Mentoring Scheme (2023).',
     imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop'
   }
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
- 
   {
-    id: 'bp2',
-    title: 'The FIFA Club Licensing Regulations: Responsibilities of Member Associations and Nigerian Clubs',
-    excerpt: 'This article explores the responsibilities of member associations under the FIFA CLR, with a particular focus on their impact on football clubs in Nigeria.',
-    author: 'Yahaya Othman',
-    date: 'Feb 27, 2026',
-    readTime: '3 min read',
-    category: 'Sports Law',
-    imageUrl: 'https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80&w=2069&auto=format&fit=crop',
-    featured: true,
-    slug: "fifa-club-licensing-regulations",
-    content: `The FIFA Club Licensing Regulations is a foundational document with the overall goal of standardizing and elevating football club management globally. 
-    `,
-  },
-
-  {
-    id: 'bp1',
-    title: 'FIFA’s Trial Rules vs. Africa’s Fake Agent Nightmare',
-    excerpt: 'The debilitating effects of fake agents scams under the guise of football trials are on the rise. These scams are defined by the pay-to-play philosphy, selling false hopes and dreams to desperate players. However, what do the regulations say on trials?',
-    author: 'Yahaya Othman',
-    date: 'Mar 3, 2026',
-    readTime: '5 min read',
-    category: 'Sports Law',
-    imageUrl: 'https://res.cloudinary.com/dq7vjblwd/image/upload/v1772573045/FIFA_trials_vs._fake_agent_scam_2_pvl7g0.png',
+    id: "bp1",
+    title: "FIFA’s Trial Rules vs. Africa’s Fake Agent Nightmare",
+    excerpt:
+      "The debilitating effects of fake agents scams under the guise of football trials are on the rise. These scams are defined by the pay-to-play philosphy, selling false hopes and dreams to desperate players. However, what do the regulations say on trials?",
+    author: "Yahaya Othman",
+    date: "2026-03-03",
+    readTime: "5 min read",
+    category: "Sports Law",
+    imageUrl:
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1772573045/FIFA_trials_vs._fake_agent_scam_2_pvl7g0.png",
     featured: true,
     slug: "fake-agent-nightmare",
     content: `
@@ -153,15 +139,34 @@ However, what do the regulations say on trials?
     `,
   },
 
-{
-    id: 'bp3',
-    title: "Bridge Transfers in Football: What you need to know",
-    excerpt: "This article examines the regulatory framework, legal implications, and compliance risks in bridge transfers. Legal practitioners must carefully evaluate intermediary structures to avoid sanctions. ",
-    author: 'Yahaya Othman',
-    date: 'Feb 18, 2026',
-    readTime: '3 min read',
-    category: 'Sports Law',
-    imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop',
+  {
+    id: "bp2",
+    title:
+      "The FIFA Club Licensing Regulations: Responsibilities of Member Associations and Nigerian Clubs",
+    excerpt:
+      "This article explores the responsibilities of member associations under the FIFA CLR, with a particular focus on their impact on football clubs in Nigeria.",
+    author: "Yahaya Othman",
+    date: "2026-03-03",
+    readTime: "3 min read",
+    category: "Sports Law",
+    imageUrl:
+      "https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80&w=2069&auto=format&fit=crop",
+    featured: true,
+    slug: "fifa-club-licensing-regulations",
+    content: `The FIFA Club Licensing Regulations is a foundational document with the overall goal of standardizing and elevating football club management globally.`,
+  },
+
+  {
+    id: "bp3",
+    title: "Bridge Transfers in Football: FIFA Rules Every Player and Agent Must Know",
+    excerpt:
+      "This article examines the regulatory framework, legal implications, and compliance risks in bridge transfers. Legal practitioners must carefully evaluate intermediary structures to avoid sanctions.",
+    author: "Yahaya Othman",
+    date: "2026-02-18",
+    readTime: "3 min read",
+    category: "Sports Law",
+    imageUrl:
+      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
     featured: true,
     slug: "bridge-transfers-in-football",
     content: `Bridge transfers have become a focal issue in international football regulation.
@@ -170,5 +175,4 @@ This article examines the regulatory framework, legal implications, and complian
 
 Legal practitioners must carefully evaluate intermediary structures to avoid sanctions.`,
   },
-
 ];
