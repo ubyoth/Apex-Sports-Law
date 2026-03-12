@@ -89,7 +89,7 @@ const NewLegalBrief: React.FC = () => {
       author: { "@type": "Person", name: AUTHOR_NAME },
       publisher: {
         "@type": "Organization",
-        name: "Apex Advocates & Solicitors",
+        name: "Apex Sports Law",
         url: SITE_URL,
       },
     }),
@@ -100,14 +100,14 @@ const NewLegalBrief: React.FC = () => {
     <>
       <Helmet>
         {/* Primary SEO */}
-        <title>{TITLE} | Apex Advocates Knowledge Centre</title>
+        <title>{TITLE} | Apex Sports Law Knowledge Centre</title>
         <meta name="description" content={DESCRIPTION} />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Apex Advocates & Solicitors" />
+        <meta property="og:site_name" content="Apex Sports Law" />
         <meta property="og:title" content={TITLE} />
         <meta property="og:description" content={DESCRIPTION} />
         <meta property="og:url" content={PAGE_URL} />
