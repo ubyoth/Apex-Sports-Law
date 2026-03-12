@@ -1,6 +1,7 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
+const CALENDLY_URL = 'https://calendly.com/apexsportslaw/30min';
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,18 +24,23 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-4 group">
             <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-110">
-              <img 
-                src="/logo.png" 
-                alt="Apex Advocates Logo" 
+              <img
+                src="/logo.png"
+                alt="Apex Advocates Logo"
                 className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://res.cloudinary.com/dq7vjblwd/image/upload/v1771280793/pngtree-high-quality-gold-medal-for-recognition-png-image_14451009_ptmpmx.png';
+                  (e.target as HTMLImageElement).src =
+                    'https://res.cloudinary.com/dq7vjblwd/image/upload/v1771280793/pngtree-high-quality-gold-medal-for-recognition-png-image_14451009_ptmpmx.png';
                 }}
               />
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-xl font-extrabold tracking-tight text-primary dark:text-white uppercase">Apex</span>
-              <span className="text-[10px] tracking-[0.2em] text-accent-gold font-semibold uppercase"> Sports Law</span>
+              <span className="text-xl font-extrabold tracking-tight text-primary dark:text-white uppercase">
+                Apex
+              </span>
+              <span className="text-[10px] tracking-[0.2em] text-accent-gold font-semibold uppercase">
+                Sports Law
+              </span>
             </div>
           </Link>
 
@@ -44,15 +50,18 @@ const Navbar: React.FC = () => {
                 key={link.path}
                 to={link.path}
                 className={`text-sm font-medium transition-colors hover:text-accent-gold ${
-                  isActive(link.path) ? 'text-accent-gold' : 'text-slate-600 dark:text-slate-300'
+                  isActive(link.path)
+                    ? 'text-accent-gold'
+                    : 'text-slate-600 dark:text-slate-300'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <a 
-              href="https://calendly.com/apexsportslaw/30min" 
-              target="_blank" 
+
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-accent-gold hover:bg-yellow-400 text-black px-4 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-accent-gold/20"
             >
@@ -61,17 +70,19 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="md:hidden">
-            <button 
+            <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-primary dark:text-white"
+              aria-label="Toggle menu"
             >
-              <span className="material-icons text-3xl">{isMobileMenuOpen ? 'close' : 'menu'}</span>
+              <span className="material-icons text-3xl">
+                {isMobileMenuOpen ? 'close' : 'menu'}
+              </span>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white dark:bg-black border-t border-accent-gold/20 animate-in fade-in slide-in-from-top-4">
           <div className="px-4 pt-2 pb-6 space-y-4">
@@ -81,15 +92,18 @@ const Navbar: React.FC = () => {
                 to={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block py-3 text-base font-medium border-b border-slate-100 dark:border-slate-800 ${
-                  isActive(link.path) ? 'text-accent-gold' : 'text-slate-600 dark:text-slate-300'
+                  isActive(link.path)
+                    ? 'text-accent-gold'
+                    : 'text-slate-600 dark:text-slate-300'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <a 
-              href="https://calendly.com/apexsportslaw/30min" 
-              target="_blank" 
+
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block w-full text-center bg-accent-gold text-black px-6 py-4 rounded-xl font-bold text-lg"
