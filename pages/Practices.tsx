@@ -34,7 +34,7 @@ const Practices: React.FC = () => {
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Apex Advocates & Solicitors",
+    name: "Apex Sports Law",
     url: SITE_URL,
     areaServed: "NG",
     address: {
@@ -49,10 +49,10 @@ const Practices: React.FC = () => {
     <div className="min-h-screen bg-white dark:bg-black">
       <Helmet>
         {/* Primary SEO */}
-        <title>Practice Areas | Sports Law, Arbitration & Corporate Advisory | Apex Advocates</title>
+        <title>Practice Areas | Sports Law, Arbitration & Corporate Advisory | Apex Sports Law</title>
         <meta
           name="description"
-          content="Explore Apex Advocates & Solicitors’ practice areas in Lagos, Nigeria: Sports Law (football contracts, transfers, FIFA regulations), Arbitration & Dispute Resolution, and Corporate Advisory."
+          content="Explore Apex Sports Law’s practice areas in Lagos, Nigeria: Sports Law (football contracts, transfers, FIFA regulations), Arbitration & Dispute Resolution, and Corporate Advisory."
         />
         <link rel="canonical" href={PAGE_URL} />
 
@@ -61,8 +61,8 @@ const Practices: React.FC = () => {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Apex Advocates & Solicitors" />
-        <meta property="og:title" content="Practice Areas | Apex Advocates & Solicitors" />
+        <meta property="og:site_name" content="Apex Sports Law" />
+        <meta property="og:title" content="Practice Areas | Apex Sports Law" />
         <meta
           property="og:description"
           content="Sports Law, Arbitration & Dispute Resolution, and Corporate Advisory services in Lagos, Nigeria."
@@ -72,7 +72,7 @@ const Practices: React.FC = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Practice Areas | Apex Advocates & Solicitors" />
+        <meta name="twitter:title" content="Practice Areas | Apex Sports Law" />
         <meta
           name="twitter:description"
           content="Sports Law, Arbitration & Dispute Resolution, and Corporate Advisory services in Lagos, Nigeria."
@@ -100,7 +100,7 @@ const Practices: React.FC = () => {
           </h1>
 
           <p className="max-w-3xl mx-auto text-xl text-slate-400 leading-relaxed font-light">
-            Apex Advocates &amp; Solicitors offers a comprehensive suite of legal services designed
+            Apex Sports Law offers a comprehensive suite of legal services designed
             to protect and promote the commercial interests of our global and local clientele.
           </p>
         </div>
@@ -257,7 +257,7 @@ const Practices: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-              href="https://calendly.com/othmany13/30min"
+              href="https://calendly.com/apexsportslaw/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-accent-gold text-black px-8 py-3.5 rounded-lg font-black uppercase tracking-widest text-xs hover:bg-yellow-600 transition-all shadow-xl shadow-accent-gold/20"
