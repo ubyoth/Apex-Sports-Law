@@ -65,37 +65,45 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        {/* Primary SEO */}
-        <title>Sports Lawyer in Nigeria | Apex Sports Law</title>
-        <meta
-          name="description"
-          content="Apex Sports Law is a Lagos-based law firm advising footballers, agents and clubs on football contracts, transfers, FIFA regulations, sports arbitration and dispute resolution."
-        />
-        <link rel="canonical" href={`${SITE_URL}/`} />
-        <link rel="manifest" href="/site.webmanifest" />
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Apex Sports Law" />
-        <meta property="og:title" content="Sports Lawyer in Nigeria | Apex Sports Law" />
-        <meta
-          property="og:description"
-          content="Legal support for footballers, agents and clubs: contracts, transfers, FIFA regulations, arbitration and dispute resolution."
-        />
-        <meta property="og:url" content={`${SITE_URL}/`} />
-        <meta property="og:image" content={OG_IMAGE} />
+  <title>Apex Sports Law | Sports Lawyers for Footballers, Clubs & Agents</title>
+  <meta
+    name="description"
+    content="Apex Sports Law advises footballers, clubs and agents on football contracts, FIFA regulations, transfers, disputes and sports arbitration in Nigeria."
+  />
+  <link rel="canonical" href="https://apexsportslaw.com/" />
+  <meta name="robots" content="index,follow" />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Sports Lawyer in Nigeria | Apex Sports Law"
-        />
-        <meta
-          name="twitter:description"
-          content="Contracts, transfers, FIFA regulations, arbitration and dispute resolution for football stakeholders."
-        />
-        <meta name="twitter:image" content={OG_IMAGE} />
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Apex Sports Law" />
+  <meta
+    property="og:title"
+    content="Apex Sports Law | Sports Lawyers for Footballers, Clubs & Agents"
+  />
+  <meta
+    property="og:description"
+    content="Sports law advice for footballers, clubs and agents on contracts, transfers, FIFA regulations and disputes."
+  />
+  <meta property="og:url" content="https://apexsportslaw.com/" />
+  <meta property="og:image" content="https://apexsportslaw.com/og/default.jpg" />
+  <meta property="og:image:secure_url" content="https://apexsportslaw.com/og/default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Apex Sports Law" />
 
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Apex Sports Law | Sports Lawyers for Footballers, Clubs & Agents"
+  />
+  <meta
+    name="twitter:description"
+    content="Sports law advice for footballers, clubs and agents on contracts, transfers, FIFA regulations and disputes."
+  />
+  <meta name="twitter:image" content="https://apexsportslaw.com/og/default.jpg" />
+</Helmet>
+      
         {/* Structured Data: WebSite */}
         <script type="application/ld+json">
           {JSON.stringify({
