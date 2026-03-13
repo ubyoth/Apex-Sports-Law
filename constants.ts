@@ -13,9 +13,9 @@ He played a key role in the Gombe State House of Assembly Election Petition (201
 
 Yahaya's professional interests include corporate advisory, arbitration, sports law. He established Apex Sports Law to provide legal counsel to footballers, agents and clubs on: football contracts and player transfers, FIFA transfer regulations, sports arbitration and dispute resolution, image rights and sponsorship agreements. Delivered with the agility, transparency, and cost-efficiency of a specialist boutique firm.`,
   qualifications: [
-    'Master in International Sports Law (in view) – ISDE' 
+    'Master in International Sports Law (in view) – ISDE', 
     'LL.B, University of Jos',
-    'Business of Sports Institute (BOI), Sports Business & Administration Course'
+    'Business of Sports Institute (BOI), Sports Business & Administration Course',
     'Barrister & Solicitor of the Supreme Court of Nigeria (2015)',
     'Member, Nigerian Bar Association (NBA)',
     'Associate, Chartered Institute of Arbitrators (UK)'
