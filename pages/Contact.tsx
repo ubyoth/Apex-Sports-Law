@@ -1,52 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import { useNavigate } from "react-router-dom";
 
 const SITE_URL = "https://apexsportslaw.com";
 const PAGE_URL = `${SITE_URL}/contact`;
 const OG_IMAGE = `${SITE_URL}/screenshot.png`;
 
 const Contact: React.FC = () => {
-  const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    const payload = {
-      name: String(formData.get("name") || "").trim(),
-      email: String(formData.get("email") || "").trim(),
-      service: String(formData.get("service") || "").trim(),
-      message: String(formData.get("message") || "").trim(),
-    };
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (!res.ok) {
-        throw new Error("Form submission failed");
-      }
-
-      form.reset();
-      navigate("/thank-you");
-    } catch (error) {
-      console.error(error);
-      alert("Sorry—your message could not be sent. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   const contactItems: Array<{
     icon: string;
     title: string;
@@ -175,95 +134,39 @@ const Contact: React.FC = () => {
               className="bg-white dark:bg-secondary-grey/5 rounded-3xl p-10 lg:p-14 shadow-2xl border border-slate-100 dark:border-accent-gold/10 scroll-mt-32"
             >
               <h2 className="text-3xl font-bold text-black dark:text-white mb-4">Submit Inquiry</h2>
-              <p className="text-slate-500 dark:text-slate-400 mb-12">
-                Expect a response within one business day.
+              <p className="text-slate-500 dark:text-slate-400 mb-8">
+                Our online inquiry form is temporarily unavailable.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
-                    <label
-                      htmlFor="contact-name"
-                      className="text-xs font-black text-black dark:text-accent-gold uppercase tracking-widest"
-                    >
-                      Full Name
-                    </label>
-                    <input
-                      id="contact-name"
-                      name="name"
-                      type="text"
-                      required
-                      placeholder="John Doe"
-                      className="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-accent-gold/20 bg-slate-50 dark:bg-black text-black dark:text-white focus:ring-2 focus:ring-accent-gold/20 outline-none transition-all"
-                    />
-                  </div>
-
-                  <div className="space-y-3">
-                    <label
-                      htmlFor="contact-email"
-                      className="text-xs font-black text-black dark:text-accent-gold uppercase tracking-widest"
-                    >
-                      Email Address
-                    </label>
-                    <input
-                      id="contact-email"
-                      name="email"
-                      type="email"
-                      required
-                      placeholder="john@example.com"
-                      className="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-accent-gold/20 bg-slate-50 dark:bg-black text-black dark:text-white focus:ring-2 focus:ring-accent-gold/20 outline-none transition-all"
-                    />
+              <div className="rounded-2xl border border-accent-gold/20 bg-slate-50 dark:bg-black p-8 space-y-6">
+                <div className="flex items-start gap-4">
+                  <span className="material-icons text-accent-gold text-3xl">info</span>
+                  <div>
+                    <h3 className="text-xl font-bold text-black dark:text-white mb-2">
+                      Contact Us Directly
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                      Please email or call us directly for inquiries while the contact form is being updated.
+                    </p>
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                  <label
-                    htmlFor="contact-service"
-                    className="text-xs font-black text-black dark:text-accent-gold uppercase tracking-widest"
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="mailto:info@apexsportslaw.com"
+                    className="flex-1 bg-accent-gold text-black py-4 px-6 rounded-xl font-black text-center hover:bg-yellow-600 transition-all"
                   >
-                    Legal Service
-                  </label>
-                  <select
-                    id="contact-service"
-                    name="service"
-                    className="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-accent-gold/20 bg-slate-50 dark:bg-black text-black dark:text-white focus:ring-2 focus:ring-accent-gold/20 outline-none transition-all appearance-none"
-                  >
-                    <option value="Corporate Advisory">Corporate Advisory</option>
-                    <option value="Sports">Sports</option>
-                    <option value="Intellectual Property">Intellectual Property</option>
-                    <option value="Dispute Resolution">Dispute Resolution</option>
-                    <option value="CAC Issues">CAC Issues</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
+                    Email Us
+                  </a>
 
-                <div className="space-y-3">
-                  <label
-                    htmlFor="contact-message"
-                    className="text-xs font-black text-black dark:text-accent-gold uppercase tracking-widest"
+                  <a
+                    href="tel:+2348163216169"
+                    className="flex-1 border border-accent-gold text-accent-gold py-4 px-6 rounded-xl font-black text-center hover:bg-accent-gold hover:text-black transition-all"
                   >
-                    Case Description
-                  </label>
-                  <textarea
-                    id="contact-message"
-                    name="message"
-                    required
-                    className="w-full px-6 py-4 rounded-xl border border-slate-200 dark:border-accent-gold/20 bg-slate-50 dark:bg-black text-black dark:text-white focus:ring-2 focus:ring-accent-gold/20 outline-none transition-all resize-none min-h-[180px]"
-                    placeholder="Briefly summarize your requirements..."
-                  />
+                    Call Now
+                  </a>
                 </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-accent-gold text-black py-5 rounded-xl font-black text-lg hover:bg-yellow-600 transition-all shadow-xl shadow-accent-gold/20 flex items-center justify-center gap-3 group disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? "Sending..." : "Submit Inquiry"}
-                  <span className="material-icons group-hover:translate-x-1 transition-transform">
-                    send
-                  </span>
-                </button>
-              </form>
+              </div>
             </div>
 
             <div className="space-y-12">
