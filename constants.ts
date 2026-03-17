@@ -168,7 +168,7 @@ However, what do the regulations say on trials?
     readTime: "3 min read",
     category: "Sports Law",
     imageUrl:
-      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1773785854/Gemini_Generated_Image_oiwmmqoiwmmqoiwm_eyyahq.png&auto=format&fit=crop",
     featured: true,
     slug: "bridge-transfers-in-football",
     content: `Bridge transfers have become a focal issue in international football regulation.
