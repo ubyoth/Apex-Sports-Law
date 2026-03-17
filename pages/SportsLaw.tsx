@@ -150,7 +150,7 @@ const SportsLaw: React.FC = () => {
             Whether you are a rising talent or an established professional, our Sports Law division provides the strategic backbone your career needs.
           </p>
           <a 
-            href="https://calendly.com/apexsportslaw/30min" 
+            href="https://calendly.com/apexsportslaw-info/30min" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-accent-gold text-black px-12 py-5 rounded-xl font-black uppercase tracking-widest text-sm hover:bg-yellow-600 transition-all shadow-2xl shadow-accent-gold/20"
