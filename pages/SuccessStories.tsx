@@ -68,7 +68,7 @@ const SuccessStories: React.FC = () => {
           <h2 className="text-4xl font-bold text-white mb-6">Need Expert Legal Counsel?</h2>
           <p className="text-slate-400 text-lg mb-12">Our success stories are built on meticulous attention to detail and unwavering client advocacy. Our founding partner, Yahaya Oruma Othman, ensures every case reflects a decade of excellence.</p>
           <a 
-            href="https://calendly.com/apexsportslaw/30min" 
+            href="https://calendly.com/apexsportslaw-info/30min" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-accent-gold text-black px-8 py-3.5 rounded-lg font-bold text-base hover:bg-yellow-600 transition-all shadow-2xl shadow-accent-gold/20"
