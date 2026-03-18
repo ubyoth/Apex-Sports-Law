@@ -25,7 +25,7 @@ const articles = [
     description:
       "This article explores the responsibilities of member associations under the FIFA Club Licensing Regulations, with a focus on their impact on football clubs in Nigeria.",
     image:
-      "https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80&w=2069&auto=format&fit=crop",
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1773854494/stadium_zjpyi2.avif",
     publishedTime: "2026-03-03T00:00:00+01:00",
     author: "Yahaya Othman",
     type: "article",
@@ -37,7 +37,7 @@ const articles = [
     description:
       "Understand FIFA’s bridge transfer rules under the RSTP, the 16-week presumption, potential sanctions, and practical compliance tips for clubs, players, and agents.",
     image:
-      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1773854542/footballer_and_boots_sliwwr.avif",
     publishedTime: "2026-02-18T00:00:00+01:00",
     author: "Yahaya Othman",
     type: "article",
@@ -49,7 +49,7 @@ const articles = [
     description:
       "A practical overview of the latest IFAB football regulation changes on throw-ins, goal kicks, substitutions, injuries and VAR protocol developments.",
     image:
-      "https://apexsportslaw.com/og/new-ifab-football-regulations.jpg",
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1773785854/Gemini_Generated_Image_oiwmmqoiwmmqoiwm_eyyahq.png",
     publishedTime: "2026-03-17T00:00:00+01:00",
     author: "Yahaya Othman",
     type: "article",
