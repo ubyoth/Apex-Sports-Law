@@ -173,80 +173,6 @@ const KnowledgeCentre: React.FC = () => {
             </p>
           </div>
 
-          {/* Firm News Section */}
-          <div className="mb-20">
-            <h2 className="text-xs font-black text-accent-gold uppercase tracking-[0.4em] mb-8 border-l-4 border-accent-gold pl-6">
-              Latest Firm News
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* News 1: Summit */}
-              <div className="bg-white dark:bg-secondary-grey/10 rounded-3xl p-8 border border-slate-100 dark:border-accent-gold/20 flex flex-col justify-between hover:border-accent-gold/50 transition-all group">
-                <div>
-                  <span className="text-[10px] text-accent-gold font-black mb-4 block uppercase tracking-widest">
-                    Summit
-                  </span>
-
-                  <a
-                    href="https://www.linkedin.com/posts/yahaya-othman_afbs2025-transformingourgame-footballlaw-activity-7388866930625032193-AdSa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABI1RvEBgSAEWasGt15rYarYPXCa2FHuYF8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block mb-6"
-                  >
-                    <h3 className="text-2xl font-bold text-black dark:text-white group-hover:text-accent-gold transition-colors leading-tight">
-                      Founding Partner Attended the Africa Football Business Summit 2025 in Mombasa,
-                      Kenya
-                    </h3>
-                  </a>
-
-                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
-                    Engaging with global sports leaders on the evolution of football law and
-                    business transformations across the continent.
-                  </p>
-                </div>
-
-                <div className="flex justify-between items-center">
-                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                    October 2025
-                  </span>
-                  <span className="material-icons text-accent-gold group-hover:translate-x-2 transition-transform">
-                    east
-                  </span>
-                </div>
-              </div>
-
-              {/* News 2: Firm Launch */}
-              <div className="bg-black dark:bg-secondary-grey/20 rounded-3xl p-8 border border-accent-gold/20 flex flex-col justify-between shadow-2xl">
-                <div>
-                  <span className="text-[10px] text-accent-gold font-black mb-4 block uppercase tracking-widest">
-                    Official Launch
-                  </span>
-
-                  <h3 className="text-2xl font-bold text-white mb-6 leading-tight">
-                    Apex Sports Law Officially Launches in Lagos
-                  </h3>
-
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    <span className="block mb-2">
-                      Founded in August 2025 by Yahaya Oruma Othman, Esq., with experience in
-                      corporate law, arbitration, and commercial dispute resolution.
-                    </span>
-                    <span className="block italic text-slate-500">
-                      Providing professional and confidential legal assistance in football or other
-                      sports-related matters.
-                    </span>
-                  </p>
-                </div>
-
-                <div className="mt-8">
-                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                    August 2025
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Legal Insights Section */}
           <div className="flex flex-col lg:flex-row gap-16">
             {/* Main Grid */}
@@ -370,6 +296,80 @@ const KnowledgeCentre: React.FC = () => {
                 )}
               </div>
 
+                        {/* Firm News Section */}
+          <div className="mb-20">
+            <h2 className="text-xs font-black text-accent-gold uppercase tracking-[0.4em] mb-8 border-l-4 border-accent-gold pl-6">
+              Latest Firm News
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* News 1: Summit */}
+              <div className="bg-white dark:bg-secondary-grey/10 rounded-3xl p-8 border border-slate-100 dark:border-accent-gold/20 flex flex-col justify-between hover:border-accent-gold/50 transition-all group">
+                <div>
+                  <span className="text-[10px] text-accent-gold font-black mb-4 block uppercase tracking-widest">
+                    Summit
+                  </span>
+
+                  <a
+                    href="https://www.linkedin.com/posts/yahaya-othman_afbs2025-transformingourgame-footballlaw-activity-7388866930625032193-AdSa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABI1RvEBgSAEWasGt15rYarYPXCa2FHuYF8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block mb-6"
+                  >
+                    <h3 className="text-2xl font-bold text-black dark:text-white group-hover:text-accent-gold transition-colors leading-tight">
+                      Founding Partner Attended the Africa Football Business Summit 2025 in Mombasa,
+                      Kenya
+                    </h3>
+                  </a>
+
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                    Engaging with global sports leaders on the evolution of football law and
+                    business transformations across the continent.
+                  </p>
+                </div>
+
+                <div className="flex justify-between items-center">
+                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                    October 2025
+                  </span>
+                  <span className="material-icons text-accent-gold group-hover:translate-x-2 transition-transform">
+                    east
+                  </span>
+                </div>
+              </div>
+
+              {/* News 2: Firm Launch */}
+              <div className="bg-black dark:bg-secondary-grey/20 rounded-3xl p-8 border border-accent-gold/20 flex flex-col justify-between shadow-2xl">
+                <div>
+                  <span className="text-[10px] text-accent-gold font-black mb-4 block uppercase tracking-widest">
+                    Official Launch
+                  </span>
+
+                  <h3 className="text-2xl font-bold text-white mb-6 leading-tight">
+                    Apex Sports Law Officially Launches in Lagos
+                  </h3>
+
+                  <p className="text-xs text-slate-400 leading-relaxed">
+                    <span className="block mb-2">
+                      Founded in August 2025 by Yahaya Oruma Othman, Esq., with experience in
+                      corporate law, arbitration, and commercial dispute resolution.
+                    </span>
+                    <span className="block italic text-slate-500">
+                      Providing professional and confidential legal assistance in football or other
+                      sports-related matters.
+                    </span>
+                  </p>
+                </div>
+
+                <div className="mt-8">
+                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                    August 2025
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
               {/* All briefs link list (always rendered for discovery) */}
               <section className="mt-16">
                 <h2 className="text-xl font-bold text-black dark:text-white mb-4">All Legal Briefs</h2>
@@ -403,6 +403,7 @@ const KnowledgeCentre: React.FC = () => {
               </section>
             </div>
 
+            
             {/* Sidebar */}
             <aside className="lg:w-1/3 space-y-10">
               <div className="bg-black rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden border border-accent-gold/20">
