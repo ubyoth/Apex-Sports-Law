@@ -82,10 +82,54 @@ function formatIsoDate(input?: string): string | undefined {
 const KnowledgeCentre: React.FC = () => {
   const POSTS_PER_CLICK = 4;
   const [visiblePosts, setVisiblePosts] = useState<number>(POSTS_PER_CLICK);
+  const [bookmarkedPosts, setBookmarkedPosts] = useState<string[]>([]);
 
   const handleLoadMore = () => setVisiblePosts((prev) => prev + POSTS_PER_CLICK);
 
   const posts = BLOG_POSTS as unknown as Post[];
+
+  useEffect(() => {
+    const saved = localStorage.getItem("apexBookmarkedPosts");
+    if (saved) {
+      try {
+        setBookmarkedPosts(JSON.parse(saved));
+      } catch {
+        setBookmarkedPosts([]);
+      }
+    }
+  }, []);
+
+  const toggleBookmark = (slug: string) => {
+    setBookmarkedPosts((prev) => {
+      const updated = prev.includes(slug)
+        ? prev.filter((item) => item !== slug)
+        : [...prev, slug];
+
+      localStorage.setItem("apexBookmarkedPosts", JSON.stringify(updated));
+      return updated;
+    });
+  };
+
+  const handleShare = async (post: Post) => {
+    const articleUrl = `${SITE_URL}/knowledge/${post.slug}`;
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: post.title,
+          text: post.excerpt,
+          url: articleUrl,
+        });
+      } else if (navigator.clipboard) {
+        await navigator.clipboard.writeText(articleUrl);
+        alert("Article link copied to clipboard.");
+      } else {
+        window.prompt("Copy this link:", articleUrl);
+      }
+    } catch (error) {
+      console.error("Share failed:", error);
+    }
+  };
 
   const blogJsonLd = useMemo(() => {
     const items = posts.slice(0, Math.min(posts.length, 20)).map((post) => {
@@ -101,8 +145,6 @@ const KnowledgeCentre: React.FC = () => {
           ? { "@type": "Person", name: post.author }
           : { "@type": "Organization", name: "Apex Sports Law" },
         publisher: { "@type": "Organization", name: "Apex Sports Law" },
-
-        // SEO-friendly dates if available
         datePublished: iso,
         dateModified: iso,
       };
@@ -122,7 +164,6 @@ const KnowledgeCentre: React.FC = () => {
   return (
     <>
       <Helmet>
-        {/* Primary SEO */}
         <title>Sports Law Articles & Legal Briefs | Apex Sports Law Knowledge Centre</title>
         <meta
           name="description"
@@ -131,7 +172,6 @@ const KnowledgeCentre: React.FC = () => {
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
 
-        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Apex Sports Law" />
         <meta
@@ -145,7 +185,6 @@ const KnowledgeCentre: React.FC = () => {
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -157,13 +196,11 @@ const KnowledgeCentre: React.FC = () => {
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
-        {/* Structured Data */}
         <script type="application/ld+json">{JSON.stringify(blogJsonLd)}</script>
       </Helmet>
 
       <div className="min-h-screen bg-background-light dark:bg-black py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Page Header */}
           <div className="mb-16 text-center lg:text-left">
             <h1 className="text-5xl md:text-6xl font-black text-black dark:text-white mb-6">
               Knowledge Centre
@@ -173,9 +210,7 @@ const KnowledgeCentre: React.FC = () => {
             </p>
           </div>
 
-          {/* Legal Insights Section */}
           <div className="flex flex-col lg:flex-row gap-16">
-            {/* Main Grid */}
             <div className="lg:w-2/3 space-y-12">
               <div className="flex items-center justify-between border-b border-accent-gold/10 pb-6 mb-8">
                 <h2 className="text-2xl font-bold text-black dark:text-white uppercase tracking-tighter">
@@ -204,6 +239,7 @@ const KnowledgeCentre: React.FC = () => {
                 {posts.slice(0, visiblePosts).map((post) => {
                   const displayDate = formatDisplayDate(post.date);
                   const isoDate = formatIsoDate(post.date);
+                  const isBookmarked = bookmarkedPosts.includes(post.slug);
 
                   return (
                     <article
@@ -233,7 +269,10 @@ const KnowledgeCentre: React.FC = () => {
                           {post.readTime ? ` • ${post.readTime}` : ""}
                         </p>
 
-                        <Link to={`/knowledge/${post.slug}`} aria-label={`Open article: ${post.title}`}>
+                        <Link
+                          to={`/knowledge/${post.slug}`}
+                          aria-label={`Open article: ${post.title}`}
+                        >
                           <h3 className="text-xl font-bold mb-4 text-black dark:text-white leading-tight group-hover:text-accent-gold transition-colors cursor-pointer">
                             {post.title}
                           </h3>
@@ -259,17 +298,32 @@ const KnowledgeCentre: React.FC = () => {
                           <div className="flex gap-4">
                             <button
                               type="button"
+                              onClick={() => handleShare(post)}
                               className="text-slate-400 hover:text-accent-gold transition-colors"
-                              aria-label="Share post"
+                              aria-label={`Share post: ${post.title}`}
+                              title="Share article"
                             >
                               <span className="material-icons text-xl">share</span>
                             </button>
+
                             <button
                               type="button"
-                              className="text-slate-400 hover:text-accent-gold transition-colors"
-                              aria-label="Bookmark post"
+                              onClick={() => toggleBookmark(post.slug)}
+                              className={`transition-colors ${
+                                isBookmarked
+                                  ? "text-accent-gold"
+                                  : "text-slate-400 hover:text-accent-gold"
+                              }`}
+                              aria-label={
+                                isBookmarked
+                                  ? `Remove bookmark for: ${post.title}`
+                                  : `Bookmark post: ${post.title}`
+                              }
+                              title={isBookmarked ? "Remove bookmark" : "Bookmark article"}
                             >
-                              <span className="material-icons text-xl">bookmark_border</span>
+                              <span className="material-icons text-xl">
+                                {isBookmarked ? "bookmark" : "bookmark_border"}
+                              </span>
                             </button>
                           </div>
                         </div>
@@ -279,7 +333,6 @@ const KnowledgeCentre: React.FC = () => {
                 })}
               </div>
 
-              {/* Load More */}
               <div className="flex justify-center pt-8">
                 {visiblePosts < posts.length && (
                   <button
@@ -296,83 +349,81 @@ const KnowledgeCentre: React.FC = () => {
                 )}
               </div>
 
-                        {/* Firm News Section */}
-          <div className="mb-20">
-            <h2 className="text-xs font-black text-accent-gold uppercase tracking-[0.4em] mb-8 border-l-4 border-accent-gold pl-6">
-              Latest Firm News
-            </h2>
+              <div className="mb-20">
+                <h2 className="text-xs font-black text-accent-gold uppercase tracking-[0.4em] mb-8 border-l-4 border-accent-gold pl-6">
+                  Latest Firm News
+                </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* News 1: Summit */}
-              <div className="bg-white dark:bg-secondary-grey/10 rounded-3xl p-8 border border-slate-100 dark:border-accent-gold/20 flex flex-col justify-between hover:border-accent-gold/50 transition-all group">
-                <div>
-                  <span className="text-[10px] text-accent-gold font-black mb-4 block uppercase tracking-widest">
-                    Summit
-                  </span>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="bg-white dark:bg-secondary-grey/10 rounded-3xl p-8 border border-slate-100 dark:border-accent-gold/20 flex flex-col justify-between hover:border-accent-gold/50 transition-all group">
+                    <div>
+                      <span className="text-[10px] text-accent-gold font-black mb-4 block uppercase tracking-widest">
+                        Summit
+                      </span>
 
-                  <a
-                    href="https://www.linkedin.com/posts/yahaya-othman_afbs2025-transformingourgame-footballlaw-activity-7388866930625032193-AdSa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABI1RvEBgSAEWasGt15rYarYPXCa2FHuYF8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block mb-6"
-                  >
-                    <h3 className="text-2xl font-bold text-black dark:text-white group-hover:text-accent-gold transition-colors leading-tight">
-                      Founding Partner Attended the Africa Football Business Summit 2025 in Mombasa,
-                      Kenya
-                    </h3>
-                  </a>
+                      <a
+                        href="https://www.linkedin.com/posts/yahaya-othman_afbs2025-transformingourgame-footballlaw-activity-7388866930625032193-AdSa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABI1RvEBgSAEWasGt15rYarYPXCa2FHuYF8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block mb-6"
+                      >
+                        <h3 className="text-2xl font-bold text-black dark:text-white group-hover:text-accent-gold transition-colors leading-tight">
+                          Founding Partner Attended the Africa Football Business Summit 2025 in
+                          Mombasa, Kenya
+                        </h3>
+                      </a>
 
-                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
-                    Engaging with global sports leaders on the evolution of football law and
-                    business transformations across the continent.
-                  </p>
-                </div>
+                      <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                        Engaging with global sports leaders on the evolution of football law and
+                        business transformations across the continent.
+                      </p>
+                    </div>
 
-                <div className="flex justify-between items-center">
-                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                    October 2025
-                  </span>
-                  <span className="material-icons text-accent-gold group-hover:translate-x-2 transition-transform">
-                    east
-                  </span>
+                    <div className="flex justify-between items-center">
+                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                        October 2025
+                      </span>
+                      <span className="material-icons text-accent-gold group-hover:translate-x-2 transition-transform">
+                        east
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="bg-black dark:bg-secondary-grey/20 rounded-3xl p-8 border border-accent-gold/20 flex flex-col justify-between shadow-2xl">
+                    <div>
+                      <span className="text-[10px] text-accent-gold font-black mb-4 block uppercase tracking-widest">
+                        Official Launch
+                      </span>
+
+                      <h3 className="text-2xl font-bold text-white mb-6 leading-tight">
+                        Apex Sports Law Officially Launches in Lagos
+                      </h3>
+
+                      <p className="text-xs text-slate-400 leading-relaxed">
+                        <span className="block mb-2">
+                          Founded in August 2025 by Yahaya Oruma Othman, Esq., with experience in
+                          corporate law, arbitration, and commercial dispute resolution.
+                        </span>
+                        <span className="block italic text-slate-500">
+                          Providing professional and confidential legal assistance in football or
+                          other sports-related matters.
+                        </span>
+                      </p>
+                    </div>
+
+                    <div className="mt-8">
+                      <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                        August 2025
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* News 2: Firm Launch */}
-              <div className="bg-black dark:bg-secondary-grey/20 rounded-3xl p-8 border border-accent-gold/20 flex flex-col justify-between shadow-2xl">
-                <div>
-                  <span className="text-[10px] text-accent-gold font-black mb-4 block uppercase tracking-widest">
-                    Official Launch
-                  </span>
-
-                  <h3 className="text-2xl font-bold text-white mb-6 leading-tight">
-                    Apex Sports Law Officially Launches in Lagos
-                  </h3>
-
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    <span className="block mb-2">
-                      Founded in August 2025 by Yahaya Oruma Othman, Esq., with experience in
-                      corporate law, arbitration, and commercial dispute resolution.
-                    </span>
-                    <span className="block italic text-slate-500">
-                      Providing professional and confidential legal assistance in football or other
-                      sports-related matters.
-                    </span>
-                  </p>
-                </div>
-
-                <div className="mt-8">
-                  <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                    August 2025
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-              {/* All briefs link list (always rendered for discovery) */}
               <section className="mt-16">
-                <h2 className="text-xl font-bold text-black dark:text-white mb-4">All Legal Briefs</h2>
+                <h2 className="text-xl font-bold text-black dark:text-white mb-4">
+                  All Legal Briefs
+                </h2>
 
                 <nav aria-label="All legal briefs">
                   <ul className="space-y-3">
@@ -403,8 +454,6 @@ const KnowledgeCentre: React.FC = () => {
               </section>
             </div>
 
-            
-            {/* Sidebar */}
             <aside className="lg:w-1/3 space-y-10">
               <div className="bg-black rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden border border-accent-gold/20">
                 <div className="relative z-10">
