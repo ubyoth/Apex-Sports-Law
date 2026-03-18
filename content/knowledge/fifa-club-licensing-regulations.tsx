@@ -7,7 +7,7 @@ const SLUG = "fifa-club-licensing-regulations";
 const PAGE_URL = `${SITE_URL}/knowledge/${SLUG}`;
 
 // Use a specific image when you have it; fallback is fine for now
-const OG_IMAGE = `${SITE_URL}/og/${SLUG}.jpg`;
+const OG_IMAGE = "https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80&w=2069&auto=format&fit=crop";
 const OG_IMAGE_FALLBACK = `${SITE_URL}/og/default.jpg`;
 
 const TITLE = "FIFA Club Licensing Regulations: What Member Associations Must Do";
