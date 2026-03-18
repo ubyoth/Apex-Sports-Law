@@ -143,20 +143,20 @@ However, what do the regulations say on trials?
 
   {
     id: "bp2",
-    title:
-      "The FIFA Club Licensing Regulations: Responsibilities of Member Associations and Nigerian Clubs",
-    excerpt:
-      "This article explores the responsibilities of member associations under the FIFA CLR, with a particular focus on their impact on football clubs in Nigeria.",
-    author: "Yahaya Othman",
-    date: "2026-03-03",
-    readTime: "3 min read",
-    category: "Sports Law",
-    imageUrl:
-      "https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80&w=2069&auto=format&fit=crop",
-    featured: true,
-    slug: "fifa-club-licensing-regulations",
-    content: `The FIFA Club Licensing Regulations is a foundational document with the overall goal of standardizing and elevating football club management globally.`,
-  },
+    title:  "The New IFAB Football Regulations: What Players, Clubs and Officials Should Know",
+  excerpt:
+    "A practical overview of the latest IFAB football regulation changes on throw-ins, goal kicks, substitutions, injuries and VAR protocol developments.",
+  author: "Yahaya Othman",
+  date: "2026-03-17",
+  readTime: "4 min read",
+  category: "Sports Law",
+  imageUrl:
+    "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
+  featured: true,
+  slug: "new-ifab-football-regulations",
+  content: `IFAB has approved a number of football regulation changes aimed at reducing time-wasting, minimising stoppages, and increasing effective playing time.`,
+},
+      
 
   {
     id: "bp3",
@@ -180,17 +180,17 @@ Legal practitioners must carefully evaluate intermediary structures to avoid san
 
   {
   id: "bp4",
-  title: "The New IFAB Football Regulations: What Players, Clubs and Officials Should Know",
-  excerpt:
-    "A practical overview of the latest IFAB football regulation changes on throw-ins, goal kicks, substitutions, injuries and VAR protocol developments.",
-  author: "Yahaya Othman",
-  date: "2026-03-17",
-  readTime: "4 min read",
-  category: "Sports Law",
-  imageUrl:
-    "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
-  featured: true,
-  slug: "new-ifab-football-regulations",
-  content: `IFAB has approved a number of football regulation changes aimed at reducing time-wasting, minimising stoppages, and increasing effective playing time.`,
-},
+  title: "The FIFA Club Licensing Regulations: Responsibilities of Member Associations and Nigerian Clubs",
+    excerpt:
+      "This article explores the responsibilities of member associations under the FIFA CLR, with a particular focus on their impact on football clubs in Nigeria.",
+    author: "Yahaya Othman",
+    date: "2026-03-03",
+    readTime: "3 min read",
+    category: "Sports Law",
+    imageUrl:
+      "https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80&w=2069&auto=format&fit=crop",
+    featured: true,
+    slug: "fifa-club-licensing-regulations",
+    content: `The FIFA Club Licensing Regulations is a foundational document with the overall goal of standardizing and elevating football club management globally.`,
+  },
 ];
