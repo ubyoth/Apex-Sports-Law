@@ -39,7 +39,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Apex Sports Law | Sports Lawyers for Footballers, Clubs & Agents</title>
+        <title>Apex Sports Law | Sports Lawyers for Footballers, Clubs & Agents </title>
 
         <meta
           name="description"
