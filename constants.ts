@@ -151,7 +151,7 @@ However, what do the regulations say on trials?
   readTime: "4 min read",
   category: "Sports Law",
   imageUrl:
-    "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
+  "https://res.cloudinary.com/dq7vjblwd/image/upload/w_2093,q_auto,c_crop,f_auto/v1773785854/Gemini_Generated_Image_oiwmmqoiwmmqoiwm_eyyahq.png",
   featured: true,
   slug: "new-ifab-football-regulations",
   content: `IFAB has approved a number of football regulation changes aimed at reducing time-wasting, minimising stoppages, and increasing effective playing time.`,
@@ -168,7 +168,7 @@ However, what do the regulations say on trials?
     readTime: "3 min read",
     category: "Sports Law",
     imageUrl:
-      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1773785854/Gemini_Generated_Image_oiwmmqoiwmmqoiwm_eyyahq.png&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
     featured: true,
     slug: "bridge-transfers-in-football",
     content: `Bridge transfers have become a focal issue in international football regulation.
