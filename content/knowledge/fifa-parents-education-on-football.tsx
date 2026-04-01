@@ -410,7 +410,6 @@ const FIFAParentsEducation: React.FC = () => {
                 </Link>
               </div>
             </div>
-          </div>
 
           <section className="mt-16 pt-10 border-t border-slate-100 dark:border-accent-gold/10">
             <h2 className="text-2xl font-bold text-black dark:text-white mb-6">
