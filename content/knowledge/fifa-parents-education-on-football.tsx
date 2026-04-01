@@ -6,7 +6,7 @@ const SITE_URL = "https://apexsportslaw.com";
 const SLUG = "fifa-parents-education-on-football";
 const PAGE_URL = `${SITE_URL}/knowledge/${SLUG}`;
 
-const OG_IMAGE = "https://res.cloudinary.com/dq7vjblwd/image/upload/v1775081179/FIFA_parents_education_oppq6h.png";
+const OG_IMAGE = "https://res.cloudinary.com/dq7vjblwd/image/upload/w_1200,h_630,c_fill/v1775081179/FIFA_parents_education_oppq6h.png";
 const OG_IMAGE_FALLBACK = `${SITE_URL}/og/default.jpg`;
 
 const TITLE =
