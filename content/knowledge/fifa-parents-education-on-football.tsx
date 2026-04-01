@@ -382,7 +382,15 @@ const FIFAParentsEducation: React.FC = () => {
   </p>
 
   <p>
-    The handbook is available for free download via FIFA’s digital hub.
+    The handbook is available for free download via {" "}
+    <a
+    href="https://digitalhub.fifa.com/m/30d262789bc915ee/original/Parents-Education-on-Football-Agents.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-accent-gold font-semibold hover:underline"
+    >
+    FIFA’s digital hub.
+    </a>{" "}
   </p>
 </div>
 
