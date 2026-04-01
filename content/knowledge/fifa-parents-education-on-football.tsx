@@ -27,14 +27,14 @@ function formatDisplayDate(iso: string) {
   }).format(d);
 }
 
-const NewIFABFootballRegulations: React.FC = () => {
+const FIFAParentsEducation: React.FC = () => {
   const displayDate = formatDisplayDate(PUBLISHED_ISO);
 
   const related = [
     {
-      title: "FIFA’s Trial Rules vs. Africa’s Fake Agent Nightmare",
-      slug: "fake-agent-nightmare",
-      note: "Trials, fake agents, and player protection under FIFA rules.",
+      title: "FIFA Parents’ Education on Football Agents: Key Takeaways for Parents of Young Footballers",
+      slug: "fifa-parents-education-on-football",
+      note: "Football agents, minors, contracts, fees, trials, and how parents can protect young players from exploitation.",
     },
   ];
 
