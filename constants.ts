@@ -88,22 +88,14 @@ export const PRACTICE_AREAS: PracticeArea[] = [
 export const SUCCESS_STORIES: SuccessStory[] = [
   {
     id: 'ss1',
-    category: 'Corporate & Commercial',
-    title: 'Strategic Restructuring & CAC Compliance',
-    challenge: 'Businesses required complex corporate structuring, governance realignment, and regulatory compliance across multiple entities.',
-    result: 'Successfully completed nine (9) corporate restructuring matters before the CAC, including post-incorporation amendments and shareholding realignments.',
-    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop'
+    category: 'Sports Law',
+    title: 'Ballers Support & LawInSport Mentorship',
+    challenge: 'Amateur athletes transitioning to professional sports usually lack adequate legal protection and contract navigation expertise.',
+    result: 'Established partnership with Ballers Support for pro bono services. Also, our founding partner participated in LawInSport Global Mentoring Scheme (2023).',
+    imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop'
   },
   {
-    id: 'ss2',
-    category: 'Labour Law',
-    title: 'Recovery of ₦1M+ in Employment Disputes',
-    challenge: 'An employee faced wrongful denial of salary arrears and earned bonuses in a complex workplace conflict.',
-    result: 'Secured the successful recovery of arrears exceeding ₦1,000,000 and negotiated over a dozen employment agreements for diverse clients.',
-    imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop'
-  },
-  {
-    id: 'ss3',
+    id: 'ss2',    
     category: 'Intellectual Property',
     title: 'Athlete Image Rights & Brand Protection',
     challenge: 'Athletes in creative industries faced challenges in trademark registration and commercial exploitation of their digital likeness.',
@@ -111,12 +103,20 @@ export const SUCCESS_STORIES: SuccessStory[] = [
     imageUrl: 'https://images.unsplash.com/photo-1453941403708-3c32160971fd?q=80&w=2072&auto=format&fit=crop'
   },
   {
-    id: 'ss4',
-    category: 'Sports Law',
-    title: 'Ballers Support & LawInSport Mentorship',
-    challenge: 'Amateur athletes transitioning to professional sports usually lack adequate legal protection and contract navigation expertise.',
-    result: 'Established partnership with Ballers Support for pro bono services. Also, our founding partner participated in LawInSport Global Mentoring Scheme (2023).',
-    imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop'
+    id: 'ss3',
+    category: 'Corporate & Commercial',
+    title: 'Strategic Restructuring & CAC Compliance',
+    challenge: 'Businesses required complex corporate structuring, governance realignment, and regulatory compliance across multiple entities.',
+    result: 'Successfully completed nine (9) corporate restructuring matters before the CAC, including post-incorporation amendments and shareholding realignments.',
+    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop'
+  },
+  {
+    id: 'ss4',    
+    category: 'Labour Law',
+    title: 'Recovery of ₦1M+ in Employment Disputes',
+    challenge: 'An employee faced wrongful denial of salary arrears and earned bonuses in a complex workplace conflict.',
+    result: 'Secured the successful recovery of arrears exceeding ₦1,000,000 and negotiated over a dozen employment agreements for diverse clients.',
+    imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop'
   }
 ];
 
