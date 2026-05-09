@@ -51,11 +51,7 @@ const SuccessStories: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="p-8 pt-0 mt-auto">
-                <button className="w-full py-4 border border-accent-gold/20 text-accent-gold font-bold text-sm rounded-xl hover:bg-accent-gold hover:text-black transition-all flex items-center justify-center gap-2 group/btn">
-                  Learn More
-                  <span className="material-icons text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
-                </button>
+              <div className="p-8 pt-0 mt-auto"> 
               </div>
             </div>
           ))}
