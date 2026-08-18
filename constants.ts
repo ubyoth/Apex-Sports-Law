@@ -235,6 +235,25 @@ Legal practitioners must carefully evaluate intermediary structures to avoid san
     content: `The FIFA Club Licensing Regulations is a foundational document with the overall goal of standardizing and elevating football club management globally.`,
   },
 
+  {
+    id: "bp7",
+    title:
+      "Termination of a Football Contract with Just Cause: Abusive Conduct (Part II)",
+    excerpt:
+      "An examination of Article 14(2) of the FIFA RSTP and the circumstances in which abusive conduct by a club or player may justify termination of a football contract with just cause.",
+    author: "Yahaya Othman",
+    date: "2026-06-02",
+    readTime: "6 min read",
+    category: "Sports Law",
+    imageUrl:
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1787097201/connor-coyne-OgqWLzWRSaI-unsplash_smotmo.jpg",
+    featured: true,
+    slug: "fifa-article-14-2-abusive-conduct-football-contract",
+    content: `
+Article 14(2) of the FIFA Regulations on the Status and Transfer of Players provides that abusive conduct aimed at forcing the counterparty to terminate or change the terms of a football contract may constitute just cause for termination.
 
+This article examines abusive conduct by clubs and players, relevant FIFA and CAS jurisprudence, and the circumstances in which Article 14(2) may be relied upon to terminate a football contract.
+    `,
+  },
 
 ];
