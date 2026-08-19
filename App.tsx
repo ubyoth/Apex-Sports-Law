@@ -19,6 +19,7 @@ import NewIFABFootballRegulations from "./content/knowledge/new-ifab-football-re
 import FIFAParentsEducation from "./content/knowledge/fifa-parents-education-on-football";
 import FootballContractJustCause from "./content/knowledge/termination-of-football-contract-with-just-cause";
 import FIFAArticle14AbusiveConduct from "./content/knowledge/fifa-article-14-2-abusive-conduct-football-contract";
+import TerminationOutstandingSalaries from "./content/knowledge/termination-football-contract-outstanding-salaries-fifa-article-14bis";
 import ThankYou from "./pages/ThankYou";
 import WhatsAppButton from "./components/WhatsAppButton";
 const ScrollToTop = () => {
@@ -66,6 +67,7 @@ const App: React.FC = () => {
   <Route path="/knowledge/fifa-parents-education-on-football" element={<FIFAParentsEducation />} />
   <Route path="/knowledge/termination-of-football-contract-with-just-cause" element={<FootballContractJustCause />} />
   <Route path="/knowledge/fifa-article-14-2-abusive-conduct-football-contract" element={<FIFAArticle14AbusiveConduct />} />
+  <Route path="/knowledge/termination-football-contract-outstanding-salaries-fifa-article-14bis" element={<TerminationOutstandingSalaries />} />
   {/* Dynamic post route LAST among /knowledge routes */}
   <Route path="/knowledge/:slug" element={<PostDetail />} />
 
