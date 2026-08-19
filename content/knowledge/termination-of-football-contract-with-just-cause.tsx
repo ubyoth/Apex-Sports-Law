@@ -344,23 +344,35 @@ const FootballContractJustCause: React.FC = () => {
 
             {/* Internal linking opportunity */}
             <p>
-              For further insights into FIFA’s regulatory framework on player
-              protection and contractual relationships, see our analysis on{" "}
-              <Link
-                to="/knowledge/fifa-parents-education-on-football"
-                className="text-accent-gold font-semibold hover:underline"
-              >
-                FIFA Parents’ Education on Football Agents
-              </Link>{" "}
-              and our guide on{" "}
-              <Link
-                to="/knowledge/fake-agent-nightmare"
-                className="text-accent-gold font-semibold hover:underline"
-              >
-                fake football agents and trial scams
-              </Link>
-              .
-            </p>
+  This article forms Part I of our analysis of termination with just cause under
+  Article 14 of the FIFA RSTP. Continue with{" "}
+  <Link
+    to="/knowledge/fifa-article-14-2-abusive-conduct-football-contract"
+    className="text-accent-gold font-semibold hover:underline"
+  >
+    Part II: Abusive Conduct
+  </Link>{" "}
+  for an examination of abusive conduct by clubs and players and the relevant
+  FIFA and CAS jurisprudence.
+</p>
+
+<p>
+  You can also read our analysis on{" "}
+  <Link
+    to="/knowledge/fifa-parents-education-on-football"
+    className="text-accent-gold font-semibold hover:underline"
+  >
+    FIFA Parents’ Education on Football Agents
+  </Link>{" "}
+  and our guide on{" "}
+  <Link
+    to="/knowledge/fake-agent-nightmare"
+    className="text-accent-gold font-semibold hover:underline"
+  >
+    fake football agents and trial scams
+  </Link>
+  .
+</p>
 
             <h2 className="text-2xl font-bold text-black dark:text-white pt-6">
               Express Grounds Under the RSTP
