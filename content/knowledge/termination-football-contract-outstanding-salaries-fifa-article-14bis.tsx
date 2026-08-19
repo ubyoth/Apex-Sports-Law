@@ -427,7 +427,7 @@ const TerminationOutstandingSalaries: React.FC = () => {
 
                 <li>
                   <Link
-                    to="/knowledge/termination-football-contract-abusive-conduct"
+                    to="/knowledge/fifa-article-14-2-abusive-conduct-football-contract"
                     className="text-accent-gold font-semibold hover:underline"
                   >
                     Termination of a Football Contract with Just Cause: Abusive
