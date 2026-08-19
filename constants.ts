@@ -256,4 +256,24 @@ This article examines abusive conduct by clubs and players, relevant FIFA and CA
     `,
   },
 
+    {
+    id: "bp8",
+    title:
+      "Termination of a Football Contract with Just Cause for Outstanding Salaries (Part III)",
+    excerpt:
+      "Article 14bis of the FIFA Regulations on the Status and Transfer of Players addresses the termination of football contracts where clubs fail to pay players their agreed remuneration.",
+    author: "Yahaya Othman",
+    date: "2026-08-05",
+    readTime: "5 min read",
+    category: "Sports Law",
+    imageUrl:
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1787128212/Gemini_Generated_Image_jok1osjok1osjok1_zjixnk.jpg",
+    featured: true,
+    slug: "termination-football-contract-outstanding-salaries-fifa-article-14bis",
+    content: `
+Clubs have an absolute duty to consistently pay their players the agreed remuneration as and when due. This is the principle that underscores Article 14bis of the FIFA Regulations on the Status and Transfer of Players. This provision was specifically introduced in 2018 to address the incessant incidents of failure and delay by clubs to pay the agreed remuneration to players.
+In fact, majority of disputes between players and clubs brought before the Dispute Resolution Chamber (DRC) and, eventually to CAS, centers on non-payment of salaries and other accruals.
+This article will examine the specific provisions and the procedures for enforcement when there is a default.
+    `,
+  },
 ];
