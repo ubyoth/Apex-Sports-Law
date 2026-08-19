@@ -233,10 +233,14 @@ const FIFAArticle14AbusiveConduct: React.FC = () => {
             </p>
 
             <blockquote className="border-l-4 border-accent-gold pl-6 italic text-slate-600 dark:text-slate-400">
-              “Any abusive conduct of a party aiming at forcing the counterparty
-              to terminate or change the terms of the contract shall entitle the
-              counterparty (a player or a club) to terminate the contract with just
-              cause.”
+            <a
+             href="https://digitalhub.fifa.com/m/40da0f707efdd011/original/FIFA-Commentary-on-the-FIFA-Regulations-for-the-Status-and-Transfer-of-Players-2023-edition.pdf"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="text-accent-gold font-semibold hover:underline"
+            >
+             Any abusive conduct of a party aiming at forcing the counterparty to terminate or change the terms of the contract shall entitle the counterparty (a player or a club) to terminate the contract with just cause.
+            </a>
             </blockquote>
 
             <p>
