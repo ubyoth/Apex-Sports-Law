@@ -43,12 +43,10 @@ const SuccessStories: React.FC = () => {
                 <div className="space-y-6">
                   <div>
                     <span className="text-[10px] font-bold text-accent-gold uppercase block mb-2 tracking-widest opacity-80">The Context</span>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{story.challenge}</p>
                   </div>
                   <div>
                     <span className="text-[10px] font-bold text-accent-gold uppercase block mb-2 tracking-widest opacity-80">Our Resolution</span>
-                    <p className="text-base text-black dark:text-slate-200 font-bold leading-relaxed">{story.result}</p>
-                  </div>
+                    </div>
                 </div>
               </div>
               <div className="p-8 pt-0 mt-auto"> 
