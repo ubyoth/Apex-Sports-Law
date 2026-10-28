@@ -101,28 +101,10 @@ const Contact: React.FC = () => {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl">
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-8">
-                Let&apos;s Discuss <br />
-                <span className="text-accent-gold">Your Case</span>
-              </h1>
               <p className="text-xl text-slate-400 mb-12 leading-relaxed">
-                We are ready to provide you with expert legal guidance. Excellence, precision, and
-                confidentiality are our cornerstones.
+                We are ready to provide you with expert legal guidance. 
+                Excellence, precision, and confidentiality are our cornerstones.
               </p>
-              <div className="flex flex-wrap gap-10">
-                <div className="flex items-center text-accent-gold">
-                  <span className="material-icons mr-3">verified</span>
-                  <span className="font-black uppercase tracking-widest text-xs">
-                    Partner-led service
-                  </span>
-                </div>
-                <div className="flex items-center text-accent-gold">
-                  <span className="material-icons mr-3">security</span>
-                  <span className="font-black uppercase tracking-widest text-xs">
-                    Confidential handling
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
