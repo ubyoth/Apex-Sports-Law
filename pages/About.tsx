@@ -13,15 +13,9 @@ const About: React.FC = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <span className="inline-block py-1 px-4 rounded-full bg-accent-gold/10 text-accent-gold text-xs font-bold uppercase tracking-[0.3em] mb-8 border border-accent-gold/20">
-              Leadership & Vision
-            </span>
             <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
               About Our <span className="text-accent-gold">Founding Partner</span>
             </h1>
-            <p className="text-xl text-slate-400 leading-relaxed font-light">
-              Building a practice on the foundations of technical mastery, strategic foresight, and unwavering commitment to client resolution.
-            </p>
           </div>
         </div>
       </header>
@@ -110,10 +104,6 @@ const About: React.FC = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-3xl font-black text-black dark:text-white mb-8 border-l-4 border-accent-gold pl-6 uppercase tracking-tight">The Boutique Philosophy</h3>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10 italic">
-                      "Excellence in legal practice is not an act, but a habit of meticulous precision and relentless strategy. At Apex, we bridge the gap between heavy-weight technical expertise and the nimble responsiveness of a modern specialist firm."
-                    </p>
                     <div className="p-10 bg-black rounded-[2rem] border border-accent-gold/20 text-white relative overflow-hidden group">
                        <div className="relative z-10">
                           <h4 className="text-2xl font-bold mb-6 text-accent-gold">Direct Partner Engagement</h4>
@@ -135,9 +125,6 @@ const About: React.FC = () => {
       <section className="bg-slate-50 dark:bg-secondary-grey/5 py-24 border-t border-slate-100 dark:border-accent-gold/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-black text-black dark:text-white mb-6 uppercase tracking-tight">Ready to Resolve Your Legal Challenge?</h2>
-          <p className="text-slate-500 dark:text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
-            Experience the precision and strategic depth that defines Yahaya's practice.
-          </p>
           <a 
             href="https://calendly.com/apexsportslaw-info/30min" 
             target="_blank" 
