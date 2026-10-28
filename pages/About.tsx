@@ -105,11 +105,7 @@ const About: React.FC = () => {
 
                   <div>
                     <div className="p-10 bg-black rounded-[2rem] border border-accent-gold/20 text-white relative overflow-hidden group">
-                       <div className="relative z-10">
-                          <h4 className="text-2xl font-bold mb-6 text-accent-gold">Direct Partner Engagement</h4>
-                          <p className="text-slate-400 mb-8 leading-relaxed">
-                            Every brief entrusted to our firm is led personally by Yahaya, ensuring that your most critical legal matters benefit from a decade of high-stakes dispute resolution and corporate experience. No delegation to juniors, no loss of strategic continuity.
-                          </p>
+                       <div className="relative z-10">   
                        </div>
                        <span className="material-icons absolute -bottom-10 -right-10 text-accent-gold/5 text-[200px] pointer-events-none group-hover:scale-110 transition-transform duration-1000">gavel</span>
                     </div>
