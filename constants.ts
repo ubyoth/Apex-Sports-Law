@@ -89,33 +89,29 @@ export const SUCCESS_STORIES: SuccessStory[] = [
   {
     id: 'ss1',
     category: 'Sports Law',
-    title: 'Ballers Support & LawInSport Mentorship',
-    challenge: 'Amateur athletes transitioning to professional sports usually lack adequate legal protection and contract navigation expertise.',
-    result: 'Established partnership with Ballers Support for pro bono services. Also, our founding partner participated in LawInSport Global Mentoring Scheme (2023).',
+    title: 'Athlete Support & Continuous Professional Development',
+    challenge: 'To address the legal and contractual vulnerabilities emerging athletes face when transitioning into professional sports, our practice established a formal pro bono collaboration with Ballers Support, providing accessible contract literacy and legal guidance to rising talent. In line with our commitment to legal excellence and global best practices, our Founding Partner was also selected as a mentee in the prestigious LawInSport Global Mentoring Scheme (2023), deepening our connection with international industry standards to better serve the sporting community.',
     imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop'
   },
   {
     id: 'ss2',    
     category: 'Intellectual Property',
     title: 'Athlete Image Rights & Brand Protection',
-    challenge: 'Athletes in creative industries faced challenges in trademark registration and commercial exploitation of their digital likeness.',
-    result: 'Successfully reviewed and negotiated image rights and copyright provisions in athlete contracts, aligning them with international standards.',
+    challenge: 'To support athletes operating within creative and digital industries facing challenges around trademark protection and commercial exploitation, our practice provides specialized guidance on the management of digital likeness and intellectual property. We have systematically reviewed and negotiated complex image rights and copyright provisions within athlete contracts, ensuring robust brand protection and alignment with international legal standards.',
     imageUrl: 'https://images.unsplash.com/photo-1453941403708-3c32160971fd?q=80&w=2072&auto=format&fit=crop'
   },
   {
     id: 'ss3',
     category: 'Corporate & Commercial',
-    title: 'Strategic Restructuring & CAC Compliance',
-    challenge: 'Businesses required complex corporate structuring, governance realignment, and regulatory compliance across multiple entities.',
-    result: 'Successfully completed nine (9) corporate restructuring matters before the CAC, including post-incorporation amendments and shareholding realignments.',
+    title: 'Strategic Corporate Restructuring & Regulatory Compliance',
+    challenge: 'To assist businesses navigating complex governance realignment and multi-entity structuring, our practice delivers comprehensive regulatory advisory and compliance solutions. We have successfully executed numerous corporate restructuring matters before the Corporate Affairs Commission (CAC), handling complex post-incorporation amendments, statutory filings, and shareholding realignments to ensure full regulatory alignment and operational efficiency.',
     imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop'
   },
   {
     id: 'ss4',    
     category: 'Labour Law',
-    title: 'Recovery of ₦1M+ in Employment Disputes',
-    challenge: 'An employee faced wrongful denial of salary arrears and earned bonuses in a complex workplace conflict.',
-    result: 'Secured the successful recovery of arrears exceeding ₦1,000,000 and negotiated over a dozen employment agreements for diverse clients.',
+    title: 'Employment Dispute Resolution & Executive Advisory',
+    challenge: 'Navigating complex workplace conflicts requires decisive advocacy to protect client compensation and contractual rights. Our practice has successfully resolved high-stakes employment disputes—securing the full recovery of withheld salary arrears, earned bonuses, and statutory entitlements for affected professionals—while regularly advising corporate and individual clients on the negotiation and drafting of comprehensive employment agreements.',
     imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop'
   }
 ];
