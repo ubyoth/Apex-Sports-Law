@@ -42,10 +42,10 @@ const SuccessStories: React.FC = () => {
                 <h3 className="text-2xl font-bold mb-6 text-black dark:text-white leading-tight group-hover:text-accent-gold transition-colors">{story.title}</h3>
                 <div className="space-y-6">
                   <div>
-                    <span className="text-[10px] font-bold text-accent-gold uppercase block mb-2 tracking-widest opacity-80">The Context</span>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{story.challenge}</p>
                   </div>
                   <div>
-                    <span className="text-[10px] font-bold text-accent-gold uppercase block mb-2 tracking-widest opacity-80">Our Resolution</span>
+                    <p className="text-base text-black dark:text-slate-200 font-bold leading-relaxed">{story.result}</p>
                     </div>
                 </div>
               </div>
