@@ -66,7 +66,7 @@ const SuccessStories: React.FC = () => {
             rel="noopener noreferrer"
             className="inline-block bg-accent-gold text-black px-8 py-3.5 rounded-lg font-bold text-base hover:bg-yellow-600 transition-all shadow-2xl shadow-accent-gold/20"
           >
-            Schedule Your Confidential Consultation
+            Schedule Your Consultation
           </a>
         </div>
       </section>
