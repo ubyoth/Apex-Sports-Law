@@ -149,8 +149,8 @@ const KnowledgeCentre: React.FC = () => {
         image: post.imageUrl ? [post.imageUrl] : undefined,
         author: post.author
           ? { "@type": "Person", name: post.author }
-          : { "@type": "Organization", name: "Apex Sports Law" },
-        publisher: { "@type": "Organization", name: "Apex Sports Law" },
+          : { "@type": "Organization", name: "Apex Advocates" },
+        publisher: { "@type": "Organization", name: "Apex Advocates" },
         datePublished: iso,
         dateModified: iso,
       };
@@ -159,10 +159,10 @@ const KnowledgeCentre: React.FC = () => {
     return {
       "@context": "https://schema.org",
       "@type": "Blog",
-      name: "Apex Sports Law Knowledge Centre",
+      name: "Apex Advocates Knowledge Centre",
       url: PAGE_URL,
       description:
-        "Legal insights on sports law, FIFA regulations, football contracts, arbitration and dispute resolution.",
+        "Legal insights on corporate law, commercial dispute resolution, employment law, arbitration, and sports law.",
       blogPost: items,
     };
   }, [posts]);
@@ -170,23 +170,23 @@ const KnowledgeCentre: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Sports Law Articles & Legal Briefs | Apex Sports Law Knowledge Centre</title>
+        <title>Legal Articles & Insights | Apex Advocates Knowledge Centre</title>
         <meta
           name="description"
-          content="Legal insights on sports law, FIFA regulations, football contracts, arbitration and dispute resolution from Apex Sports Law in Lagos, Nigeria."
+          content="Expert legal insights on corporate law, commercial dispute resolution, labor law, arbitration, and sports law from Apex Advocates in Lagos, Nigeria."
         />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Apex Sports Law" />
+        <meta property="og:site_name" content="Apex Advocates" />
         <meta
           property="og:title"
-          content="Apex Knowledge Centre | Sports Law Articles & Legal Briefs"
+          content="Apex Knowledge Centre | Legal Articles & Insights"
         />
         <meta
           property="og:description"
-          content="Read legal briefs on football contracts, transfers, FIFA regulations, arbitration and dispute resolution."
+          content="Read legal briefs on corporate advisory, dispute resolution, commercial arbitration, and sports law."
         />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
@@ -194,18 +194,18 @@ const KnowledgeCentre: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Apex Sports Law Knowledge Centre | Sports Law Articles & Legal Briefs"
+          content="Apex Advocates Knowledge Centre | Legal Articles & Insights"
         />
         <meta
           name="twitter:description"
-          content="Legal briefs on football contracts, transfers, FIFA regulations, arbitration and dispute resolution."
+          content="Legal briefs on corporate advisory, dispute resolution, commercial arbitration, and sports law."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
         <script type="application/ld+json">{JSON.stringify(blogJsonLd)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-background-light dark:bg-black py-16">
+      <div className="min-h-screen bg-background-light dark:bg-black py-16 font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center lg:text-left">
             <h1 className="text-5xl md:text-6xl font-black text-black dark:text-white mb-6">
@@ -298,7 +298,7 @@ const KnowledgeCentre: React.FC = () => {
 
                         <div className="pt-6 border-t border-slate-100 dark:border-accent-gold/10 flex items-center justify-between">
                           <span className="text-xs font-bold text-black dark:text-slate-300">
-                            By {post.author || "Apex Sports Law"}
+                            By {post.author || "Apex Advocates"}
                           </span>
 
                           <div className="flex gap-4">
@@ -402,17 +402,16 @@ const KnowledgeCentre: React.FC = () => {
                       </span>
 
                       <h3 className="text-2xl font-bold text-white mb-6 leading-tight">
-                        Apex Sports Law Officially Launches in Lagos
+                        Apex Advocates Officially Launches in Lagos
                       </h3>
 
                       <p className="text-xs text-slate-400 leading-relaxed">
                         <span className="block mb-2">
-                          Founded in August 2025 by Yahaya Oruma Othman, Esq., with experience in
-                          corporate law, arbitration, and commercial dispute resolution.
+                          Founded in August 2025 by Yahaya Oruma Othman, Esq., specializing in
+                          corporate law, dispute resolution, arbitration, and sports law.
                         </span>
                         <span className="block italic text-slate-500">
-                          Providing professional and confidential legal assistance in football or
-                          other sports-related matters.
+                          Providing professional and confidential legal representation for institutional and individual clients.
                         </span>
                       </p>
                     </div>
