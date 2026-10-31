@@ -5,7 +5,7 @@ import { PRACTICE_AREAS } from "../constants";
 
 const SITE_URL = "https://apexsportslaw.com";
 const PAGE_URL = `${SITE_URL}/practices`;
-const OG_IMAGE = `${SITE_URL}/og/practice-areas.jpg`; // you can temporarily use /og/default.jpg
+const OG_IMAGE = `${SITE_URL}/og/practice-areas.jpg`;
 
 const Practices: React.FC = () => {
   const featuredAreas = PRACTICE_AREAS.filter(
@@ -30,29 +30,33 @@ const Practices: React.FC = () => {
     })),
   };
 
-  // Optional: org-level info (safe + generic)
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Apex Sports Law",
+    name: "Apex Advocates",
     url: SITE_URL,
-    areaServed: "NG",
+    areaServed: ["NG", "Africa"],
     address: {
       "@type": "PostalAddress",
       addressLocality: "Lagos",
       addressCountry: "NG",
     },
-    serviceType: ["Sports law", "Arbitration", "Corporate advisory"],
+    serviceType: [
+      "Corporate Advisory",
+      "Arbitration & Dispute Resolution",
+      "Labour & Employment Law",
+      "Sports Law & Governance"
+    ],
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
+    <div className="min-h-screen bg-white dark:bg-black font-sans">
       <Helmet>
         {/* Primary SEO */}
-        <title>Practice Areas | Sports Law, Arbitration & Corporate Advisory | Apex Sports Law</title>
+        <title>Practice Areas | Corporate Law, Dispute Resolution & Sports Law | Apex Advocates</title>
         <meta
           name="description"
-          content="Explore Apex Sports Law’s practice areas in Lagos, Nigeria: Sports Law (football contracts, transfers, FIFA regulations), Arbitration & Dispute Resolution, and Corporate Advisory."
+          content="Explore Apex Advocates’ practice areas in Lagos, Nigeria: Corporate & Commercial Advisory, Dispute Resolution & Arbitration, Employment Law, and Sports Law."
         />
         <link rel="canonical" href={PAGE_URL} />
 
@@ -61,21 +65,21 @@ const Practices: React.FC = () => {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Apex Sports Law" />
-        <meta property="og:title" content="Practice Areas | Apex Sports Law" />
+        <meta property="og:site_name" content="Apex Advocates" />
+        <meta property="og:title" content="Practice Areas | Apex Advocates" />
         <meta
           property="og:description"
-          content="Sports Law, Arbitration & Dispute Resolution, and Corporate Advisory services in Lagos, Nigeria."
+          content="Corporate Advisory, Commercial Dispute Resolution, Labour Law, and Sports Law services in Lagos, Nigeria."
         />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Practice Areas | Apex Sports Law" />
+        <meta name="twitter:title" content="Practice Areas | Apex Advocates" />
         <meta
           name="twitter:description"
-          content="Sports Law, Arbitration & Dispute Resolution, and Corporate Advisory services in Lagos, Nigeria."
+          content="Corporate Advisory, Commercial Dispute Resolution, Labour Law, and Sports Law services in Lagos, Nigeria."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -100,8 +104,8 @@ const Practices: React.FC = () => {
           </h1>
 
           <p className="max-w-3xl mx-auto text-xl text-slate-400 leading-relaxed font-light">
-            Apex Sports Law offers a comprehensive suite of legal services designed
-            to protect and promote the commercial interests of our global and local clientele.
+            Apex Advocates offers a comprehensive suite of commercial legal services designed
+            to protect and promote the commercial interests of our institutional, corporate, and individual clientele across Africa.
           </p>
         </div>
       </header>
@@ -124,16 +128,15 @@ const Practices: React.FC = () => {
                     <span className="material-icons text-accent-gold">{area.icon}</span>
                   </div>
 
-                  {/* Keep these as H2s for page structure */}
                   <h2 className="text-3xl font-bold text-black dark:text-white uppercase tracking-tight">
                     {area.title}
                   </h2>
                 </div>
 
-                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
+                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10 font-light">
                   {area.description} Our firm leverages a decade of experience to provide
-                  "outside the box" resolutions for complex legal challenges within this domain.
-                  We ensure that every strategy is meticulously tailored to the specific needs of
+                  strategic resolutions for complex legal challenges within this domain.
+                  We ensure that every advice is meticulously tailored to the specific commercial needs of
                   our clients.
                 </p>
 
@@ -214,7 +217,7 @@ const Practices: React.FC = () => {
               },
               {
                 title: "Alternative Dispute Resolution First",
-                desc: "We deploy negotiation, mediation, and arbitration as strategic tools to resolve disputes efficiently, preserve relationships, and avoid the cost and unpredictability of litigation.",
+                desc: "We deploy negotiation, mediation, and arbitration as strategic tools to resolve disputes efficiently, preserve relationships, and avoid unnecessary litigation costs.",
                 icon: "handshake",
               },
               {
@@ -235,7 +238,7 @@ const Practices: React.FC = () => {
                 <h4 className="text-xl font-bold mb-4 text-black dark:text-white uppercase tracking-tight">
                   {step.title}
                 </h4>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-light">
                   {step.desc}
                 </p>
               </div>
