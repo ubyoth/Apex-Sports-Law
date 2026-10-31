@@ -19,7 +19,18 @@ export default {
                 "legal-black": "#050505",
             },
             fontFamily: {
-                "display": ["Public Sans", "sans-serif"]
+                "display": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+                "sans": [
+                    "Inter",
+                    "system-ui",
+                    "-apple-system",
+                    "BlinkMacSystemFont",
+                    "Segoe UI",
+                    "Roboto",
+                    "Helvetica Neue",
+                    "Arial",
+                    "sans-serif"
+                ]
             }
         },
     },
