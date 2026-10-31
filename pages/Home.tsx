@@ -9,24 +9,6 @@ const OG_IMAGE = `${SITE_URL}/og/default.jpg`;
 const Home: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const galleryImages = [
-    {
-      url: "https://unsplash.com/photos/white-and-blue-soccer-ball-on-green-grass-field-OgqWLzWRSaI?q=80&w=2070&auto=format&fit=crop",
-      title: "The Law Library",
-      category: "Research",
-    },
-    {
-      url: "https://unsplash.com/photos/white-and-blue-soccer-ball-on-green-grass-field-OgqWLzWRSaI?q=80&w=2070&auto=format&fit=crop",
-      title: "Chambers Boardroom",
-      category: "Strategic Meetings",
-    },
-    {
-      url: "https://unsplash.com/photos/white-and-blue-soccer-ball-on-green-grass-field-OgqWLzWRSaI?q=80&w=2070&auto=format&fit=crop",
-      title: "Litigation Review",
-      category: "Case Prep",
-    },
-  ];
-
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
@@ -39,11 +21,11 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Apex Sports Law | Sports Lawyers for Footballers, Clubs & Agents </title>
+        <title>Apex Advocates | Corporate Law, Dispute Resolution & Sports Law in Nigeria</title>
 
         <meta
           name="description"
-          content="Apex Sports Law advises footballers, clubs and agents on football contracts, FIFA regulations, transfers, disputes and sports arbitration in Nigeria."
+          content="Apex Advocates is a premier full-service law firm in Lagos, Nigeria, specializing in corporate advisory, commercial dispute resolution, labor law, and sports law."
         />
 
         <link rel="canonical" href="https://apexsportslaw.com/" />
@@ -51,14 +33,14 @@ const Home: React.FC = () => {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Apex Sports Law" />
+        <meta property="og:site_name" content="Apex Advocates" />
         <meta
           property="og:title"
-          content="Apex Sports Law | Sports Lawyers for Footballers, Clubs & Agents"
+          content="Apex Advocates | Corporate Law, Dispute Resolution & Sports Law"
         />
         <meta
           property="og:description"
-          content="Sports law advice for footballers, clubs and agents on contracts, transfers, FIFA regulations and disputes."
+          content="Full-service commercial law practice providing strategic legal counsel across corporate advisory, dispute resolution, employment, and sports law in Nigeria and Africa."
         />
         <meta property="og:url" content="https://apexsportslaw.com/" />
         <meta property="og:image" content={OG_IMAGE} />
@@ -70,11 +52,11 @@ const Home: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Apex Sports Law | Sports Lawyers for Footballers, Clubs & Agents"
+          content="Apex Advocates | Corporate Law, Dispute Resolution & Sports Law"
         />
         <meta
           name="twitter:description"
-          content="Sports law advice for footballers, clubs and agents on contracts, transfers, FIFA regulations and disputes."
+          content="Full-service commercial law practice providing strategic legal counsel across corporate advisory, dispute resolution, employment, and sports law in Nigeria and Africa."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -83,7 +65,7 @@ const Home: React.FC = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            name: "Apex Sports Law",
+            name: "Apex Advocates",
             url: SITE_URL,
             potentialAction: {
               "@type": "SearchAction",
@@ -98,9 +80,9 @@ const Home: React.FC = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LegalService",
-            name: "Apex Sports Law",
+            name: "Apex Advocates",
             url: SITE_URL,
-            areaServed: "NG",
+            areaServed: ["NG", "Africa"],
             address: {
               "@type": "PostalAddress",
               addressLocality: "Lagos",
@@ -108,15 +90,16 @@ const Home: React.FC = () => {
             },
             image: OG_IMAGE,
             makesOffer: [
-              { "@type": "Offer", name: "Sports Law" },
+              { "@type": "Offer", name: "Corporate & Commercial Advisory" },
               { "@type": "Offer", name: "Arbitration & Dispute Resolution" },
-              { "@type": "Offer", name: "Corporate Advisory" },
+              { "@type": "Offer", name: "Labour & Employment Law" },
+              { "@type": "Offer", name: "Sports Law & Governance" },
             ],
           })}
         </script>
       </Helmet>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col font-sans">
 
         {/* Hero Section */}
         <section className="relative h-[85vh] flex items-center overflow-hidden">
@@ -141,9 +124,7 @@ const Home: React.FC = () => {
               </h1>
 
               <p className="text-xl text-slate-300 mb-10 leading-relaxed font-light">
-                Apex Sports Law advises footballers, agents and clubs on football contracts and
-                player transfers, FIFA transfer regulations, sports arbitration and dispute
-                resolution.
+                Apex Advocates is a premier full-service law practice delivering expert counsel in corporate advisory, commercial dispute resolution, employment law, and specialized sports law across Nigeria and Africa.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -160,7 +141,7 @@ const Home: React.FC = () => {
 
         </section>
 
-        {/* Lean Practice Areas Section */}
+        {/* Practice Areas Section */}
         <section className="py-24 bg-white dark:bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -249,8 +230,7 @@ const Home: React.FC = () => {
                 </p>
 
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-                  Yahaya Oruma Othman is the Founder and Principal Partner of Apex Advocates &
-                  Solicitors.
+                  Yahaya Oruma Othman is the Founder and Principal Partner of Apex Advocates.
                 </p>
 
                 <div className="flex flex-wrap gap-8 mb-10">
