@@ -1,17 +1,16 @@
-
 import { PracticeArea, SuccessStory, BlogPost, TeamMember } from './types';
 
 export const FOUNDER_BIO: TeamMember = {
   name: 'Yahaya Oruma Othman, Esq.',
   role: 'Founder & Principal Partner',
   imageUrl: 'https://res.cloudinary.com/dq7vjblwd/image/upload/v1771278933/1740250408076_jnhl5j.jpg',
-  bio: `Yahaya Oruma Othman is the Founder and Principal Partner of Apex Sports Law. He holds an LL.B from the University of Jos and was called to the Nigerian Bar in 2015 as a Barrister and Solicitor of the Supreme Court of Nigeria. He is a member of the Nigerian Bar Association (NBA) and an Associate of the Chartered Institute of Arbitrators (United Kingdom).
+  bio: `Yahaya Oruma Othman is the Founder and Principal Partner of Apex Advocates. He holds an LL.B from the University of Jos and was called to the Nigerian Bar in 2015 as a Barrister and Solicitor of the Supreme Court of Nigeria. He is a member of the Nigerian Bar Association (NBA) and an Associate of the Chartered Institute of Arbitrators (United Kingdom).
 
-With ten years of experience in private practice, Yahaya has advised clients on corporate transactions, arbitration, contract law, labour and employment disputes, and commercial litigation. His track record includes successfully representing parties in high-stakes disputes, navigating complex regulatory environments, and delivering pragmatic solutions to commercial challenges.
+With ten years of experience in private practice, Yahaya has advised institutional and individual clients on corporate transactions, commercial arbitration, contract law, labour and employment disputes, and high-stakes litigation. His track record includes successfully representing parties in complex commercial disputes, navigating regulatory environments, and delivering pragmatic, result-oriented legal counsel.
 
-His intellectual property practice has grown through work with businesses and creators on trademark protection, copyright enforcement, and licensing structures aligned with Nigeria's IP regime and international best practices.
+His intellectual property practice encompasses working with businesses and creators on trademark protection, copyright enforcement, and licensing structures aligned with Nigeria's IP regime and international best practices.
 
-Yahaya's professional interests include corporate advisory, arbitration, sports law. He established Apex Sports Law to provide legal counsel to footballers, agents and clubs on: football contracts and player transfers, FIFA transfer regulations, sports arbitration and dispute resolution, image rights and sponsorship agreements. Delivered with the agility, transparency, and cost-efficiency of a specialist boutique firm.`,
+Yahaya's core practice focus covers corporate advisory, dispute resolution, employment law, and sports law. He established Apex Advocates to deliver specialized, agile, and cost-efficient legal solutions tailored to enterprise, institutional, and individual clients across Nigeria and broader Africa.`,
   qualifications: [
     'Master in International Sports Law (in view) – ISDE', 
     'LL.B, University of Jos',
@@ -24,63 +23,63 @@ Yahaya's professional interests include corporate advisory, arbitration, sports 
 
 export const PRACTICE_AREAS: PracticeArea[] = [
   {
-    id: 'sports',
-    title: 'Sports Law & Athlete Representation',
-    description: 'Specialized legal management for the modern sports professional.',
-    icon: 'sports_soccer',
+    id: 'corporate-advisory',
+    title: 'Corporate & Commercial Advisory',
+    description: 'Strategic guidance for businesses, investors, and startups at every stage of growth.',
+    icon: 'business',
     services: [
-      'Athlete contracts and negotiations',
-      'Image rights and licensing',
-      'Endorsement and sponsorship agreements',
-      'Regulatory compliance for sports orgs'
+      'Corporate restructuring and CAC regulatory compliance',
+      'Business incorporation and entity structuring',
+      'Commercial contract drafting and negotiation',
+      'M&A, joint ventures, and governance risk assessment'
     ]
   },
   {
-    id: 'corporate-advisory',
-    title: 'Corporate & Commercial Advisory',
-    description: 'Strategic guidance for businesses at every stage of growth.',
-    icon: 'business',
+    id: 'arbitration',
+    title: 'Dispute Resolution & Arbitration',
+    description: 'Partner-led commercial dispute resolution through strategic litigation, mediation, and arbitration.',
+    icon: 'balance',
     services: [
-      'Corporate restructuring and CAC filings',
-      'Business incorporation (LLC, Ltd/Gte)',
-      'Commercial contract drafting and review',
-      'Risk assessment and governance'
+      'Domestic and international commercial arbitration',
+      'Debt recovery and judgment enforcement',
+      'Civil and commercial litigation',
+      'Alternative Dispute Resolution (ADR)'
     ]
   },
   {
     id: 'labour',
-    title: 'Employment & Labour Disputes',
-    description: 'Protecting rights and interests in the professional workspace.',
+    title: 'Employment & Labour Law',
+    description: 'Protecting corporate rights and executive interests in the modern workspace.',
     icon: 'gavel',
     services: [
-      'Employment contract negotiation',
-      'Workplace dispute resolution',
-      'Disciplinary and termination advisory',
-      'Labour law regulatory compliance'
+      'Executive employment contract negotiation',
+      'Workplace dispute resolution & NIC representation',
+      'Disciplinary, redundancy, and termination advisory',
+      'Labour law regulatory compliance audits'
+    ]
+  },
+  {
+    id: 'sports',
+    title: 'Sports Law & Governance',
+    description: 'Specialized legal management for modern sports professionals, clubs, and governing bodies.',
+    icon: 'sports_soccer',
+    services: [
+      'Athlete contracts and transfer negotiations',
+      'FIFA Tribunal and CAS arbitration representation',
+      'Image rights, licensing, and endorsement agreements',
+      'Regulatory compliance for sports organizations'
     ]
   },
   {
     id: 'ip',
     title: 'Intellectual Property & Brand Protection',
-    description: 'Securing the value of your creative and industrial assets.',
+    description: 'Securing and maximizing the commercial value of creative and corporate assets.',
     icon: 'verified_user',
     services: [
-      'Trademark registration',
-      'Copyright protection and licensing',
+      'Trademark registration and management',
+      'Copyright protection and licensing structures',
       'Intellectual property enforcement',
-      'Brand management and protection'
-    ]
-  },
-  {
-    id: 'arbitration',
-    title: 'Dispute Resolution & ADR',
-    description: 'Resolving conflicts through strategic litigation and alternative means.',
-    icon: 'balance',
-    services: [
-      'Debt recovery and enforcement',
-      'Mediation and Arbitration',
-      'Civil and Commercial Litigation',
-      'Alternative Dispute Resolution (ADR)'
+      'Brand protection and digital asset management'
     ]
   }
 ];
@@ -117,33 +116,32 @@ export const SUCCESS_STORIES: SuccessStory[] = [
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
-    {
-  id: "bp1",
-  title:
-    "Termination of a Football Contract with Just Cause: A Glance at Article 14 of the FIFA RSTP",
-  excerpt:
-    "Article 14 of the FIFA Regulations on the Status and Transfer of Players governs when a player or club may lawfully terminate a football contract with just cause, without compensation or sporting sanctions.",
-  author: "Yahaya Othman",
-  date: "2026-05-22",
-  readTime: "5 minute read",
-  category: "Sports Law",
-  imageUrl:
-    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png",
-  featured: true,
-  slug: "termination-of-football-contract-with-just-cause",
-  content: `
+  {
+    id: "bp1",
+    title:
+      "Termination of a Football Contract with Just Cause: A Glance at Article 14 of the FIFA RSTP",
+    excerpt:
+      "Article 14 of the FIFA Regulations on the Status and Transfer of Players governs when a player or club may lawfully terminate a football contract with just cause, without compensation or sporting sanctions.",
+    author: "Yahaya Othman",
+    date: "2026-05-22",
+    readTime: "5 minute read",
+    category: "Sports Law",
+    imageUrl:
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png",
+    featured: true,
+    slug: "termination-of-football-contract-with-just-cause",
+    content: `
 Article 14 of the FIFA Regulations on the Status and Transfer of Players (RSTP) governs when a player or club may terminate a football contract with just cause.
 While contractual stability remains a fundamental principle in football law, FIFA and CAS jurisprudence recognise that certain breaches may justify unilateral termination without compensation or sporting sanctions.
 This article examines the meaning of just cause, the principles developed through FIFA and CAS decisions, and the legal framework governing contractual disputes in professional football.
-  `,
-},
-  
+    `,
+  },
   
   {
     id: "bp2",
     title: "FIFA’s Trial Rules vs. Africa’s Fake Agent Nightmare",
     excerpt:
-      "The debilitating effects of fake agents scams under the guise of football trials are on the rise. These scams are defined by the pay-to-play philosphy, selling false hopes and dreams to desperate players. However, what do the regulations say on trials?",
+      "The debilitating effects of fake agents scams under the guise of football trials are on the rise. These scams are defined by the pay-to-play philosophy, selling false hopes and dreams to desperate players. However, what do the regulations say on trials?",
     author: "Yahaya Othman",
     date: "2026-03-03",
     readTime: "5 min read",
@@ -159,7 +157,7 @@ However, what do the regulations say on trials?
     `,
   },
 
-   {
+  {
     id: "bp3",
     title: "FIFA Parents’ Education on Football Agents: Key Takeaways for Parents of Young Footballers",
     excerpt:
@@ -180,20 +178,19 @@ The document also demystifies the role of football agents and equips parents wit
 
   {
     id: "bp4",
-    title:  "The New IFAB Football Regulations: What Players, Clubs and Officials Should Know",
-  excerpt:
-    "A practical overview of the latest IFAB football regulation changes on throw-ins, goal kicks, substitutions, injuries and VAR protocol developments.",
-  author: "Yahaya Othman",
-  date: "2026-03-17",
-  readTime: "4 min read",
-  category: "Sports Law",
-  imageUrl:
-  "https://res.cloudinary.com/dq7vjblwd/image/upload/w_2093,q_auto,c_crop,f_auto/v1773785854/Gemini_Generated_Image_oiwmmqoiwmmqoiwm_eyyahq.png",
-  featured: true,
-  slug: "new-ifab-football-regulations",
-  content: `IFAB has approved a number of football regulation changes aimed at reducing time-wasting, minimising stoppages, and increasing effective playing time.`,
-},
-      
+    title: "The New IFAB Football Regulations: What Players, Clubs and Officials Should Know",
+    excerpt:
+      "A practical overview of the latest IFAB football regulation changes on throw-ins, goal kicks, substitutions, injuries and VAR protocol developments.",
+    author: "Yahaya Othman",
+    date: "2026-03-17",
+    readTime: "4 min read",
+    category: "Sports Law",
+    imageUrl:
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/w_2093,q_auto,c_crop,f_auto/v1773785854/Gemini_Generated_Image_oiwmmqoiwmmqoiwm_eyyahq.png",
+    featured: true,
+    slug: "new-ifab-football-regulations",
+    content: `IFAB has approved a number of football regulation changes aimed at reducing time-wasting, minimising stoppages, and increasing effective playing time.`,
+  },
 
   {
     id: "bp5",
@@ -216,8 +213,8 @@ Legal practitioners must carefully evaluate intermediary structures to avoid san
   },
 
   {
-  id: "bp6",
-  title: "The FIFA Club Licensing Regulations: Responsibilities of Member Associations and Nigerian Clubs",
+    id: "bp6",
+    title: "The FIFA Club Licensing Regulations: Responsibilities of Member Associations and Nigerian Clubs",
     excerpt:
       "This article explores the responsibilities of member associations under the FIFA CLR, with a particular focus on their impact on football clubs in Nigeria.",
     author: "Yahaya Othman",
@@ -252,7 +249,7 @@ This article examines abusive conduct by clubs and players, relevant FIFA and CA
     `,
   },
 
-    {
+  {
     id: "bp8",
     title:
       "Termination of a Football Contract with Just Cause for Outstanding Salaries (Part III)",
