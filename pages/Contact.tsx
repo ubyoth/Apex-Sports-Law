@@ -34,20 +34,20 @@ const Contact: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Contact a Sports Lawyer in Nigeria & Africa | Apex Sports Law</title>
+        <title>Contact Corporate & Dispute Resolution Lawyers in Lagos | Apex Advocates</title>
         <meta
           name="description"
-          content="Contact Apex Sports Law in Lagos, Nigeria for sports law advice, football contracts, transfers, FIFA regulations, arbitration and dispute resolution. Apex Sports Law also serves clients across Africa."
+          content="Contact Apex Advocates in Lagos, Nigeria for legal advisory in corporate law, commercial dispute resolution, employment disputes, and sports law across Africa."
         />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Apex Sports Law" />
-        <meta property="og:title" content="Contact | Apex Sports Law" />
+        <meta property="og:site_name" content="Apex Advocates" />
+        <meta property="og:title" content="Contact Us | Apex Advocates" />
         <meta
           property="og:description"
-          content="Reach Apex Sports Law for sports law, FIFA regulations, arbitration and corporate advisory in Nigeria and across Africa."
+          content="Reach Apex Advocates for corporate legal counsel, commercial arbitration, labor disputes, and sports law advisory in Nigeria and across Africa."
         />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
@@ -56,10 +56,10 @@ const Contact: React.FC = () => {
         <meta property="og:image:height" content="630" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact | Apex Sports Law" />
+        <meta name="twitter:title" content="Contact Us | Apex Advocates" />
         <meta
           name="twitter:description"
-          content="Reach Apex Sports Law for sports law, FIFA regulations, arbitration and corporate advisory in Nigeria and across Africa."
+          content="Reach Apex Advocates for corporate legal counsel, commercial arbitration, labor disputes, and sports law advisory in Nigeria and across Africa."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -68,10 +68,10 @@ const Contact: React.FC = () => {
             "@context": "https://schema.org",
             "@type": "ContactPage",
             url: PAGE_URL,
-            name: "Contact Apex Sports Law",
+            name: "Contact Apex Advocates",
             mainEntity: {
               "@type": "LegalService",
-              name: "Apex Sports Law",
+              name: "Apex Advocates",
               url: SITE_URL,
               areaServed: ["NG", "Africa"],
               address: {
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-white dark:bg-black">
+      <div className="min-h-screen bg-white dark:bg-black font-sans">
         <section className="relative py-24 bg-black overflow-hidden border-b border-accent-gold/10">
           <div className="absolute inset-0 opacity-20 pointer-events-none grayscale">
             <img
@@ -101,8 +101,11 @@ const Contact: React.FC = () => {
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-3xl">
+              <h1 className="text-5xl font-black text-white mb-6">
+                Get in Touch with <span className="text-accent-gold">Apex Advocates</span>
+              </h1>
               <p className="text-xl text-slate-400 mb-12 leading-relaxed">
-                We are ready to provide you with expert legal guidance. 
+                We are ready to provide you with expert corporate counsel, dispute resolution, and specialized legal guidance. 
                 Excellence, precision, and confidentiality are our cornerstones.
               </p>
             </div>
@@ -157,8 +160,7 @@ const Contact: React.FC = () => {
                   Connect With Us
                 </h2>
                 <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
-                  Apex Sports Law is located in Lagos, Nigeria, providing access to
-                  corporate clients and individuals across Nigeria and Africa.
+                  Apex Advocates is headquartered in Lagos, Nigeria, serving regional commercial enterprises, institutions, and individual clients across Nigeria and broader Africa.
                 </p>
 
                 <div className="space-y-10">
