@@ -14,7 +14,7 @@ const PostDetail: React.FC = () => {
   // If no post is found
   if (!post) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center font-sans bg-white dark:bg-black text-black dark:text-white">
         <h1 className="text-2xl font-bold">Article Not Found</h1>
       </div>
     );
@@ -36,11 +36,11 @@ const PostDetail: React.FC = () => {
     "image": [pageImage],
     "author": {
       "@type": "Person",
-      "name": post.author || "Apex Sports Law"
+      "name": post.author || "Apex Advocates"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Apex Sports Law",
+      "name": "Apex Advocates",
       "logo": {
         "@type": "ImageObject",
         "url": `${SITE_URL}/logo.png`
@@ -55,13 +55,13 @@ const PostDetail: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle} | Apex Sports Law</title>
+        <title>{pageTitle} | Apex Advocates</title>
         <meta name="description" content={pageDesc} />
         <link rel="canonical" href={pageUrl} />
         <meta name="robots" content="index,follow" />
 
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Apex Sports Law" />
+        <meta property="og:site_name" content="Apex Advocates" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDesc} />
@@ -76,29 +76,29 @@ const PostDetail: React.FC = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <div className="min-h-screen bg-white dark:bg-black py-20">
+      <div className="min-h-screen bg-white dark:bg-black py-20 font-sans">
         <div className="max-w-3xl mx-auto px-6">
 
           {/* Back Button */}
           <Link
             to="/knowledge"
-            className="text-accent-gold text-sm font-bold mb-6 inline-block"
+            className="text-accent-gold text-sm font-bold mb-6 inline-block hover:underline"
           >
             ← Back to Knowledge Centre
           </Link>
 
           {/* Title */}
-          <h1 className="text-4xl font-black mb-4 text-black dark:text-white">
+          <h1 className="text-4xl font-black mb-4 text-black dark:text-white leading-tight">
             {post.title}
           </h1>
 
           {/* Meta Info */}
-          <p className="text-sm text-slate-500 mb-8">
-            {post.date} • {post.readTime} • By {post.author}
+          <p className="text-sm text-slate-500 mb-8 font-medium">
+            {post.date} • {post.readTime} • By {post.author || "Apex Advocates"}
           </p>
 
           {/* Article Content */}
-          <div className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line">
+          <div className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line font-light">
             {post.content}
           </div>
 
