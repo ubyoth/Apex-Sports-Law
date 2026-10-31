@@ -1,11 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { FOUNDER_BIO } from '../constants';
 
 const SITE_URL = "https://apexsportslaw.com";
 const PAGE_URL = `${SITE_URL}/about`;
-const OG_IMAGE = FOUNDER_BIO.imageUrl;
+const OG_IMAGE = FOUNDER_BIO?.imageUrl;
 
 const About: React.FC = () => {
   return (
@@ -45,8 +44,8 @@ const About: React.FC = () => {
             name: "About Apex Advocates",
             mainEntity: {
               "@type": "Person",
-              name: FOUNDER_BIO.name,
-              jobTitle: FOUNDER_BIO.role,
+              name: FOUNDER_BIO?.name,
+              jobTitle: FOUNDER_BIO?.role,
               worksFor: {
                 "@type": "LegalService",
                 name: "Apex Advocates",
@@ -91,13 +90,13 @@ const About: React.FC = () => {
                     <div className="absolute -inset-2 bg-accent-gold/20 rounded-[2.5rem] blur-xl opacity-20"></div>
                     <div className="relative rounded-[2rem] overflow-hidden border-8 border-white dark:border-secondary-grey shadow-2xl bg-secondary-grey/10">
                       <img 
-                        src={FOUNDER_BIO.imageUrl} 
-                        alt={FOUNDER_BIO.name} 
+                        src={FOUNDER_BIO?.imageUrl} 
+                        alt={FOUNDER_BIO?.name} 
                         className="w-full h-[650px] object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-1000"
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/40 to-transparent p-10 text-white">
-                        <p className="text-3xl font-black mb-1 uppercase tracking-tight">{FOUNDER_BIO.name}</p>
-                        <p className="text-accent-gold font-black uppercase tracking-[0.2em] text-xs">{FOUNDER_BIO.role}</p>
+                        <p className="text-3xl font-black mb-1 uppercase tracking-tight">{FOUNDER_BIO?.name}</p>
+                        <p className="text-accent-gold font-black uppercase tracking-[0.2em] text-xs">{FOUNDER_BIO?.role}</p>
                       </div>
                     </div>
                   </div>
@@ -127,7 +126,7 @@ const About: React.FC = () => {
                   <div className="space-y-12">
                     <div>
                       <h3 className="text-3xl font-black text-black dark:text-white mb-8 border-l-4 border-accent-gold pl-6 uppercase tracking-tight">Professional Summary</h3>
-                      {FOUNDER_BIO.bio.split('\n\n').map((paragraph, i) => (
+                      {FOUNDER_BIO?.bio?.split('\n\n').map((paragraph, i) => (
                         <p key={i} className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-6 font-light">
                           {paragraph}
                         </p>
@@ -154,7 +153,7 @@ const About: React.FC = () => {
                       <div>
                         <h4 className="text-[10px] font-black text-accent-gold uppercase tracking-[0.3em] mb-6">Credentials</h4>
                         <ul className="space-y-4">
-                          {FOUNDER_BIO.qualifications.map((qual, i) => (
+                          {FOUNDER_BIO?.qualifications?.map((qual, i) => (
                             <li key={i} className="flex items-start gap-3 text-sm font-bold text-black dark:text-slate-200">
                               <span className="material-icons text-accent-gold text-lg mt-0.5">school</span>
                               <span>{qual}</span>
@@ -179,21 +178,6 @@ const About: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="bg-slate-50 dark:bg-secondary-grey/5 py-24 border-t border-slate-100 dark:border-accent-gold/10">
-          <div className="max-w-4xl mx-auto px-4 text-center space-y-8">
-            <h2 className="text-4xl font-black text-black dark:text-white uppercase tracking-tight">Ready to Resolve Your Legal Challenge?</h2>
-            <a 
-              href="https://calendly.com/apexsportslaw-info/30min" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-3.5 rounded-lg font-black uppercase tracking-widest text-xs hover:scale-105 transition-all shadow-2xl shadow-accent-gold/20"
-            >
-              Direct Inquiry
-            </a>
           </div>
         </section>
       </div>
