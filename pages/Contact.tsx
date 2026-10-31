@@ -34,10 +34,10 @@ const Contact: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Contact a Sports Lawyer in Nigeria | Apex Sports Law</title>
+        <title>Contact a Sports Lawyer in Nigeria & Africa | Apex Sports Law</title>
         <meta
           name="description"
-          content="Contact Apex Sports Law in Lagos, Nigeria for sports law advice, football contracts, transfers, FIFA regulations, arbitration and dispute resolution."
+          content="Contact Apex Sports Law in Lagos, Nigeria for sports law advice, football contracts, transfers, FIFA regulations, arbitration and dispute resolution. Apex Sports Law also serves clients across Africa."
         />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
         <meta property="og:title" content="Contact | Apex Sports Law" />
         <meta
           property="og:description"
-          content="Reach Apex Sports Law for sports law, FIFA regulations, arbitration and corporate advisory in Nigeria."
+          content="Reach Apex Sports Law for sports law, FIFA regulations, arbitration and corporate advisory in Nigeria and across Africa."
         />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
         <meta name="twitter:title" content="Contact | Apex Sports Law" />
         <meta
           name="twitter:description"
-          content="Reach Apex Sports Law for sports law, FIFA regulations, arbitration and corporate advisory in Nigeria."
+          content="Reach Apex Sports Law for sports law, FIFA regulations, arbitration and corporate advisory in Nigeria and across Africa."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
               "@type": "LegalService",
               name: "Apex Sports Law",
               url: SITE_URL,
-              areaServed: "NG",
+              areaServed: ["NG", "Africa"],
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Lagos",
@@ -158,7 +158,7 @@ const Contact: React.FC = () => {
                 </h2>
                 <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-12">
                   Apex Sports Law is located in Lagos, Nigeria, providing access to
-                  corporate clients and individuals across Nigeria.
+                  corporate clients and individuals across Nigeria and Africa.
                 </p>
 
                 <div className="space-y-10">
@@ -217,34 +217,6 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-          <div className="rounded-[2.5rem] overflow-hidden shadow-2xl h-[550px] relative group border-8 border-white dark:border-accent-gold/10">
-            <img
-              alt="Map view for Lagos office"
-              className="w-full h-full object-cover grayscale opacity-60 transition-transform duration-1000 group-hover:scale-105"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7RbIvs-VjDvluQIDkAhTwL3gU3bsj5MBbvBFlBub-T1dwj47NoD8yyzHcrsXuehcgzHlSVm6bgEdBJ2HLXXPiMxkLwR7XuXnkmUAzyZqzBzzqwU4CrOELJfNQCuPwm46qKqNCn-uFjE3WzY0LT4CgGNMmdanSTqOe5pM2xcqCc1vQKdJ3jHbIcR_w7uiO7TXFIdTrtcFhbFtVTl51uJ7oF3ec_uwsrkN3gwX9RCr3KhyMG9vckqFQn-ZC1uYQUpk23CeVwTEjUMA"
-              loading="lazy"
-              decoding="async"
-            />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-
-            <div className="absolute top-10 left-10 bg-black dark:bg-black p-10 rounded-3xl shadow-2xl border border-accent-gold/30 max-w-sm backdrop-blur-xl bg-opacity-90">
-              <h3 className="text-2xl font-bold text-white mb-3">Lagos Office</h3>
-              <p className="text-sm text-slate-400 mb-8 leading-relaxed">
-                Centrally located in Lagos for our corporate partners.
-              </p>
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-accent-gold text-black px-8 py-4 rounded-xl font-bold text-sm inline-flex items-center gap-3 hover:bg-yellow-600 transition-all"
-              >
-                Navigate <span className="material-icons text-sm">open_in_new</span>
-              </a>
             </div>
           </div>
         </section>
