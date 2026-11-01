@@ -1,55 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://apexsportslaw.com/</loc>
-<priority>1.0</priority>
-</url>
+  <!-- Main Pages -->
+  <url>
+    <loc>https://apexsportslaw.com/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>1.0</priority>
+  </url>
 
-<url>
-<loc>https://apexsportslaw.com/practices</loc>
-<priority>0.9</priority>
-</url>
+  <url>
+    <loc>https://apexsportslaw.com/practices</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.9</priority>
+  </url>
 
-<url>
-<loc>https://apexsportslaw.com/practices/sports</loc>
-<priority>0.9</priority>
-</url>
+  <url>
+    <loc>https://apexsportslaw.com/practices/sports</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.9</priority>
+  </url>
 
-<url>
-<loc>https://apexsportslaw.com/success-stories</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://apexsportslaw.com/knowledge</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.9</priority>
+  </url>
 
-<url>
-<loc>https://apexsportslaw.com/knowledge</loc>
-<priority>0.9</priority>
-</url>
+  <url>
+    <loc>https://apexsportslaw.com/success-stories</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://apexsportslaw.com/knowledge/bridge-transfers-in-football</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://apexsportslaw.com/about</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
 
-<url>
-<loc>https://apexsportslaw.com/knowledge/fifa-club-licensing-regulations</loc>
-<priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://apexsportslaw.com/contact</loc>
+    <lastmod>2026-10-01</lastmod>
+    <priority>0.7</priority>
+  </url>
 
-<url>
-<loc>https://apexsportslaw.com/knowledge/fake-agent-nightmare</loc>
-<priority>0.8</priority>
-</url>
+  <!-- Knowledge Centre / Blog Articles -->
+  <url>
+    <loc>https://apexsportslaw.com/knowledge/termination-football-contract-outstanding-salaries-fifa-article-14bis</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://apexsportslaw.com/about</loc>
-<priority>0.7</priority>
-</url>
+  <url>
+    <loc>https://apexsportslaw.com/knowledge/fifa-article-14-2-abusive-conduct-football-contract</loc>
+    <lastmod>2026-06-02</lastmod>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-<loc>https://apexsportslaw.com/contact</loc>
-<priority>0.7</priority>
-</url>
+  <url>
+    <loc>https://apexsportslaw.com/knowledge/termination-of-football-contract-with-just-cause</loc>
+    <lastmod>2026-05-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://apexsportslaw.com/knowledge/fifa-parents-education-on-football</loc>
+    <lastmod>2026-04-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://apexsportslaw.com/knowledge/new-ifab-football-regulations</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://apexsportslaw.com/knowledge/fake-agent-nightmare</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://apexsportslaw.com/knowledge/fifa-club-licensing-regulations</loc>
+    <lastmod>2026-03-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://apexsportslaw.com/knowledge/bridge-transfers-in-football</loc>
+    <lastmod>2026-02-18</lastmod>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
