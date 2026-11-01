@@ -24,14 +24,12 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
     subtitle: "Enterprise Governance, M&A & Regulatory Compliance",
     icon: "business_center",
     description:
-      "We provide strategic counsel to startups, established enterprises, and international investors navigating the Nigerian and broader African business landscape. From entity structuring and CAC compliance to complex commercial contracting and cross-border M&A transactions, we ensure complete risk mitigation.",
+      "We provide strategic counsel to startups and established enterprises navigating the Nigerian and broader African business landscape. From entity structuring and CAC compliance to complex commercial contracting, we ensure complete risk mitigation.",
     services: [
       "Corporate Structuring & Governance",
-      "Mergers, Acquisitions & Joint Ventures",
       "Regulatory Compliance & CAC Filings",
       "Commercial Contract Drafting & Negotiation",
-      "Intellectual Property Protection",
-      "Foreign Direct Investment (FDI) Advisory"
+      "Joint Ventures & Strategic Partnerships"
     ],
     imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop",
   },
@@ -41,14 +39,12 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
     subtitle: "Litigation, Mediation & International Arbitration",
     icon: "gavel",
     description:
-      "When commercial disputes arise, our focus is swift, partner-led resolution that preserves enterprise value and business relationships. We represent corporate entities and executives across high-stakes commercial litigation, domestic and international arbitration, and structured mediation.",
+      "When commercial disputes arise, our focus is swift, partner-led resolution that preserves enterprise value and business relationships.",
     services: [
-      "Commercial Litigation & Appellate Practice",
       "Domestic & International Arbitration",
       "Alternative Dispute Resolution (ADR)",
       "Contractual Breach & Enforcement",
-      "Shareholder & Partnership Disputes",
-      "Asset Recovery & Debt Restructuring"
+      "Shareholder & Partnership Disputes"
     ],
     imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
   },
@@ -60,14 +56,27 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
     description:
       "We advise employers, boards, and senior executives on complex labor issues, trade union engagements, and National Industrial Court litigation. Our practice ensures robust compliance with Nigerian labor laws while crafting executive compensation packages and employment policies.",
     services: [
-      "Executive Employment Contracts & Severance",
       "Workplace Policy & Employee Handbooks",
       "Trade Union & Collective Bargaining",
-      "National Industrial Court Representation",
-      "Redundancy & Restructuring Advisory",
-      "Workplace Harassment & Compliance Audits"
+      "Executive Employment Agreements",
+      
     ],
     imageUrl: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop",
+  },
+  {
+    id: "intellectual-property",
+    title: "Intellectual Property & Brand Protection",
+    subtitle: "Trademarks, Copyrights & Commercial Licensing",
+    icon: "verified_user",
+    description:
+      "We secure and maximize the commercial value of creative and corporate assets. From trademark portfolios and copyright enforcement to complex licensing and digital asset management, we protect brand integrity across domestic and international markets.",
+    services: [
+      "Trademark Registration & Portfolio Management",
+      "Copyright Protection & Licensing Structures",
+      "Intellectual Property Infringement Enforcement",
+      "Image Rights & Brand Commercialization"
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1453941403708-3c32160971fd?q=80&w=2072&auto=format&fit=crop",
   },
   {
     id: "sports-governance",
@@ -117,6 +126,7 @@ const Practices: React.FC = () => {
       "Corporate Advisory",
       "Commercial Dispute Resolution",
       "Labour & Employment Law",
+      "Intellectual Property & Brand Protection",
       "Sports Law & Governance"
     ],
   };
@@ -124,10 +134,10 @@ const Practices: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-black font-sans">
       <Helmet>
-        <title>Full-Service Corporate, Dispute Resolution & Sports Law | Apex Advocates</title>
+        <title>Full-Service Corporate, Dispute Resolution, IP & Sports Law | Apex Advocates</title>
         <meta
           name="description"
-          content="Discover Apex Advocates' comprehensive commercial practice areas in Lagos, Nigeria: Corporate Advisory, Dispute Resolution, Employment Law, and Sports Law."
+          content="Discover Apex Advocates' comprehensive commercial practice areas in Lagos, Nigeria: Corporate Advisory, Dispute Resolution, Employment Law, Intellectual Property, and Sports Law."
         />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
@@ -137,7 +147,7 @@ const Practices: React.FC = () => {
         <meta property="og:title" content="Full-Service Practice Areas | Apex Advocates" />
         <meta
           property="og:description"
-          content="Strategic legal counsel in Corporate Advisory, Dispute Resolution, Employment Law, and Sports Law in Nigeria and across Africa."
+          content="Strategic legal counsel in Corporate Advisory, Dispute Resolution, Employment Law, Intellectual Property, and Sports Law in Nigeria and across Africa."
         />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
@@ -146,7 +156,7 @@ const Practices: React.FC = () => {
         <meta name="twitter:title" content="Full-Service Practice Areas | Apex Advocates" />
         <meta
           name="twitter:description"
-          content="Strategic legal counsel in Corporate Advisory, Dispute Resolution, Employment Law, and Sports Law in Nigeria and across Africa."
+          content="Strategic legal counsel in Corporate Advisory, Dispute Resolution, Employment Law, Intellectual Property, and Sports Law in Nigeria and across Africa."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -171,7 +181,7 @@ const Practices: React.FC = () => {
           </h1>
 
           <p className="max-w-3xl mx-auto text-xl text-slate-400 leading-relaxed font-light">
-            Apex Advocates provides partner-led legal representation across corporate transactions, commercial litigation, labor disputes, and specialized sports regulation across Nigeria and Africa.
+            Apex Advocates provides partner-led legal representation across corporate transactions, labour disputes, intellectual property protection, and specialized sports regulation across Nigeria and Africa.
           </p>
         </div>
       </header>
@@ -314,7 +324,7 @@ const Practices: React.FC = () => {
             Ready for Strategic Commercial Representation?
           </h2>
           <p className="text-slate-400 text-lg font-light max-w-2xl mx-auto">
-            Schedule a confidential consultation with our principal partner to discuss your corporate, dispute resolution, or sports advisory needs.
+            Schedule a confidential consultation with our principal partner to discuss your corporate, dispute resolution, IP, or sports advisory needs.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
