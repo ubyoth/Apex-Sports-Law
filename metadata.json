@@ -1,5 +1,22 @@
 {
   "name": "Apex Advocates & Solicitors",
-  "description": "A high-end corporate and dispute resolution law practice website featuring advanced legal insights, success stories, and an AI-powered legal assistant.",
+  "short_name": "Apex Advocates",
+  "description": "A premier corporate, commercial advisory, and dispute resolution law practice website featuring advanced legal insights, success stories, and high-performance client intake.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
   "requestFramePermissions": []
 }
