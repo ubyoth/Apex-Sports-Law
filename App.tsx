@@ -1,28 +1,34 @@
-
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+
+// Layout & Global Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import SurveyPopup from './components/SurveyPopup';
+import WhatsAppButton from './components/WhatsAppButton';
+
+// Main Pages
 import Home from './pages/Home';
+import Practices from './pages/Practices';
+import SportsLaw from './pages/SportsLaw';
 import SuccessStories from './pages/SuccessStories';
 import KnowledgeCentre from './pages/KnowledgeCentre';
-import Contact from './pages/Contact';
-import SportsLaw from './pages/SportsLaw';
-import Practices from './pages/Practices';
 import About from './pages/About';
-import SurveyPopup from './components/SurveyPopup';
-import PostDetail from "./pages/PostDetail";
-import BridgeTransfers from "./content/knowledge/bridge-transfers-in-football";
-import FIFALicensing from "./content/knowledge/fifa-club-licensing-regulations";
-import FakeAgents from "./content/knowledge/fake-agent-nightmare";
-import NewIFABFootballRegulations from "./content/knowledge/new-ifab-football-regulations";
-import FIFAParentsEducation from "./content/knowledge/fifa-parents-education-on-football";
-import FootballContractJustCause from "./content/knowledge/termination-of-football-contract-with-just-cause";
-import FIFAArticle14AbusiveConduct from "./content/knowledge/fifa-article-14-2-abusive-conduct-football-contract";
-import TerminationOutstandingSalaries from "./content/knowledge/termination-football-contract-outstanding-salaries-fifa-article-14bis";
-import ThankYou from "./pages/ThankYou";
-import WhatsAppButton from "./components/WhatsAppButton";
-const ScrollToTop = () => {
+import Contact from './pages/Contact';
+import ThankYou from './pages/ThankYou';
+import PostDetail from './pages/PostDetail';
+
+// Static Knowledge Brief Content Imports
+import BridgeTransfers from './content/knowledge/bridge-transfers-in-football';
+import FIFALicensing from './content/knowledge/fifa-club-licensing-regulations';
+import FakeAgents from './content/knowledge/fake-agent-nightmare';
+import NewIFABFootballRegulations from './content/knowledge/new-ifab-football-regulations';
+import FIFAParentsEducation from './content/knowledge/fifa-parents-education-on-football';
+import FootballContractJustCause from './content/knowledge/termination-of-football-contract-with-just-cause';
+import FIFAArticle14AbusiveConduct from './content/knowledge/fifa-article-14-2-abusive-conduct-football-contract';
+import TerminationOutstandingSalaries from './content/knowledge/termination-football-contract-outstanding-salaries-fifa-article-14bis';
+
+const ScrollToTop: React.FC = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
@@ -47,33 +53,32 @@ const App: React.FC = () => {
         <Navbar />
         <main className="flex-grow">
           <Routes>
-  {/* Main pages */}
-  <Route path="/" element={<Home />} />
-  <Route path="/practices" element={<Practices />} />
-  <Route path="/practices/sports" element={<SportsLaw />} />
-  <Route path="/success-stories" element={<SuccessStories />} />
-  <Route path="/knowledge" element={<KnowledgeCentre />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/contact" element={<Contact />} />
+            {/* Main Core Pages */}
+            <Route path="/" element={<Home />} />
+            <Route path="/practices" element={<Practices />} />
+            <Route path="/practices/sports" element={<SportsLaw />} />
+            <Route path="/success-stories" element={<SuccessStories />} />
+            <Route path="/knowledge" element={<KnowledgeCentre />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/thank-you" element={<ThankYou />} />
 
-  {/* ✅ Thank you page */}
-  <Route path="/thank-you" element={<ThankYou />} />
+            {/* Specific Knowledge Articles */}
+            <Route path="/knowledge/bridge-transfers-in-football" element={<BridgeTransfers />} />
+            <Route path="/knowledge/fifa-club-licensing-regulations" element={<FIFALicensing />} />
+            <Route path="/knowledge/fake-agent-nightmare" element={<FakeAgents />} />
+            <Route path="/knowledge/new-ifab-football-regulations" element={<NewIFABFootballRegulations />} />
+            <Route path="/knowledge/fifa-parents-education-on-football" element={<FIFAParentsEducation />} />
+            <Route path="/knowledge/termination-of-football-contract-with-just-cause" element={<FootballContractJustCause />} />
+            <Route path="/knowledge/fifa-article-14-2-abusive-conduct-football-contract" element={<FIFAArticle14AbusiveConduct />} />
+            <Route path="/knowledge/termination-football-contract-outstanding-salaries-fifa-article-14bis" element={<TerminationOutstandingSalaries />} />
+            
+            {/* Dynamic Post Catch-all */}
+            <Route path="/knowledge/:slug" element={<PostDetail />} />
 
-  {/* Knowledge articles (specific first) */}
-  <Route path="/knowledge/bridge-transfers-in-football" element={<BridgeTransfers />} />
-  <Route path="/knowledge/fifa-club-licensing-regulations" element={<FIFALicensing />} />
-  <Route path="/knowledge/fake-agent-nightmare" element={<FakeAgents />} />
-  <Route path="/knowledge/new-ifab-football-regulations" element={<NewIFABFootballRegulations />} />
-  <Route path="/knowledge/fifa-parents-education-on-football" element={<FIFAParentsEducation />} />
-  <Route path="/knowledge/termination-of-football-contract-with-just-cause" element={<FootballContractJustCause />} />
-  <Route path="/knowledge/fifa-article-14-2-abusive-conduct-football-contract" element={<FIFAArticle14AbusiveConduct />} />
-  <Route path="/knowledge/termination-football-contract-outstanding-salaries-fifa-article-14bis" element={<TerminationOutstandingSalaries />} />
-  {/* Dynamic post route LAST among /knowledge routes */}
-  <Route path="/knowledge/:slug" element={<PostDetail />} />
-
-  {/* ✅ Catch-all LAST */}
-  <Route path="*" element={<Navigate to="/" replace />} />
-</Routes>
+            {/* Wildcard Fallback */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
         </main>
         <Footer />
         <SurveyPopup />
