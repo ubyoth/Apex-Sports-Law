@@ -462,10 +462,6 @@ const KnowledgeCentre: React.FC = () => {
             <aside className="lg:w-1/3 space-y-10">
               <div className="bg-black rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden border border-accent-gold/20">
                 <div className="relative z-10">
-                  <h2 className="text-2xl font-bold mb-6 leading-tight">
-                    Stay Ahead <br />
-                    <span className="text-accent-gold">of the Law</span>
-                  </h2>
                   <p className="text-slate-400 mb-10 text-sm leading-relaxed">
                     Subscribe to the Apex Legal Insights newsletter for monthly updates delivered
                     straight to your inbox.
