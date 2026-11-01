@@ -1,54 +1,58 @@
-# Apex Sports Law — Official Website
+# Apex Advocates — Official Website
 
-Apex Sports Law is a specialist sports law practice advising footballers, agents, and clubs on contracts, transfers, FIFA regulations, and dispute resolution.
+Apex Advocates is a premier full-service commercial law firm based in Lagos, Nigeria, delivering partner-led legal counsel across Corporate & Commercial Advisory, Dispute Resolution & Arbitration, Labour & Employment Law, and specialized Sports Law & Governance.
 
-This repository contains the production codebase for the Apex Sports Law website, including its SEO-optimized Knowledge Centre.
+This repository contains the production codebase for the Apex Advocates web platform, including its SEO-optimized Knowledge Centre, practice area portfolio, and client conversion funnels.
 
 ---
 
 ## Overview
 
 The platform is designed to:
-- Provide **authoritative legal insights** on football regulations
-- Serve as a **client acquisition channel** for advisory services
-- Establish **thought leadership** in sports law across Africa
-- Deliver **high-performance, SEO-first content** targeting football stakeholders
+- Establish **authoritative commercial legal leadership** across enterprise, labor, arbitration, and sports sectors in Nigeria and broader Africa.
+- Serve as a **high-trust client acquisition channel** for corporate entities, investors, institutions, and individuals.
+- Establish **thought leadership** in corporate advisory and specialized sports governance.
+- Deliver **high-performance, SEO-first legal briefs** targeting corporate stakeholders, executives, and legal professionals.
 
 ---
 
 ## Key Capabilities
 
-### 1. Knowledge Centre (Content Engine)
-- Long-form, SEO-optimized legal articles
-- Structured for discoverability (Google, LinkedIn previews)
+### 1. Practice Architecture (Full-Service Model)
+Structured presentation of four core practice pillars:
+- **Corporate & Commercial Advisory:** M&A, CAC regulatory compliance, corporate governance, FDI, and commercial contract drafting.
+- **Dispute Resolution & Commercial Arbitration:** Litigation, domestic and international arbitration, and structured mediation.
+- **Labour & Employment Law:** Executive compensation, NIC litigation, workplace policy, and union engagements.
+- **Sports Law & Governance:** Player contracts, FIFA Football Tribunal & CAS arbitration, image rights, and regulatory defense.
+
+### 2. Knowledge Centre (Content Engine)
+- Long-form, SEO-optimized legal articles and regulatory analysis.
+- Structured for discoverability (Google indexing, rich LinkedIn/X social previews).
 - Focus areas:
   - FIFA Regulations (RSTP, agents, transfers)
-  - Football governance and compliance
-  - Player protection and dispute resolution
+  - Commercial contracts, arbitration, and labor dispute governance
+  - Intellectual property protection and image rights
 
-### 2. SEO Infrastructure
+### 3. SEO Infrastructure
 - Server-compatible metadata via `react-helmet-async`
 - Open Graph (OG) and Twitter Card optimization
 - Canonical URL enforcement
-- Structured data (Schema.org: WebSite, LegalService)
-- Internal linking strategy for topical authority
+- Structured data (Schema.org: `WebSite`, `LegalService`, `BlogPosting`, `ItemList`)
+- Dynamic XML sitemap indexing (`sitemap.xml`)
 
-### 3. Conversion Layer
-- Embedded consultation funnel (Calendly integration)
-- Service positioning across:
-  - Sports Law
-  - Arbitration & Dispute Resolution
-  - Corporate Advisory
+### 4. Conversion Layer
+- Embedded consultation funnel (Calendly integration for partner scheduling)
+- Direct contact pathways across all practice groups
 
 ---
 
 ## Tech Stack
 
-- **Frontend:** React (TypeScript) + Vite  
+- **Frontend:** React (TypeScript) + Vite + Tailwind CSS  
 - **Routing:** React Router DOM  
-- **SEO:** react-helmet-async  
+- **SEO & Metadata:** react-helmet-async  
 - **Hosting:** Firebase Hosting  
-- **Assets:** Cloudinary (images), static OG images  
+- **Assets:** Cloudinary CDN (images), static OG images  
 
 ---
 
@@ -56,10 +60,11 @@ The platform is designed to:
 
 ```bash
 /src
-  /pages
-    Home.tsx
-    PostDetail.tsx
-  /constants
-    constants.ts   # Blog content + metadata
+  /components        # Global UI components (Navbar, Footer, Modals, Buttons)
+  /content/knowledge # Static legal brief pages
+  /pages             # Core route pages (Home, Practices, KnowledgeCentre, PostDetail, About, Contact, etc.)
+  /constants         # Firm metadata, practice definitions, success stories, and blog posts
+  /types             # TypeScript interface declarations
 /public
-  /og             # Open Graph images
+  /og                # Open Graph social preview images
+  sitemap.xml        # Search engine sitemap index
