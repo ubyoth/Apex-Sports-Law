@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 flex items-center justify-center rounded">
                 <img 
-                  src="https://res.cloudinary.com/dq7vjblwd/image/upload/v1771278934/Apex_Logo_l2egs3.png" 
+                  src="/logo.png" 
                   alt="Apex Advocates Logo" 
                   className="w-full h-full object-contain"
                 />
