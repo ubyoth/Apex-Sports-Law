@@ -36,10 +36,10 @@ const Navbar: React.FC = () => {
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-xl font-extrabold tracking-tight text-primary dark:text-white uppercase">
-                Apex
+                Apex 
               </span>
               <span className="text-[10px] tracking-[0.2em] text-accent-gold font-semibold uppercase">
-                Sports Law
+                Advocates
               </span>
             </div>
           </Link>
