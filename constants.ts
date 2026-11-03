@@ -273,17 +273,14 @@ This article will examine the specific provisions and the procedures for enforce
   {
   id: "bp9",
   title: "The FIFA Regulations on the Status and Transfer of Players (RSTP) 2027: What is New?",
-  excerpt: "An overview of the key changes introduced by the FIFA Regulations on the Status and Transfer of Players (RSTP) 2027, including governance, compensation, transfer fees, menstrual health, family leave and international transfer certificates.",
+  excerpt: "An overview of the key changes introduced in the FIFA Regulations on the Status and Transfer of Players (RSTP) 2027, covering governance, liquidated compensation, players’ share in transfer fees, menstrual health, family leave and international transfer certificates.",
   author: "Yahaya Othman",
   date: "2026-11-03",
-  readTime: "6 minute read",
+  readTime: "4 minute read",
   category: "Sports Law",
   imageUrl: "https://res.cloudinary.com/dq7vjblwd/image/upload/v1793725839/anthony-maw-rFg2FJy_XA4-unsplash_ada94h.jpg",
-  featured: false,
-  slug: "fifa-rstp-2027-what-is-new",
-  content: `The highly riveting Football Law Annual Review (FLAR) 2026 held in Budapest on Thursday, 29th October 2026 on the new FIFA Regulations on the Status and Transfer of Players (RSTP) highlighted the key alterations that will shape the international transfer system from 1st January 2027.
-This is indeed a revolution because, for the first time, the rules governing the transfer system were not written by FIFA alone, but in conjunction with players, clubs and the various leagues.
-We have outlined and highlighted some of the key changes introduced into the RSTP 2027 that are worthy of note.
+  featured: true,
+  slug: "fifa-rstp-2027-what-is-new"
    `,
   },
 
