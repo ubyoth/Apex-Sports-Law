@@ -27,6 +27,7 @@ import FIFAParentsEducation from './content/knowledge/fifa-parents-education-on-
 import FootballContractJustCause from './content/knowledge/termination-of-football-contract-with-just-cause';
 import FIFAArticle14AbusiveConduct from './content/knowledge/fifa-article-14-2-abusive-conduct-football-contract';
 import TerminationOutstandingSalaries from './content/knowledge/termination-football-contract-outstanding-salaries-fifa-article-14bis';
+import FIFARSTP2027 from "./content/knowledge/fifa-rstp-2027-what-is-new";
 
 const ScrollToTop: React.FC = () => {
   const { pathname, hash } = useLocation();
@@ -72,6 +73,7 @@ const App: React.FC = () => {
             <Route path="/knowledge/termination-of-football-contract-with-just-cause" element={<FootballContractJustCause />} />
             <Route path="/knowledge/fifa-article-14-2-abusive-conduct-football-contract" element={<FIFAArticle14AbusiveConduct />} />
             <Route path="/knowledge/termination-football-contract-outstanding-salaries-fifa-article-14bis" element={<TerminationOutstandingSalaries />} />
+            <Route path="/knowledge/fifa-rstp-2027-what-is-new" element={<FIFARSTP2027 />}/>
             
             {/* Dynamic Post Catch-all */}
             <Route path="/knowledge/:slug" element={<PostDetail />} />
