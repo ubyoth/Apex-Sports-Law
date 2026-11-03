@@ -93,7 +93,7 @@ export const SUCCESS_STORIES: SuccessStory[] = [
     imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop'
   },
   {
-    id: 'ss2',    
+    id: 'ss2',   
     category: 'Intellectual Property',
     title: 'Athlete Image Rights & Brand Protection',
     challenge: 'To support athletes operating within creative and digital industries facing challenges around trademark protection and commercial exploitation, our practice provides specialized guidance on the management of digital likeness and intellectual property. We have systematically reviewed and negotiated complex image rights and copyright provisions within athlete contracts, ensuring robust brand protection and alignment with international legal standards.',
@@ -107,7 +107,7 @@ export const SUCCESS_STORIES: SuccessStory[] = [
     imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop'
   },
   {
-    id: 'ss4',    
+    id: 'ss4',   
     category: 'Labour Law',
     title: 'Employment Dispute Resolution & Executive Advisory',
     challenge: 'Navigating complex workplace conflicts requires decisive advocacy to protect client compensation and contractual rights. Our practice has successfully resolved high-stakes employment disputes—securing the full recovery of withheld salary arrears, earned bonuses, and statutory entitlements for affected professionals—while regularly advising corporate and individual clients on the negotiation and drafting of comprehensive employment agreements.',
@@ -271,17 +271,16 @@ This article will examine the specific provisions and the procedures for enforce
   },
 
   {
-  id: "bp9",
-  title: "The FIFA Regulations on the Status and Transfer of Players (RSTP) 2027: What is New?",
-  excerpt: "An overview of the key changes introduced in the FIFA Regulations on the Status and Transfer of Players (RSTP) 2027, covering governance, liquidated compensation, players’ share in transfer fees, menstrual health, family leave and international transfer certificates.",
-  author: "Yahaya Othman",
-  date: "2026-11-03",
-  readTime: "4 minute read",
-  category: "Sports Law",
-  imageUrl: "https://res.cloudinary.com/dq7vjblwd/image/upload/v1793725839/anthony-maw-rFg2FJy_XA4-unsplash_ada94h.jpg",
-  featured: true,
-  slug: "fifa-rstp-2027-what-is-new"
-   `,
-  },
-
+    id: "bp9",
+    title: "The FIFA Regulations on the Status and Transfer of Players (RSTP) 2027: What is New?",
+    excerpt: "An overview of the key changes introduced in the FIFA Regulations on the Status and Transfer of Players (RSTP) 2027, covering governance, liquidated compensation, players’ share in transfer fees, menstrual health, family leave and international transfer certificates.",
+    author: "Yahaya Othman",
+    date: "2026-11-03",
+    readTime: "4 minute read",
+    category: "Sports Law",
+    imageUrl: "https://res.cloudinary.com/dq7vjblwd/image/upload/v1793725839/anthony-maw-rFg2FJy_XA4-unsplash_ada94h.jpg",
+    featured: true,
+    slug: "fifa-rstp-2027-what-is-new",
+    content: "Overview of the key changes introduced in the FIFA Regulations on the Status and Transfer of Players (RSTP) 2027."
+  }
 ];
