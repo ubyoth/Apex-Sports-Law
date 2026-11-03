@@ -1,151 +1,191 @@
+
+import React, { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+
+const SITE_URL = "https://apexsportslaw.com";
+const SLUG = "fifa-rstp-2027-what-is-new";
+const PAGE_URL = `${SITE_URL}/knowledge/${SLUG}`;
+
+const OG_IMAGE =
+  "https://res.cloudinary.com/dq7vjblwd/image/upload/v1793725839/anthony-maw-rFg2FJy_XA4-unsplash_ada94h.jpg";
+const OG_IMAGE_FALLBACK = `${SITE_URL}/og/default.jpg`;
 
 const TITLE =
   "The FIFA Regulations on the Status and Transfer of Players (RSTP) 2027: What is New?";
 
 const DESCRIPTION =
-  "An overview of the key changes discussed in relation to the FIFA Regulations on the Status and Transfer of Players (RSTP) 2027, including governance, compensation, transfer fees, menstrual health, family leave and international transfer certificates.";
+  "An overview of the key changes introduced in the FIFA Regulations on the Status and Transfer of Players (RSTP) 2027, covering governance, liquidated compensation, players’ share in transfer fees, menstrual health, family leave and international transfer certificates.";
 
-const CANONICAL_URL =
-  "https://apexsportslaw.com/knowledge/fifa-rstp-2027-what-is-new";
+const PUBLISHED_ISO = "2026-11-03";
+const AUTHOR_NAME = "Yahaya Othman";
 
-const IMAGE_URL =
-  "https://res.cloudinary.com/dq7vjblwd/image/upload/v1793725839/anthony-maw-rFg2FJy_XA4-unsplash_ada94h.jpg";
+function formatDisplayDate(iso: string) {
+  const d = new Date(`${iso}T00:00:00Z`);
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(d);
+}
 
-const PUBLISHED_DATE = "2026-11-03";
+const FIFARSTP2027: React.FC = () => {
+  const displayDate = formatDisplayDate(PUBLISHED_ISO);
 
-const FIFARSTP2027 = () => {
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: TITLE,
-    description: DESCRIPTION,
-    image: IMAGE_URL,
-    author: {
-      "@type": "Person",
-      name: "Yahaya Othman",
+  const related = [
+    {
+      title:
+        "Termination of a Football Contract with Just Cause for Outstanding Salaries (Part III)",
+      slug: "termination-football-contract-outstanding-salaries-fifa-article-14bis",
+      note:
+        "An examination of FIFA RSTP Article 14bis and the circumstances in which outstanding salaries may justify termination of a football contract.",
     },
-    publisher: {
-      "@type": "Organization",
-      name: "Apex Sports Law",
-      url: "https://apexsportslaw.com",
+    {
+      title: "Bridge Transfers in Football",
+      slug: "bridge-transfers-in-football",
+      note:
+        "Explore the regulatory issues surrounding bridge transfers in professional football.",
     },
-    datePublished: PUBLISHED_DATE,
-    dateModified: PUBLISHED_DATE,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": CANONICAL_URL,
-    },
-    articleSection: "Sports Law",
-  };
+  ];
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://apexsportslaw.com/",
+  const breadcrumbJsonLd = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${SITE_URL}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Knowledge Centre",
+          item: `${SITE_URL}/knowledge`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: TITLE,
+          item: PAGE_URL,
+        },
+      ],
+    }),
+    []
+  );
+
+  const articleJsonLd = useMemo(
+    () => ({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+      headline: TITLE,
+      description: DESCRIPTION,
+      image: [OG_IMAGE, OG_IMAGE_FALLBACK],
+      datePublished: PUBLISHED_ISO,
+      dateModified: PUBLISHED_ISO,
+      author: { "@type": "Person", name: AUTHOR_NAME },
+      publisher: {
+        "@type": "Organization",
+        name: "Apex Sports Law",
+        url: SITE_URL,
       },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Knowledge Centre",
-        item: "https://apexsportslaw.com/knowledge-centre",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: TITLE,
-        item: CANONICAL_URL,
-      },
-    ],
-  };
+    }),
+    []
+  );
 
   return (
     <>
       <Helmet>
-        <title>{TITLE} | Apex Sports Law</title>
+        <title>{TITLE} | Apex Sports Law Knowledge Centre</title>
         <meta name="description" content={DESCRIPTION} />
-        <link rel="canonical" href={CANONICAL_URL} />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta name="robots" content="index,follow" />
 
         <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Apex Sports Law" />
         <meta property="og:title" content={TITLE} />
         <meta property="og:description" content={DESCRIPTION} />
-        <meta property="og:url" content={CANONICAL_URL} />
-        <meta property="og:image" content={IMAGE_URL} />
-        <meta property="article:published_time" content={PUBLISHED_DATE} />
-        <meta property="article:author" content="Yahaya Othman" />
-        <meta property="article:section" content="Sports Law" />
+        <meta property="og:url" content={PAGE_URL} />
+
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:secure_url" content={OG_IMAGE} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta property="og:image" content={OG_IMAGE_FALLBACK} />
+        <meta property="og:image:secure_url" content={OG_IMAGE_FALLBACK} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        <meta
+          property="article:published_time"
+          content={`${PUBLISHED_ISO}T00:00:00+01:00`}
+        />
+        <meta property="article:author" content={AUTHOR_NAME} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={TITLE} />
         <meta name="twitter:description" content={DESCRIPTION} />
-        <meta name="twitter:image" content={IMAGE_URL} />
+        <meta name="twitter:image" content={OG_IMAGE} />
 
         <script type="application/ld+json">
-          {JSON.stringify(articleSchema)}
+          {JSON.stringify(breadcrumbJsonLd)}
         </script>
         <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
+          {JSON.stringify(articleJsonLd)}
         </script>
       </Helmet>
 
-      <main className="bg-white text-black">
-        {/* Article hero */}
-        <section className="bg-black text-white">
-          <div className="mx-auto max-w-5xl px-6 py-16 md:px-10 md:py-24">
-            <nav
-              aria-label="Breadcrumb"
-              className="mb-8 text-sm text-gray-300"
-            >
-              <Link
-                to="/"
-                className="transition-colors hover:text-[#C8A96B]"
-              >
-                Home
-              </Link>
-              <span className="mx-2">/</span>
-              <Link
-                to="/knowledge-centre"
-                className="transition-colors hover:text-[#C8A96B]"
-              >
-                Knowledge Centre
-              </Link>
-              <span className="mx-2">/</span>
-              <span className="text-[#C8A96B]">Sports Law</span>
-            </nav>
+      <div className="min-h-screen bg-white dark:bg-black py-20">
+        <article className="max-w-3xl mx-auto px-6">
+          <nav aria-label="Breadcrumb" className="mb-6 text-sm">
+            <ol className="flex flex-wrap items-center gap-2 text-slate-500">
+              <li>
+                <Link
+                  to="/"
+                  className="hover:text-accent-gold transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li>
+                <Link
+                  to="/knowledge"
+                  className="hover:text-accent-gold transition-colors"
+                >
+                  Knowledge Centre
+                </Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li className="text-slate-700 dark:text-slate-300 line-clamp-1">
+                {TITLE}
+              </li>
+            </ol>
+          </nav>
 
-            <p className="mb-4 text-sm uppercase tracking-[0.2em] text-[#C8A96B]">
-              Sports Law
-            </p>
+          <Link
+            to="/knowledge"
+            className="text-accent-gold text-sm font-bold mb-6 inline-block"
+          >
+            ← Back to Knowledge Centre
+          </Link>
 
-            <h1 className="max-w-4xl font-serif text-3xl leading-tight md:text-5xl md:leading-tight">
-              {TITLE}
-            </h1>
+          <h1 className="text-4xl font-black mb-6 text-black dark:text-white">
+            {TITLE}
+          </h1>
 
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-300">
-              <span>By Yahaya Othman</span>
-              <span>November 3, 2026</span>
-            </div>
-          </div>
-        </section>
+          <p className="text-sm text-slate-500 mb-10">
+            <time dateTime={PUBLISHED_ISO}>{displayDate}</time> • 4 min read • By{" "}
+            {AUTHOR_NAME}
+          </p>
 
-        {/* Featured image */}
-        <section className="mx-auto max-w-5xl px-6 pt-10 md:px-10 md:pt-14">
-          <img
-            src={IMAGE_URL}
-            alt={TITLE}
-            className="max-h-[560px] w-full rounded-sm object-cover"
-          />
-        </section>
-
-        {/* Article body */}
-        <article className="mx-auto max-w-3xl px-6 py-12 md:px-10 md:py-16">
-          <div className="space-y-6 text-base leading-8 text-gray-800 md:text-lg md:leading-9">
+          {/* Article Body */}
+          <div className="space-y-6 text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
             <p>
               The highly riveting Football Law Annual Review (FLAR) 2026 held
               in Budapest on Thursday, 29th October 2026 on the new FIFA
@@ -169,7 +209,7 @@ const FIFARSTP2027 = () => {
               introduced into the RSTP 2027 that are worthy of note:
             </p>
 
-            <h2 className="pt-4 font-serif text-2xl text-black md:text-3xl">
+            <h2 className="text-2xl font-bold text-black dark:text-white pt-6">
               Governance Framework
             </h2>
 
@@ -189,15 +229,15 @@ const FIFARSTP2027 = () => {
               over the applicability of the RSTP.
             </p>
 
-            <h2 className="pt-4 font-serif text-2xl text-black md:text-3xl">
+            <h2 className="text-2xl font-bold text-black dark:text-white pt-6">
               Liquidated Compensation
             </h2>
 
             <p>
               By the provision of Article 17.1, parties can now agree,
               beforehand, the amount of compensation that accrues when there is
-              termination without just cause. This is one of the effects of the
-              Lassana Diarra’s decision. However, the Football Tribunal can
+              termination without just cause. This is one of the effects of
+              the Lassana Diarra’s decision. However, the Football Tribunal can
               reduce such an amount if it considers it excessively high or
               disregard it altogether if it is manifestly unfair.
             </p>
@@ -210,7 +250,7 @@ const FIFARSTP2027 = () => {
               received from the day of breach till the end of his contract.
             </p>
 
-            <h2 className="pt-4 font-serif text-2xl text-black md:text-3xl">
+            <h2 className="text-2xl font-bold text-black dark:text-white pt-6">
               Players Share in Transfer Fees
             </h2>
 
@@ -220,8 +260,8 @@ const FIFARSTP2027 = () => {
               players involved in a permanent international transfer, where the
               player would receive a fixed annual remuneration of less than
               Euros 150,000.00, a share of the transfer compensation. The
-              selling club must pay the player  5% of the transfer fee paid by
-              the buying club.
+              selling club must pay the player{"  "}5% of the transfer fee paid
+              by the buying club.
             </p>
 
             <p>
@@ -236,7 +276,7 @@ const FIFARSTP2027 = () => {
               in his own transfer.
             </p>
 
-            <h2 className="pt-4 font-serif text-2xl text-black md:text-3xl">
+            <h2 className="text-2xl font-bold text-black dark:text-white pt-6">
               Female Players and Menstrual Health
             </h2>
 
@@ -250,17 +290,17 @@ const FIFARSTP2027 = () => {
               rights related to menstrual health.
             </p>
 
-            <h2 className="pt-4 font-serif text-2xl text-black md:text-3xl">
+            <h2 className="text-2xl font-bold text-black dark:text-white pt-6">
               Pregnancy, Adoption and Family Leave
             </h2>
 
             <p>
               Under the new revised Article 18quater, pregnancy, adoption and
-              leave for female players are now the bedrock of the provision. The
-              validity of an employment contract cannot be made subject to a
-              pregnancy test, and when a club terminates a player’s contract
-              during her pregnancy or leave, there is a presumption that such a
-              termination was made without just cause.
+              leave for female players are now the bedrock of the provision.
+              The validity of an employment contract cannot be made subject to
+              a pregnancy test, and when a club terminates a player’s contract
+              during her pregnancy or leave, there is a presumption that such
+              a termination was made without just cause.
             </p>
 
             <p>
@@ -271,7 +311,7 @@ const FIFARSTP2027 = () => {
               transfer windows.
             </p>
 
-            <h2 className="pt-4 font-serif text-2xl text-black md:text-3xl">
+            <h2 className="text-2xl font-bold text-black dark:text-white pt-6">
               International Transfer Certificate (ITC)
             </h2>
 
@@ -299,64 +339,58 @@ const FIFARSTP2027 = () => {
 
             <p>Let us know what you provision interests you the most.</p>
           </div>
-        </article>
 
-        {/* Related articles are separate from the supplied article body */}
-        <section className="border-t border-gray-200 bg-gray-50">
-          <div className="mx-auto max-w-5xl px-6 py-12 md:px-10 md:py-16">
-            <p className="mb-3 text-sm uppercase tracking-[0.18em] text-[#9A7B3F]">
-              Continue Reading
+          <div className="mt-10 p-8 rounded-2xl border border-accent-gold/20 bg-black text-white">
+            <h3 className="text-xl font-bold text-accent-gold mb-3">
+              Need legal support on football regulations, compliance, or disputes?
+            </h3>
+            <p className="text-slate-300 mb-6">
+              Explore our Sports Law practice or send a confidential inquiry for
+              a tailored review of your matter.
             </p>
-
-            <h2 className="mb-8 font-serif text-2xl text-black md:text-3xl">
-              Related Legal Briefs
-            </h2>
-
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/knowledge/termination-of-football-contract-with-just-cause"
-                className="group border border-gray-200 bg-white p-6 transition-colors hover:border-[#C8A96B]"
+                to="/practices/sports"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-accent-gold text-black font-black uppercase tracking-widest text-xs hover:bg-yellow-600 transition-all"
               >
-                <p className="mb-2 text-xs uppercase tracking-wider text-[#9A7B3F]">
-                  Sports Law
-                </p>
-                <h3 className="font-serif text-xl text-black transition-colors group-hover:text-[#9A7B3F]">
-                  Termination of a Football Contract with Just Cause
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-gray-600">
-                  Explore the legal principles governing termination of
-                  football contracts with just cause.
-                </p>
+                Sports Law Practice
               </Link>
-
               <Link
-                to="/knowledge/bridge-transfers-in-football"
-                className="group border border-gray-200 bg-white p-6 transition-colors hover:border-[#C8A96B]"
+                to="/contact#direct-inquiry"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-white/20 text-white font-black uppercase tracking-widest text-xs hover:bg-white/5 transition-all"
               >
-                <p className="mb-2 text-xs uppercase tracking-wider text-[#9A7B3F]">
-                  Sports Law
-                </p>
-                <h3 className="font-serif text-xl text-black transition-colors group-hover:text-[#9A7B3F]">
-                  Bridge Transfers in Football
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-gray-600">
-                  Read more about transfer-related regulatory issues in
-                  professional football.
-                </p>
-              </Link>
-            </div>
-
-            <div className="mt-10">
-              <Link
-                to="/knowledge-centre"
-                className="inline-flex items-center border-b border-[#C8A96B] pb-1 text-sm font-medium text-black transition-colors hover:text-[#9A7B3F]"
-              >
-                Return to Knowledge Centre
+                Contact the Firm
               </Link>
             </div>
           </div>
-        </section>
-      </main>
+
+          <section className="mt-16 pt-10 border-t border-slate-100 dark:border-accent-gold/10">
+            <h2 className="text-2xl font-bold text-black dark:text-white mb-6">
+              Related Legal Briefs
+            </h2>
+
+            <div className="grid grid-cols-1 gap-6">
+              {related.map((item) => (
+                <Link
+                  key={item.slug}
+                  to={`/knowledge/${item.slug}`}
+                  className="block p-6 rounded-2xl border border-slate-200 dark:border-accent-gold/10 hover:border-accent-gold/40 transition-all"
+                >
+                  <h3 className="text-lg font-bold text-black dark:text-white mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    {item.note}
+                  </p>
+                  <span className="mt-3 inline-flex items-center gap-2 text-accent-gold text-xs font-bold uppercase tracking-widest">
+                    Read brief <span className="material-icons text-sm">east</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        </article>
+      </div>
     </>
   );
 };
