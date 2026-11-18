@@ -9,7 +9,7 @@ const OG_IMAGE = `${SITE_URL}/og/practice-areas.jpg`;
 type PracticeGroup = {
   id: string;
   title: string;
-  subtitle: string;
+  subtitle: string; // Can be left in type or removed if unused elsewhere
   icon: string;
   description: string;
   services: string[];
@@ -59,7 +59,6 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
       "Workplace Policy & Employee Handbooks",
       "Trade Union & Collective Bargaining",
       "Executive Employment Agreements",
-      
     ],
     imageUrl: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop",
   },
@@ -171,9 +170,7 @@ const Practices: React.FC = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <span className="inline-block py-1.5 px-5 rounded-full bg-accent-gold/10 text-accent-gold text-xs font-bold uppercase tracking-[0.3em] mb-8 border border-accent-gold/20">
-            Full-Service Commercial Law Firm
-          </span>
+          {/* Hero pill badge removed here */}
 
           <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
             Strategic Counsel for <br />
@@ -199,14 +196,7 @@ const Practices: React.FC = () => {
             >
               {/* Text Column */}
               <div className="w-full lg:w-1/2">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent-gold/10 flex items-center justify-center border border-accent-gold/20">
-                    <span className="material-icons text-accent-gold text-2xl">{group.icon}</span>
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-accent-gold">
-                    {group.subtitle}
-                  </span>
-                </div>
+                {/* Subtitle with icon block removed here */}
 
                 <h2 className="text-3xl md:text-4xl font-extrabold text-black dark:text-white mb-6 uppercase tracking-tight">
                   {group.title}
