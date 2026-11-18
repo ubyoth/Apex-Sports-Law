@@ -32,11 +32,13 @@
     <priority>0.8</priority>
   </url>
 
+  {/*
   <url>
     <loc>https://apexsportslaw.com/about</loc>
     <lastmod>2026-10-01</lastmod>
     <priority>0.7</priority>
   </url>
+  */}
 
   <url>
     <loc>https://apexsportslaw.com/contact</loc>
