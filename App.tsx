@@ -13,7 +13,7 @@ import Practices from './pages/Practices';
 import SportsLaw from './pages/SportsLaw';
 import SuccessStories from './pages/SuccessStories';
 import KnowledgeCentre from './pages/KnowledgeCentre';
-import About from './pages/About';
+{/* import About from './pages/About'; */}
 import Contact from './pages/Contact';
 import ThankYou from './pages/ThankYou';
 import PostDetail from './pages/PostDetail';
@@ -60,7 +60,7 @@ const App: React.FC = () => {
             <Route path="/practices/sports" element={<SportsLaw />} />
             <Route path="/success-stories" element={<SuccessStories />} />
             <Route path="/knowledge" element={<KnowledgeCentre />} />
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} /> */}
             <Route path="/contact" element={<Contact />} />
             <Route path="/thank-you" element={<ThankYou />} />
 
