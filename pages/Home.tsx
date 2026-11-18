@@ -228,12 +228,15 @@ const Home: React.FC = () => {
                 </div>
 
                 <div className="pt-6 border-t border-slate-100 dark:border-accent-gold/10 flex flex-wrap items-center justify-between gap-4">
+                  {/*
                   <Link
                     to="/about"
                     className="inline-flex items-center gap-3 bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-3.5 rounded-xl font-black uppercase tracking-widest text-xs hover:gap-4 transition-all shadow-xl"
                   >
                     Read Full Bio <span className="material-icons">east</span>
                   </Link>
+                  */}
+                  
                 </div>
               </div>
             </div>
