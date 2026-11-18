@@ -7,9 +7,9 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navLinks = [
+const navLinks = [
     { name: 'Home', path: '/' },
-    {/* { name: 'About Us', path: '/about' }, */}
+    // { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/practices' },
     { name: 'Success Stories', path: '/success-stories' },
     { name: 'Knowledge Centre', path: '/knowledge' },
