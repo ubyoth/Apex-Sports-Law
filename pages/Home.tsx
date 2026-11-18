@@ -297,9 +297,7 @@ const Home: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Secure Your Legal Interests Today
             </h2>
-            <p className="text-xl text-slate-400 mb-10">
-              Schedule a consultation with our experts to discuss your requirements.
-            </p>
+            
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
