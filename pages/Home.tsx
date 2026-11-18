@@ -103,7 +103,6 @@ const Home: React.FC = () => {
 
         {/* Hero Section */}
         <section className="relative h-[85vh] flex items-center overflow-hidden">
-
           <div className="absolute inset-0 z-0">
             <img
               alt="Modern law office interior"
@@ -116,7 +115,6 @@ const Home: React.FC = () => {
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
-
               <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
                 Precision. <br />
                 <span className="text-accent-gold">Strategy.</span> <br />
@@ -135,10 +133,8 @@ const Home: React.FC = () => {
                   Explore Our Services
                 </Link>
               </div>
-
             </div>
           </div>
-
         </section>
 
         {/* Practice Areas Section */}
@@ -207,7 +203,7 @@ const Home: React.FC = () => {
               {/* Image Column */}
               <div className="w-full md:w-[30%] relative">
                 <img
-                  alt="Yahaya Oruma Othman, Esq."
+                  alt={FOUNDER_BIO.name}
                   className="w-full h-full min-h-[450px] object-cover object-top grayscale hover:grayscale-0 transition-all duration-1000"
                   src={FOUNDER_BIO.imageUrl}
                 />
@@ -215,51 +211,30 @@ const Home: React.FC = () => {
               </div>
 
               {/* Content Column */}
-              <div className="w-full md:w-[60%] p-10 lg:p-16 flex flex-col justify-center">
-                <h2 className="text-accent-gold font-bold uppercase tracking-widest text-xs mb-3">
-                  Leadership
-                </h2>
-
-                <h3 className="text-3xl lg:text-4xl font-black text-black dark:text-white mb-6 uppercase tracking-tight">
-                  Meet Our Founder
-                </h3>
-
-                <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-8 italic border-l-4 border-accent-gold pl-6">
-                  "Excellence in legal practice is not an act, but a habit of meticulous precision and
-                  relentless strategy."
-                </p>
-
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-                  Yahaya Oruma Othman is the Founder and Principal Partner of Apex Advocates.
-                </p>
-
-                <div className="flex flex-wrap gap-8 mb-10">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-accent-gold/10 flex items-center justify-center">
-                      <span className="material-icons text-accent-gold">school</span>
-                    </div>
-                    <span className="font-bold dark:text-white text-xs uppercase tracking-wider">
-                      LL.B, University of Jos
-                    </span>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-accent-gold/10 flex items-center justify-center">
-                      <span className="material-icons text-accent-gold">history_edu</span>
-                    </div>
-                    <span className="font-bold dark:text-white text-xs uppercase tracking-wider">
-                      10+ Years Experience
-                    </span>
-                  </div>
+              <div className="w-full md:w-[70%] p-10 lg:p-14 flex flex-col justify-between">
+                <div>
+                  <span className="text-accent-gold text-xs font-black uppercase tracking-[0.3em] mb-3 block">
+                    Leadership & Counsel
+                  </span>
+                  <h3 className="text-3xl font-black text-black dark:text-white mb-2">
+                    {FOUNDER_BIO.name}
+                  </h3>
+                  <p className="text-accent-gold font-bold text-sm mb-6 uppercase tracking-wider">
+                    {FOUNDER_BIO.role}
+                  </p>
+                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-8 font-light">
+                    {FOUNDER_BIO.bio}
+                  </p>
                 </div>
 
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-4 bg-black dark:bg-accent-gold text-white dark:text-black px-10 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:gap-6 transition-all shadow-xl self-start"
-                >
-                  Full Professional Profile{" "}
-                  <span className="material-icons">arrow_forward</span>
-                </Link>
+                <div className="pt-6 border-t border-slate-100 dark:border-accent-gold/10 flex flex-wrap items-center justify-between gap-4">
+                  <Link
+                    to="/about"
+                    className="inline-flex items-center gap-3 bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-3.5 rounded-xl font-black uppercase tracking-widest text-xs hover:gap-4 transition-all shadow-xl"
+                  >
+                    Read Full Bio <span className="material-icons">east</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -284,7 +259,7 @@ const Home: React.FC = () => {
                 "https://res.cloudinary.com/dq7vjblwd/image/upload/v1771518667/saharan_titans_xmitsa.png",
               ].map((logo, index) => (
                 <div key={index} className="flex items-center justify-center h-full">
-                  <img src={logo} alt={`Client ${index + 1}`} className="h-30 object-contain" />
+                  <img src={logo} alt={`Client ${index + 1}`} className="h-20 object-contain" />
                 </div>
               ))}
             </div>
@@ -297,24 +272,16 @@ const Home: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Secure Your Legal Interests Today
             </h2>
-            
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://calendly.com/othmany13/30min"
+                href="https://calendly.com/apexsportslaw-info/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-accent-gold text-black px-8 py-3.5 rounded-lg font-bold text-base hover:bg-yellow-600 transition-all shadow-xl shadow-accent-gold/20"
               >
                 Book a Consultation
               </a>
-
-              <Link
-                to="/success-stories"
-                className="bg-transparent border border-white/20 text-white px-8 py-3.5 rounded-lg font-bold text-base hover:bg-white/10 transition-all"
-              >
-                Success Stories
-              </Link>
             </div>
           </div>
         </section>
