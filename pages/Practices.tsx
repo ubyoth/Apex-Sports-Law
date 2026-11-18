@@ -19,6 +19,25 @@ type PracticeGroup = {
 
 const PRACTICE_GROUPS: PracticeGroup[] = [
   {
+    id: "sports-governance",
+    title: "Sports Law & Regulatory Governance",
+    subtitle: "Contracts, FIFA DRC Representation & Athlete Advisory",
+    icon: "sports_soccer",
+    description:
+      "We advise professional athletes, sports clubs, governing bodies, and commercial sponsors on complex sports regulations, transfer contracts, image rights, and representation before the FIFA Football Tribunal and CAS.",
+    services: [
+      "Player Transfer & Representation Agreements",
+      "FIFA Tribunal & CAS Arbitration",
+      "Image Rights & Sponsorship Contracts",
+      "Club Governance & Academy Structuring",
+      "Regulatory & Disciplinary Defense",
+      "Sports Infrastructure & Event Licensing"
+    ],
+    imageUrl: "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png?q=80&w=2070&auto=format&fit=crop",
+    link: "/practices/sports"
+  }, 
+  
+  {
     id: "corporate-commercial",
     title: "Corporate & Commercial Advisory",
     subtitle: "Enterprise Governance, M&A & Regulatory Compliance",
@@ -75,26 +94,9 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
       "Intellectual Property Infringement Enforcement",
       "Image Rights & Brand Commercialization"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1453941403708-3c32160971fd?q=80&w=2072&auto=format&fit=crop",
+    imageUrl: "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795008255/markus-winkler-9XfSFjcwGh0-unsplash_kmkg2s.jpg?q=80&w=2072&auto=format&fit=crop",
   },
-  {
-    id: "sports-governance",
-    title: "Sports Law & Regulatory Governance",
-    subtitle: "Contracts, FIFA DRC Representation & Athlete Advisory",
-    icon: "sports_soccer",
-    description:
-      "As a premier sports law authority in Africa, we advise professional athletes, sports clubs, governing bodies, and commercial sponsors on complex sports regulations, transfer contracts, image rights, and representation before the FIFA Football Tribunal and CAS.",
-    services: [
-      "Player Transfer & Representation Agreements",
-      "FIFA Tribunal & CAS Arbitration",
-      "Image Rights & Sponsorship Contracts",
-      "Club Governance & Academy Structuring",
-      "Regulatory & Disciplinary Defense",
-      "Sports Infrastructure & Event Licensing"
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=2070&auto=format&fit=crop",
-    link: "/practices/sports"
-  }
+
 ];
 
 const Practices: React.FC = () => {
@@ -178,7 +180,7 @@ const Practices: React.FC = () => {
           </h1>
 
           <p className="max-w-3xl mx-auto text-xl text-slate-400 leading-relaxed font-light">
-            Apex Advocates provides partner-led legal representation across corporate transactions, labour disputes, intellectual property protection, and specialized sports regulation across Nigeria and Africa.
+            Apex Advocates provides legal representation across corporate transactions, labour disputes, intellectual property protection, and specialized sports regulation across Nigeria and Africa.
           </p>
         </div>
       </header>
@@ -314,7 +316,7 @@ const Practices: React.FC = () => {
             Ready for Strategic Commercial Representation?
           </h2>
           <p className="text-slate-400 text-lg font-light max-w-2xl mx-auto">
-            Schedule a confidential consultation with our principal partner to discuss your corporate, dispute resolution, IP, or sports advisory needs.
+            Schedule a confidential consultation with us to discuss your corporate, dispute resolution, IP, or sports advisory needs.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
@@ -324,15 +326,9 @@ const Practices: React.FC = () => {
               rel="noopener noreferrer"
               className="bg-accent-gold text-black px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-yellow-600 transition-all shadow-xl shadow-accent-gold/20"
             >
-              Book Partner Consultation
+              Book Consultation
             </a>
 
-            <Link
-              to="/contact"
-              className="bg-transparent border border-white/20 text-white px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-white/5 transition-all"
-            >
-              Direct Office Inquiry
-            </Link>
           </div>
         </div>
       </section>
