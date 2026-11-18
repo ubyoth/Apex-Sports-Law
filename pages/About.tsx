@@ -160,18 +160,7 @@ const About: React.FC = () => {
                         </ul>
                       </div>
                     </div>
-
-                    <div>
-                      <div className="p-10 bg-black rounded-[2rem] border border-accent-gold/20 text-white relative overflow-hidden group">
-                        <div className="relative z-10 space-y-4">
-                          <h4 className="text-accent-gold text-xs font-black uppercase tracking-[0.2em]">Our Firm Principle</h4>
-                          <p className="text-xl font-light text-slate-300 leading-relaxed italic">
-                            "Delivering uncompromised commercial legal excellence through precise advocacy, strategic negotiation, and tailored advice for institutional and individual clients."
-                          </p>
-                        </div>
-                        <span className="material-icons absolute -bottom-10 -right-10 text-accent-gold/5 text-[200px] pointer-events-none group-hover:scale-110 transition-transform duration-1000">gavel</span>
-                      </div>
-                    </div>
+                  
                   </div>
                 </div>
               </div>
