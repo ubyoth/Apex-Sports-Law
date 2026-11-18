@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Corporate & Dispute Resolution Lawyers in Lagos | Apex Advocates</title>
+        <title>Contact Professional Lawyers in Lagos | Apex Advocates</title>
         <meta
           name="description"
           content="Contact Apex Advocates in Lagos, Nigeria for legal advisory in corporate law, commercial dispute resolution, employment disputes, and sports law across Africa."
@@ -104,10 +104,7 @@ const Contact: React.FC = () => {
               <h1 className="text-5xl font-black text-white mb-6">
                 Get in Touch with <span className="text-accent-gold">Apex Advocates</span>
               </h1>
-              <p className="text-xl text-slate-400 mb-12 leading-relaxed">
-                We are ready to provide you with expert corporate counsel, dispute resolution, and specialized legal guidance. 
-                Excellence, precision, and confidentiality are our cornerstones.
-              </p>
+              
             </div>
           </div>
         </section>
@@ -118,11 +115,7 @@ const Contact: React.FC = () => {
               id="direct-inquiry"
               className="bg-white dark:bg-secondary-grey/5 rounded-3xl p-10 lg:p-14 shadow-2xl border border-slate-100 dark:border-accent-gold/10 scroll-mt-32"
             >
-              <h2 className="text-3xl font-bold text-black dark:text-white mb-4">Submit Inquiry</h2>
-              <p className="text-slate-500 dark:text-slate-400 mb-8">
-                Our online inquiry form is temporarily unavailable.
-              </p>
-
+       
               <div className="rounded-2xl border border-accent-gold/20 bg-slate-50 dark:bg-black p-8 space-y-6">
                 <div className="flex items-start gap-4">
                   <span className="material-icons text-accent-gold text-3xl">info</span>
