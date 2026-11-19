@@ -218,15 +218,7 @@ const Practices: React.FC = () => {
                     <span className="material-icons text-base">east</span>
                   </Link>
                 ) : (
-                  <a
-                    href="https://calendly.com/apexsportslaw-info/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 border border-[#202020] bg-[#202020] px-6 py-3.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:border-[#A88B4D] hover:bg-[#A88B4D] hover:text-[#202020]"
-                  >
-                    Request Consultation
-                    <span className="material-icons text-base">east</span>
-                  </a>
+             
                 )}
               </div>
 
