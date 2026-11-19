@@ -90,7 +90,7 @@ const Home: React.FC = () => {
 
       <div className="flex flex-col font-sans">
         {/* Hero Section */}
-        <section className="relative h-[85vh] flex items-center overflow-hidden">
+        <section className="relative h-[75vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               alt="Modern law office interior"
