@@ -182,7 +182,7 @@ However, what do the regulations say on trials?
     readTime: "3 min read",
     category: "Sports Law",
     imageUrl:
-      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1775040418/FIFA_parents_education_kpumiw.jpg",
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png",
     featured: true,
     slug: "fifa-parents-education-on-football",
     content: `
