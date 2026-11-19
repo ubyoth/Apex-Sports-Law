@@ -23,6 +23,32 @@ Yahaya's core practice focus covers corporate advisory, dispute resolution, empl
 
 export const PRACTICE_AREAS: PracticeArea[] = [
   {
+    id: 'sports',
+    title: 'Athlete, Coach & Agent Representation',
+    description: '',
+    icon: 'sports_soccer',
+    services: [
+      'Athlete contracts and transfer negotiations',
+      'FIFA Tribunal and CAS arbitration representation',
+      'Image rights, licensing, and endorsement agreements',
+      'Regulatory compliance for sports organizations'
+    ]
+  },
+
+  {
+    id: 'compliance',
+    title: 'Regulatory and League Compliance',
+    description: '',
+    icon: 'policy',
+    services: [
+      'Sector-specific regulatory licensing and approvals',
+      'Corporate governance and board advisory',
+      'Data protection and privacy compliance (NDPA)',
+      'Internal compliance audits and risk mitigation'
+    ]
+  },
+  
+  {
     id: 'corporate-advisory',
     title: 'Corporate & Commercial Advisory',
     description: '',
@@ -48,8 +74,8 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   },
   {
     id: 'labour',
-    title: 'Employment & Labour Law',
-    description: 'Contract Negotiation & Drafting',
+    title: 'Contract Negotiation & Drafting',
+    description: ' ',
     icon: 'gavel',
     services: [
       'Executive employment contract negotiation',
@@ -58,18 +84,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       'Labour law regulatory compliance audits'
     ]
   },
-  {
-    id: 'sports',
-    title: 'Athlete, Coach & Agent Representation',
-    description: '',
-    icon: 'sports_soccer',
-    services: [
-      'Athlete contracts and transfer negotiations',
-      'FIFA Tribunal and CAS arbitration representation',
-      'Image rights, licensing, and endorsement agreements',
-      'Regulatory compliance for sports organizations'
-    ]
-  },
+
   {
     id: 'ip',
     title: 'Intellectual Property and Brand Protection',
@@ -80,18 +95,6 @@ export const PRACTICE_AREAS: PracticeArea[] = [
       'Copyright protection and licensing structures',
       'Intellectual property enforcement',
       'Brand protection and digital asset management'
-    ]
-  },
-  {
-    id: 'compliance',
-    title: 'Regulatory and League Compliance',
-    description: '',
-    icon: 'policy',
-    services: [
-      'Sector-specific regulatory licensing and approvals',
-      'Corporate governance and board advisory',
-      'Data protection and privacy compliance (NDPA)',
-      'Internal compliance audits and risk mitigation'
     ]
   }
 ];
