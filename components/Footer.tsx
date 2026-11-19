@@ -137,10 +137,9 @@ const Footer: React.FC = () => {
                 </span>
                 <span>Lagos, Nigeria</span>
               </div>
-
             </div>
+          </div> 
           </div>
-
          
 
         {/* Copyright */}
