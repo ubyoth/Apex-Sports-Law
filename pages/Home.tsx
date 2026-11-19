@@ -101,59 +101,54 @@ const Home: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
           </div>
 
-         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20 md:mt-32">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20 md:mt-32">
             <div className="max-w-2xl">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-snug mb-6">
                 Protecting Athletes. <br />
                 <span className="text-accent-gold">Resolving Disputes.</span> <br />
                 Enhancing Compliance.
-              </h1>             
+              </h1>
             </div>
           </div>
         </section>
 
-
-
-        
-        {/* Practice Areas Section */}
+        {/* Practice Areas Section (6 cards: 3 columns x 2 rows on desktop) */}
         <section className="py-24 bg-white dark:bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-             
               <h3 className="text-4xl font-extrabold text-black dark:text-white">
-               Our Services
+                Our Services
               </h3>
               <div className="w-20 h-1 bg-accent-gold mx-auto mt-6"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {PRACTICE_AREAS.filter(
-                (area) =>
-                  area.id === "sports" ||
-                  area.id === "corporate-advisory" ||
-                  area.id === "arbitration"
-              ).map((area) => (
+              {PRACTICE_AREAS.slice(0, 6).map((area) => (
                 <div
                   key={area.id}
-                  className="group p-8 bg-slate-50 dark:bg-secondary-grey/50 rounded-xl border border-transparent hover:border-accent-gold/20 transition-all hover:shadow-2xl hover:shadow-accent-gold/5 flex flex-col"
+                  className="group p-8 bg-slate-50 dark:bg-secondary-grey/50 rounded-xl border border-transparent hover:border-accent-gold/20 transition-all hover:shadow-2xl hover:shadow-accent-gold/5 flex flex-col justify-between"
                 >
-                  <div className="w-14 h-14 bg-accent-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent-gold transition-colors shrink-0">
-                    <span className="material-icons text-accent-gold group-hover:text-black">
-                      {area.icon}
-                    </span>
+                  <div>
+                    <div className="w-14 h-14 bg-accent-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent-gold transition-colors shrink-0">
+                      <span className="material-icons text-accent-gold group-hover:text-black">
+                        {area.icon}
+                      </span>
+                    </div>
+
+                    <h4 className="text-xl font-bold mb-6 text-black dark:text-white">
+                      {area.title}
+                    </h4>
+
+                    {area.description?.trim() && (
+                      <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        {area.description}
+                      </p>
+                    )}
                   </div>
-
-                  <h4 className="text-xl font-bold mb-4 text-black dark:text-white">
-                    {area.title}
-                  </h4>
-
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
-                    {area.description}
-                  </p>
 
                   <Link
                     to={area.id === "sports" ? "/practices/sports" : `/practices#${area.id}`}
-                    className="text-accent-gold font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
+                    className="text-accent-gold font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all mt-auto"
                   >
                     Learn More <span className="material-icons text-sm">arrow_forward</span>
                   </Link>
