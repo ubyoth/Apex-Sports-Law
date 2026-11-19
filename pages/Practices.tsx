@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -124,7 +125,7 @@ const Practices: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black font-sans">
+    <div className="min-h-screen bg-white font-sans text-[#202020]">
       <Helmet>
         <title>Full-Service Commercial Law Firm | Apex Advocates</title>
         <meta
@@ -157,18 +158,18 @@ const Practices: React.FC = () => {
       </Helmet>
 
       {/* Services Hero */}
-      <header className="relative py-32 bg-black overflow-hidden border-b border-accent-gold/20">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-gold/20 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/2" />
+      <header className="relative overflow-hidden border-b border-white/10 bg-[#202020] py-24 md:py-28">
+        <div className="pointer-events-none absolute inset-0 opacity-10">
+          <div className="absolute -right-32 -top-40 h-[600px] w-[600px] rounded-full bg-[#B99A55]/30 blur-[140px]" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-semibold text-white leading-tight">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
             Strategic Legal <br />
-            <span className="text-accent-gold">Counsel for Business</span>
+            <span className="text-[#B99A55]">Counsel for Business</span>
           </h1>
 
-          <p className="max-w-3xl mx-auto text-xl text-neutral-200 leading-relaxed font-light">
+          <p className="mx-auto mt-7 max-w-3xl text-base font-light leading-8 text-neutral-300 md:text-lg">
             Apex Advocates is a full-service commercial law practice. We provide strategic legal
             counsel to businesses, institutions, and individuals across corporate advisory, dispute
             resolution, employment, regulatory compliance, intellectual property, and sports law.
@@ -177,33 +178,37 @@ const Practices: React.FC = () => {
       </header>
 
       {/* Main Services Grid */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      <section className="bg-[#FAF9F6] py-20 md:py-24">
+        <div className="mx-auto max-w-7xl space-y-20 px-4 sm:px-6 lg:px-8 md:space-y-24">
           {PRACTICE_GROUPS.map((group, index) => (
             <div
               key={group.id}
               id={group.id}
-              className={`flex flex-col lg:flex-row gap-12 items-center scroll-mt-32 ${
+              className={`flex scroll-mt-28 flex-col items-center gap-9 lg:flex-row lg:gap-16 ${
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
               {/* Text Column */}
               <div className="w-full lg:w-7/12">
-                <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-6 tracking-tight">
+                <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#A88B4D]">
+                  {group.subtitle}
+                </p>
+
+                <h2 className="mb-5 text-2xl font-semibold leading-tight tracking-tight text-[#202020] md:text-3xl lg:text-4xl">
                   {group.title}
                 </h2>
 
-                <p className="text-lg text-neutral-600 dark:text-neutral-200 leading-relaxed mb-8 font-light">
+                <p className="mb-7 text-[15px] font-light leading-8 text-[#555555] md:text-base">
                   {group.description}
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   {group.services.map((service) => (
-                    <div key={service} className="flex items-start gap-3 group">
-                      <span className="material-icons text-accent-gold text-sm mt-1 transition-transform group-hover:scale-125">
+                    <div key={service} className="group flex items-start gap-3">
+                      <span className="material-icons mt-1 text-sm text-[#A88B4D] transition-transform group-hover:scale-110">
                         verified
                       </span>
-                      <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-200">
+                      <span className="text-sm font-medium text-[#454545]">
                         {service}
                       </span>
                     </div>
@@ -213,34 +218,36 @@ const Practices: React.FC = () => {
                 {group.link ? (
                   <Link
                     to={group.link}
-                    className="inline-flex items-center gap-4 bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-4 font-black uppercase tracking-widest text-xs hover:gap-6 transition-all shadow-xl"
+                    className="inline-flex items-center gap-3 border border-[#202020] bg-[#202020] px-6 py-3.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:border-[#A88B4D] hover:bg-[#A88B4D] hover:text-[#202020]"
                   >
-                    Explore Dedicated Sports Practice <span className="material-icons">east</span>
+                    Explore Dedicated Sports Practice
+                    <span className="material-icons text-base">east</span>
                   </Link>
                 ) : (
                   <a
                     href="https://calendly.com/apexsportslaw-info/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-4 bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-4 font-black uppercase tracking-widest text-xs hover:gap-6 transition-all shadow-xl"
+                    className="inline-flex items-center gap-3 border border-[#202020] bg-[#202020] px-6 py-3.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:border-[#A88B4D] hover:bg-[#A88B4D] hover:text-[#202020]"
                   >
-                    Request Consultation <span className="material-icons">east</span>
+                    Request Consultation
+                    <span className="material-icons text-base">east</span>
                   </a>
                 )}
               </div>
 
               {/* Image Column */}
-              <div className="w-full lg:w-5/12 max-w-md mx-auto lg:max-w-none">
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-accent-gold/20 blur opacity-25 group-hover:opacity-50 transition duration-1000" />
-                  <div className="relative aspect-[5/4] overflow-hidden border border-accent-gold/10 shadow-2xl">
+              <div className="mx-auto w-full max-w-md lg:mx-0 lg:max-w-none lg:w-5/12">
+                <div className="group relative">
+                  <div className="absolute -inset-1 bg-[#E9E6DE] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="relative aspect-[5/4] overflow-hidden border border-[#E9E6DE] bg-[#F4F2ED]">
                     <img
                       src={group.imageUrl}
                       alt={`${group.title} legal practice`}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                      className="h-full w-full scale-[1.03] object-cover grayscale transition-all duration-700 group-hover:scale-100 group-hover:grayscale-0"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
                   </div>
                 </div>
               </div>
@@ -250,16 +257,16 @@ const Practices: React.FC = () => {
       </section>
 
       {/* Strategic Approach */}
-      <section className="py-24 bg-slate-50 dark:bg-secondary-grey/5 border-y border-accent-gold/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-sans text-accent-gold font-bold uppercase tracking-widest text-xs mb-4">
+      <section className="border-y border-[#E9E6DE] bg-white py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#A88B4D]">
             Our Methodology
           </h2>
-          <h3 className="text-4xl font-semibold text-black dark:text-white mb-16 tracking-tight">
+          <h3 className="mb-14 text-3xl font-semibold tracking-tight text-[#202020] md:text-4xl">
             The Apex Advantage
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
               {
                 title: "Partner-Led Service",
@@ -279,17 +286,17 @@ const Practices: React.FC = () => {
             ].map((step) => (
               <div
                 key={step.title}
-                className="p-8 bg-white dark:bg-black border border-accent-gold/5 shadow-xl transition-all hover:border-accent-gold/30 group text-left"
+                className="group border border-[#E9E6DE] bg-[#FAF9F6] p-7 text-left transition-all duration-300 hover:border-[#B99A55] md:p-8"
               >
-                <div className="w-16 h-16 bg-accent-gold/10 flex items-center justify-center mb-6 group-hover:bg-accent-gold transition-colors">
-                  <span className="material-icons text-accent-gold text-3xl group-hover:text-black">
+                <div className="mb-6 flex h-14 w-14 items-center justify-center border border-[#E9E6DE] bg-white transition-colors duration-300 group-hover:border-[#B99A55] group-hover:bg-[#B99A55]/10">
+                  <span className="material-icons text-2xl text-[#A88B4D]">
                     {step.icon}
                   </span>
                 </div>
-                <h4 className="text-xl font-semibold mb-4 text-black dark:text-white tracking-tight">
+                <h4 className="mb-4 text-xl font-semibold tracking-tight text-[#202020]">
                   {step.title}
                 </h4>
-                <p className="text-neutral-600 dark:text-neutral-200 text-sm leading-relaxed font-light">
+                <p className="text-sm font-light leading-7 text-[#666666]">
                   {step.desc}
                 </p>
               </div>
@@ -299,21 +306,25 @@ const Practices: React.FC = () => {
       </section>
 
       {/* Custom Inquiry CTA */}
-      <section className="bg-black py-24 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-8">
-          <h2 className="text-4xl font-semibold text-white tracking-tight">
+      <section className="relative overflow-hidden bg-[#202020] py-20 md:py-24">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -right-32 -top-40 h-[420px] w-[420px] rounded-full bg-[#B99A55]/10 blur-[130px]" />
+        </div>
+
+        <div className="relative z-10 mx-auto max-w-4xl space-y-7 px-4 text-center">
+          <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
             Need Commercial Representation?
           </h2>
-          <p className="text-neutral-200 text-lg font-light max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-base font-light leading-8 text-neutral-300 md:text-lg">
             Schedule a confidential consultation with us to discuss your needs.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+          <div className="flex flex-col justify-center gap-5 pt-3 sm:flex-row">
             <a
               href="https://calendly.com/apexsportslaw-info/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent-gold text-black px-8 py-4 font-black uppercase tracking-widest text-xs hover:bg-yellow-600 transition-all shadow-xl shadow-accent-gold/20"
+              className="inline-flex items-center justify-center border border-[#B99A55] bg-[#B99A55] px-8 py-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#202020] transition-all duration-300 hover:border-[#D0B77D] hover:bg-[#D0B77D]"
             >
               Book Consultation
             </a>
