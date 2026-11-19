@@ -2,7 +2,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { PRACTICE_AREAS, FOUNDER_BIO } from "../constants";
+import { PRACTICE_AREAS } from "../constants";
 
 const SITE_URL = "https://apexsportslaw.com";
 const OG_IMAGE = `${SITE_URL}/og/default.jpg`;
@@ -25,6 +25,12 @@ const SERVICE_IMAGES: Record<string, string> = {
 const FALLBACK_SERVICE_IMAGE =
   "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop";
 
+/*
+ * FOUNDER CONTENT — TEMPORARILY DISABLED
+ *
+ * The founder biography and qualifications are retained here
+ * for possible future use.
+ *
 const FOUNDER_PARAGRAPHS = [
   "Yahaya Oruma Othman is the Founder and Principal Partner of Apex Advocates, serving clients across Nigeria and Africa. An Associate of the Chartered Institute of Arbitrators (UK) and LawInSport mentee, he brings over a decade of private practice experience to the business and regulation of sport.",
   "Drawing on a strong background in high-stakes litigation, employment disputes, and corporate transactions, he helps sporting stakeholders navigate complex regulatory regimes, structure endorsement and licensing deals, and resolve disputes efficiently.",
@@ -39,6 +45,7 @@ const FOUNDER_QUALIFICATIONS = [
   "Associate, Chartered Institute of Arbitrators (UK)",
   "Member, Nigerian Bar Association (NBA)",
 ];
+*/
 
 const Home: React.FC = () => {
   return (
@@ -231,7 +238,11 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Founder Section */}
+        {/*
+        ============================================================
+        FOUNDER SECTION — TEMPORARILY DISABLED
+        ============================================================
+
         <section className="py-20 lg:py-24 bg-slate-50 dark:bg-secondary-grey/5 overflow-hidden border-y border-accent-gold/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -247,7 +258,6 @@ const Home: React.FC = () => {
 
             <div className="bg-white dark:bg-black shadow-xl overflow-hidden border border-neutral-200 dark:border-accent-gold/10 flex flex-col md:flex-row items-stretch">
 
-              {/* Founder Image */}
               <div className="w-full md:w-[35%] lg:w-[32%] relative overflow-hidden bg-neutral-200 dark:bg-secondary-grey">
                 <img
                   alt={FOUNDER_BIO.name}
@@ -259,7 +269,6 @@ const Home: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
               </div>
 
-              {/* Founder Content */}
               <div className="w-full md:w-[65%] lg:w-[68%] p-8 md:p-10 lg:p-12 flex flex-col justify-between">
 
                 <div>
@@ -278,7 +287,6 @@ const Home: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Qualifications */}
                 <div className="pt-7 border-t border-neutral-200 dark:border-accent-gold/10">
                   <h4 className="text-accent-gold text-[10px] font-bold uppercase tracking-[0.25em] mb-5">
                     Qualifications & Credentials
@@ -299,11 +307,14 @@ const Home: React.FC = () => {
           </div>
         </section>
 
+        END OF FOUNDER SECTION
+        */}
+
         {/* Call to Action */}
         <section className="bg-black py-20 lg:py-24 relative overflow-hidden border-t border-accent-gold/20">
           <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-accent-gold/5 rounded-full blur-[140px] pointer-events-none" />
 
-          <div className="max-w-5xl mx-auto px-4 text-center relative z-10">         
+          <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
             <p className="text-neutral-300 text-base md:text-lg font-light max-w-2xl mx-auto mb-10 leading-relaxed">
               Schedule a confidential consultation with our team to discuss
               your legal needs and explore how we can assist you.
@@ -320,7 +331,6 @@ const Home: React.FC = () => {
                 <span className="material-icons text-base">east</span>
               </a>
             </div>
-
           </div>
         </section>
 
