@@ -9,7 +9,7 @@ const OG_IMAGE = `${SITE_URL}/og/practice-areas.jpg`;
 type PracticeGroup = {
   id: string;
   title: string;
-  subtitle: string; // Can be left in type or removed if unused elsewhere
+  subtitle: string;
   icon: string;
   description: string;
   services: string[];
@@ -19,61 +19,74 @@ type PracticeGroup = {
 
 const PRACTICE_GROUPS: PracticeGroup[] = [
   {
-    id: "sports-governance",
-    title: "Athlete, Coach & Agent Representation",
-    subtitle: "Contracts, FIFA DRC Representation & Athlete Advisory",
-    icon: "sports_soccer",
-    description:
-      "We provide end-to-end representation for athletes, coaches, and licensed agents across every stage of a sporting career. Our practice handles the drafting and negotiation of playing contracts, coaching agreements, termination clauses, and performance bonus structures. We also advise on domestic and international transfers, ensuring compliance with FIFA and local federation regulations regarding solidarity mechanisms, training compensation calculations, and player-agent representation agreements.",
-    services: [
-    ],
-    imageUrl: "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png?q=80&w=2070&auto=format&fit=crop",
-    link: "/practices/sports"
-  }, 
-  
-  {
     id: "corporate-commercial",
     title: "Corporate & Commercial Advisory",
-    subtitle: "",
+    subtitle: "Entity Structuring, Compliance & Commercial Contracts",
     icon: "business_center",
     description:
-      "We provide strategic counsel to startups and established enterprises navigating the Nigerian and broader African business landscape. From entity structuring and CAC compliance to complex commercial contracting, we ensure complete risk mitigation.",
-    services: [
-      
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop",
+      "We provide strategic counsel to startups and established enterprises navigating the Nigerian and broader African business landscape. From entity structuring and CAC compliance to shareholder agreements, mergers and acquisitions, investment transactions, and complex commercial contracting, we ensure complete risk mitigation at every stage of your business.",
+    services: [],
+    imageUrl:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop",
   },
+
+  {
+    id: "sports-governance",
+    title: "Sports Law",
+    subtitle: "Representation, Disputes, Governance & Commercial Rights",
+    icon: "sports_soccer",
+    description:
+      "We maintain a full boutique sports law practice serving athletes, coaches, agents, clubs, leagues, federations, and sports brands. We draft and negotiate playing, coaching, and agent agreements and advise on domestic and international transfers under FIFA and federation rules. We represent clients before disciplinary panels, the FIFA Football Tribunal, and the Court of Arbitration for Sport (CAS) in contract, wage, eligibility, and agent fee disputes. We counsel governing bodies on constitutions, club licensing, anti-doping, integrity, and safeguarding compliance. And we structure and protect the commercial value of sport through image rights, sponsorship and endorsement deals, media and broadcasting rights, merchandising, and esports partnerships.",
+    services: [],
+    imageUrl:
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png?q=80&w=2070&auto=format&fit=crop",
+    link: "/practices/sports",
+  },
+  
   {
     id: "dispute-resolution",
     title: "Dispute Resolution & Commercial Arbitration",
-    subtitle: "Litigation, Mediation & International Arbitration",
+    subtitle: "Litigation, Mediation & Arbitration",
+    icon: "gavel",
     description:
-      "We represent athletes, clubs, agents, and governing bodies before domestic disciplinary panels, federation chambers like the FIFA Football Tribunal, and the Court of Arbitration for Sport (CAS). Our disputes practice spans unilateral contract terminations, unpaid wages, agent fee disputes, and selection or eligibility challenges, backed by urgent injunctive relief, defamation defense, and online abuse takedowns during tournaments and transfer windows.",
-    services: [
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
+      "We represent businesses, institutions, and individuals in commercial litigation, mediation, and domestic and international arbitration. Our disputes practice spans breach of contract, debt recovery, shareholder and partnership disputes, and enforcement of judgments and arbitral awards, with urgent injunctive relief where speed matters. We pursue negotiated resolution wherever it serves your interests and litigate decisively when it does not.",
+    services: [],
+    imageUrl:
+      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: "labour-employment",
-    title: "Regulatory & League Compliance",
-    subtitle: "",
+    title: "Labour & Employment Law",
+    subtitle: "Employment Contracts, Workplace Policy & Employment Disputes",
+    icon: "groups",
     description:
-      "We counsel federations, leagues, national sports commissions, and clubs on drafting constitutions, bylaws, ethics codes, and club licensing frameworks. We also manage compliance with World Anti-Doping Agency (WADA) codes, match-fixing and anti-corruption protocols, athlete safeguarding policies, salary caps, and Financial Fair Play sustainability criteria.",
-    services: [
-    ],
-    imageUrl: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop",
+      "We advise employers and senior executives on the full employment lifecycle: drafting employment contracts and executive agreements, building staff handbooks and workplace policies, and managing disciplinary processes, terminations, and redundancies in line with Nigerian labour law. We also represent clients in employment disputes, and advise on statutory obligations such as pensions and employee compensation.",
+    services: [],
+    imageUrl:
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop",
+  },
+  {
+    id: "regulatory-compliance",
+    title: "Regulatory & Compliance Advisory",
+    subtitle: "Licensing, Data Protection & Corporate Governance",
+    icon: "policy",
+    description:
+      "We help businesses navigate the regulatory environment they operate in. Our compliance practice covers sector licensing and regulatory approvals, data protection, anti-money laundering and consumer protection obligations, corporate governance, and the design of internal compliance policies and programmes. We also represent clients in regulatory inquiries and enforcement matters, helping you stay compliant, avoid penalties, and protect your licence to operate.",
+    services: [],
+    imageUrl:
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: "intellectual-property",
     title: "Intellectual Property & Brand Protection",
     subtitle: "Trademarks, Copyrights & Commercial Licensing",
+    icon: "verified_user",
     description:
-      "We help talent, clubs, and corporate partners monetize and protect sports assets by structuring image rights companies, negotiating brand ambassador endorsements, and managing Name, Image, and Likeness (NIL) deals. Our practice also covers kit supply agreements, stadium naming rights, merchandising licenses, ambush marketing protection, broadcasting and streaming/OTT licensing, anti-piracy enforcement, and esports partnerships.",
-    services: [
-    ],
-    imageUrl: "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795008255/markus-winkler-9XfSFjcwGh0-unsplash_kmkg2s.jpg?q=80&w=2072&auto=format&fit=crop",
+      "We help businesses, creators, and innovators protect and monetize their intangible assets. Our practice covers trademark and copyright registration, brand clearance and portfolio management, licensing and franchising agreements, technology and software licensing, and infringement and anti-counterfeiting enforcement, so that your brand and ideas remain secure as you grow.",
+    services: [],
+    imageUrl:
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795008255/markus-winkler-9XfSFjcwGh0-unsplash_kmkg2s.jpg?q=80&w=2072&auto=format&fit=crop",
   },
-
 ];
 
 const Practices: React.FC = () => {
@@ -94,6 +107,8 @@ const Practices: React.FC = () => {
     "@type": "LegalService",
     name: "Apex Advocates",
     url: SITE_URL,
+    description:
+      "Full-service commercial law practice providing strategic legal counsel in Nigeria and across Africa.",
     areaServed: ["NG", "Africa"],
     address: {
       "@type": "PostalAddress",
@@ -101,21 +116,22 @@ const Practices: React.FC = () => {
       addressCountry: "NG",
     },
     serviceType: [
-      "Corporate Advisory",
-      "Commercial Dispute Resolution",
+      "Corporate & Commercial Advisory",
+      "Dispute Resolution & Commercial Arbitration",
       "Labour & Employment Law",
+      "Regulatory & Compliance Advisory",
       "Intellectual Property & Brand Protection",
-      "Sports Law & Governance"
+      "Sports Law",
     ],
   };
 
   return (
     <div className="min-h-screen bg-white dark:bg-black font-sans">
       <Helmet>
-        <title>Full-Service Sports Law Firm | Apex Advocates</title>
+        <title>Full-Service Commercial Law Firm | Apex Advocates</title>
         <meta
           name="description"
-          content="Discover Apex Advocates' comprehensive commercial sports law practice in Lagos, Nigeria and across Africa."
+          content="Apex Advocates is a full-service commercial law practice in Lagos, Nigeria, providing strategic legal counsel across corporate, dispute resolution, employment, regulatory compliance, intellectual property, and sports law."
         />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
@@ -125,16 +141,16 @@ const Practices: React.FC = () => {
         <meta property="og:title" content="Full-Service Practice Areas | Apex Advocates" />
         <meta
           property="og:description"
-          content="Strategic legal counsel in Sports Law in Nigeria and across Africa."
+          content="Strategic legal counsel across corporate, disputes, employment, IP, and sports law in Nigeria and across Africa."
         />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sports Law Practice Areas | Apex Advocates" />
+        <meta name="twitter:title" content="Practice Areas | Apex Advocates" />
         <meta
           name="twitter:description"
-          content="Strategic legal counsel in Sports Law in Nigeria and across Africa."
+          content="Strategic legal counsel across corporate, disputes, employment, IP, and sports law in Nigeria and across Africa."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -149,15 +165,15 @@ const Practices: React.FC = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          {/* Hero pill badge removed here */}
-
-   <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-  Strategic Legal <br />
-  <span className="text-accent-gold">Counsel for Sports</span>
-</h1>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+            Strategic Legal <br />
+            <span className="text-accent-gold">Counsel for Business</span>
+          </h1>
 
           <p className="max-w-3xl mx-auto text-xl text-slate-400 leading-relaxed font-light">
-            We focus exclusively on resolving sports-related disputes and protecting athletes’ rights, through litigation, arbitration and alternative dispute resolution methods.
+            Apex Advocates is a full-service commercial law practice. We provide strategic legal
+            counsel to businesses, institutions, and individuals across corporate advisory, dispute
+            resolution, employment, regulatory compliance, intellectual property, and sports law.
           </p>
         </div>
       </header>
@@ -175,8 +191,6 @@ const Practices: React.FC = () => {
             >
               {/* Text Column */}
               <div className="w-full lg:w-1/2">
-                {/* Subtitle with icon block removed here */}
-
                 <h2 className="text-3xl md:text-4xl font-extrabold text-black dark:text-white mb-6 uppercase tracking-tight">
                   {group.title}
                 </h2>
@@ -261,7 +275,7 @@ const Practices: React.FC = () => {
               },
               {
                 title: "Commercial Pragmatism",
-                desc: "We provide clear, actionable risk assessment that empowers corporate leaders to execute strategic business decisions with confidence.",
+                desc: "We provide clear, actionable risk assessment that empowers business leaders to execute strategic decisions with confidence.",
                 icon: "business_center",
               },
             ].map((step) => (
@@ -305,7 +319,6 @@ const Practices: React.FC = () => {
             >
               Book Consultation
             </a>
-
           </div>
         </div>
       </section>
