@@ -11,7 +11,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 import Home from './pages/Home';
 import Practices from './pages/Practices';
 import SportsLaw from './pages/SportsLaw';
-import SuccessStories from './pages/SuccessStories';
+import OurWork from './pages/OurWork';
 import KnowledgeCentre from './pages/KnowledgeCentre';
 {/* import About from './pages/About'; */}
 import Contact from './pages/Contact';
@@ -58,7 +58,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/practices" element={<Practices />} />
             <Route path="/practices/sports" element={<SportsLaw />} />
-            <Route path="/success-stories" element={<SuccessStories />} />
+            <Route path="/our-work" element={<OurWork />} />
             <Route path="/knowledge" element={<KnowledgeCentre />} />
             {/* <Route path="/about" element={<About />} /> */}
             <Route path="/contact" element={<Contact />} />
