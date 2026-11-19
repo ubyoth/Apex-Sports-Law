@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { PRACTICE_AREAS, FOUNDER_BIO } from "../constants";
@@ -7,17 +7,6 @@ const SITE_URL = "https://apexsportslaw.com";
 const OG_IMAGE = `${SITE_URL}/og/default.jpg`;
 
 const Home: React.FC = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollTo =
-        direction === "left" ? scrollLeft - clientWidth : scrollLeft + clientWidth;
-      scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
-    }
-  };
-
   return (
     <>
       <Helmet>
@@ -100,7 +89,6 @@ const Home: React.FC = () => {
       </Helmet>
 
       <div className="flex flex-col font-sans">
-
         {/* Hero Section */}
         <section className="relative h-[85vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -115,10 +103,10 @@ const Home: React.FC = () => {
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
-              <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-                Precision. <br />
-                <span className="text-accent-gold">Strategy.</span> <br />
-                Resolution.
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-snug mb-6">
+                Protecting Athletes. <br />
+                <span className="text-accent-gold">Resolving Disputes</span> <br />
+                Enhancing Compliance.
               </h1>
 
               <p className="text-xl text-slate-300 mb-10 leading-relaxed font-light">
@@ -236,7 +224,6 @@ const Home: React.FC = () => {
                     Read Full Bio <span className="material-icons">east</span>
                   </Link>
                   */}
-                  
                 </div>
               </div>
             </div>
