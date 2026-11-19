@@ -101,7 +101,7 @@ const Home: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20 md:mt-32">
             <div className="max-w-2xl">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-snug mb-6">
                 Protecting Athletes. <br />
@@ -109,31 +109,21 @@ const Home: React.FC = () => {
                 Enhancing Compliance.
               </h1>
 
-              <p className="text-xl text-slate-300 mb-10 leading-relaxed font-light">
-                Apex Advocates is a premier full-service law practice delivering expert counsel in corporate advisory, commercial dispute resolution, employment law, and specialized sports law across Nigeria and Africa.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/practices"
-                  className="bg-accent-gold text-black px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-600 transition-all shadow-xl shadow-accent-gold/20 text-center"
-                >
-                  Explore Our Services
-                </Link>
-              </div>
+              
             </div>
           </div>
         </section>
 
+
+
+        
         {/* Practice Areas Section */}
         <section className="py-24 bg-white dark:bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-accent-gold font-bold uppercase tracking-widest text-sm mb-3">
-                Our Expertise
-              </h2>
+             
               <h3 className="text-4xl font-extrabold text-black dark:text-white">
-                Core Practice Areas
+               Our Services
               </h3>
               <div className="w-20 h-1 bg-accent-gold mx-auto mt-6"></div>
             </div>
