@@ -168,7 +168,7 @@ const Practices: React.FC = () => {
             <span className="text-accent-gold">Counsel for Business</span>
           </h1>
 
-          <p className="max-w-3xl mx-auto text-xl text-white leading-relaxed font-light">
+          <p className="max-w-3xl mx-auto text-xl text-neutral-200 leading-relaxed font-light">
             Apex Advocates is a full-service commercial law practice. We provide strategic legal
             counsel to businesses, institutions, and individuals across corporate advisory, dispute
             resolution, employment, regulatory compliance, intellectual property, and sports law.
@@ -178,22 +178,22 @@ const Practices: React.FC = () => {
 
       {/* Main Services Grid */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           {PRACTICE_GROUPS.map((group, index) => (
             <div
               key={group.id}
               id={group.id}
-              className={`flex flex-col lg:flex-row gap-16 items-center scroll-mt-32 ${
+              className={`flex flex-col lg:flex-row gap-12 items-center scroll-mt-32 ${
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
               {/* Text Column */}
-              <div className="w-full lg:w-1/2">
+              <div className="w-full lg:w-7/12">
                 <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-6 tracking-tight">
                   {group.title}
                 </h2>
 
-                <p className="text-lg text-neutral-600 dark:text-white leading-relaxed mb-8 font-light">
+                <p className="text-lg text-neutral-600 dark:text-neutral-200 leading-relaxed mb-8 font-light">
                   {group.description}
                 </p>
 
@@ -203,7 +203,7 @@ const Practices: React.FC = () => {
                       <span className="material-icons text-accent-gold text-sm mt-1 transition-transform group-hover:scale-125">
                         verified
                       </span>
-                      <span className="text-sm font-semibold text-neutral-800 dark:text-white">
+                      <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-200">
                         {service}
                       </span>
                     </div>
@@ -213,7 +213,7 @@ const Practices: React.FC = () => {
                 {group.link ? (
                   <Link
                     to={group.link}
-                    className="inline-flex items-center gap-4 bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:gap-6 transition-all shadow-xl"
+                    className="inline-flex items-center gap-4 bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-4 font-black uppercase tracking-widest text-xs hover:gap-6 transition-all shadow-xl"
                   >
                     Explore Dedicated Sports Practice <span className="material-icons">east</span>
                   </Link>
@@ -222,7 +222,7 @@ const Practices: React.FC = () => {
                     href="https://calendly.com/apexsportslaw-info/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-4 bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:gap-6 transition-all shadow-xl"
+                    className="inline-flex items-center gap-4 bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-4 font-black uppercase tracking-widest text-xs hover:gap-6 transition-all shadow-xl"
                   >
                     Request Consultation <span className="material-icons">east</span>
                   </a>
@@ -230,10 +230,10 @@ const Practices: React.FC = () => {
               </div>
 
               {/* Image Column */}
-              <div className="w-full lg:w-1/2">
+              <div className="w-full lg:w-5/12 max-w-md mx-auto lg:max-w-none">
                 <div className="relative group">
-                  <div className="absolute -inset-1 bg-accent-gold/20 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000" />
-                  <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden border border-accent-gold/10 shadow-2xl">
+                  <div className="absolute -inset-1 bg-accent-gold/20 blur opacity-25 group-hover:opacity-50 transition duration-1000" />
+                  <div className="relative aspect-[5/4] overflow-hidden border border-accent-gold/10 shadow-2xl">
                     <img
                       src={group.imageUrl}
                       alt={`${group.title} legal practice`}
@@ -279,9 +279,9 @@ const Practices: React.FC = () => {
             ].map((step) => (
               <div
                 key={step.title}
-                className="p-8 bg-white dark:bg-black rounded-3xl border border-accent-gold/5 shadow-xl transition-all hover:border-accent-gold/30 group text-left"
+                className="p-8 bg-white dark:bg-black border border-accent-gold/5 shadow-xl transition-all hover:border-accent-gold/30 group text-left"
               >
-                <div className="w-16 h-16 bg-accent-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent-gold transition-colors">
+                <div className="w-16 h-16 bg-accent-gold/10 flex items-center justify-center mb-6 group-hover:bg-accent-gold transition-colors">
                   <span className="material-icons text-accent-gold text-3xl group-hover:text-black">
                     {step.icon}
                   </span>
@@ -289,7 +289,7 @@ const Practices: React.FC = () => {
                 <h4 className="text-xl font-semibold mb-4 text-black dark:text-white tracking-tight">
                   {step.title}
                 </h4>
-                <p className="text-neutral-600 dark:text-white text-sm leading-relaxed font-light">
+                <p className="text-neutral-600 dark:text-neutral-200 text-sm leading-relaxed font-light">
                   {step.desc}
                 </p>
               </div>
@@ -304,7 +304,7 @@ const Practices: React.FC = () => {
           <h2 className="text-4xl font-semibold text-white tracking-tight">
             Need Commercial Representation?
           </h2>
-          <p className="text-white text-lg font-light max-w-2xl mx-auto">
+          <p className="text-neutral-200 text-lg font-light max-w-2xl mx-auto">
             Schedule a confidential consultation with us to discuss your needs.
           </p>
 
@@ -313,7 +313,7 @@ const Practices: React.FC = () => {
               href="https://calendly.com/apexsportslaw-info/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent-gold text-black px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-yellow-600 transition-all shadow-xl shadow-accent-gold/20"
+              className="bg-accent-gold text-black px-8 py-4 font-black uppercase tracking-widest text-xs hover:bg-yellow-600 transition-all shadow-xl shadow-accent-gold/20"
             >
               Book Consultation
             </a>
