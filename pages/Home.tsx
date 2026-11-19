@@ -10,7 +10,7 @@ const FALLBACK_SERVICE_IMAGE =
 
 const SERVICE_IMAGES: Record<string, string> = {
   sports:
-    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099794/sasun-bughdaryan-FaTLrG5-ViE-unsplash_dy07yr.jpg?q=80&w=2093&auto=format&fit=crop",
+    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099801/jason-charters-IorqsMssQH0-unsplash_khpbxl.jpg?q=80&w=2093&auto=format&fit=crop",
   compliance:
     "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099791/jakub-zerdzicki-fXlL5I0IvK0-unsplash_pydhio.jpg?q=80&w=2069&auto=format&fit=crop",
   "corporate-advisory":
