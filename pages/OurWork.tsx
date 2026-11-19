@@ -65,9 +65,6 @@ const OurWork: React.FC = () => {
             <div className="absolute top-1/2 -right-24 w-64 h-64 bg-accent-gold rounded-full filter blur-3xl"></div>
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span className="inline-block py-1 px-3 rounded-full bg-accent-gold/10 text-accent-gold text-xs font-bold uppercase tracking-wider mb-6 border border-accent-gold/20">
-              Proven Results
-            </span>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Success Stories</h1>
             <p className="max-w-2xl mx-auto text-lg text-slate-400 font-light leading-relaxed">
               At Apex Advocates, we measure our success by the victories and protection of our clients. Explore how we’ve navigated complex legal landscapes to deliver exceptional outcomes through meticulous strategy.
