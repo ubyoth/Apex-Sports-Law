@@ -24,9 +24,9 @@ const SERVICE_IMAGES: Record<string, string> = {
 };
 
 const FOUNDER_PARAGRAPHS = [
-  "Yahaya Oruma Othman is the Founder and Principal Partner of Apex Advocates, a specialized sports and commercial law practice serving clients across Nigeria and Africa. Admitted to the Nigerian Bar in 2015 and an Associate of the Chartered Institute of Arbitrators (UK), he brings over a decade of private practice experience to the business and regulation of sport.",
-  "Yahaya advises athletes, coaches, clubs, federations, and corporate rights holders across sports regulation, athlete and intermediary contracts, commercial arbitration, intellectual property protection, and institutional governance. Drawing on a strong background in high-stakes litigation, employment disputes, and corporate transactions, he helps sporting stakeholders navigate complex regulatory regimes, structure endorsement and licensing deals, and resolve disputes efficiently before domestic and international tribunals.",
-  "He established Apex Advocates to deliver agile, specialized, and commercially grounded legal counsel tailored to the evolving sports ecosystem across Nigeria and the broader African continent.",
+  "Yahaya Oruma Othman is the Founder and Principal Partner of Apex Advocates, serving clients across Nigeria and Africa.An Associate of the Chartered Institute of Arbitrators (UK) and LawInSport mentee, he brings over a decade of private practice experience to the business and regulation of sport.",
+  "Drawing on a strong background in high-stakes litigation, employment disputes, and corporate transactions, he helps sporting stakeholders navigate complex regulatory regimes, structure endorsement and licensing deals, and resolve disputes efficiently.",
+  "Apex Advocates was established to deliver agile, specialized, and commercially grounded legal counsel tailored to the evolving sports ecosystem across Africa and the world over.",
 ];
 
 const FOUNDER_QUALIFICATIONS = [
@@ -135,7 +135,7 @@ const Home: React.FC = () => {
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20 md:mt-32">
             <div className="max-w-2xl">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-snug mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white leading-snug mb-6">
                 Protecting Athletes. <br />
                 <span className="text-accent-gold">Resolving Disputes.</span> <br />
                 Enhancing Compliance.
@@ -148,7 +148,7 @@ const Home: React.FC = () => {
         <section className="py-24 bg-white dark:bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h3 className="text-4xl font-extrabold text-black dark:text-white">
+              <h3 className="text-4xl font-semibold tracking-tight text-black dark:text-white">
                 Our Services
               </h3>
               <div className="w-20 h-1 bg-accent-gold mx-auto mt-6"></div>
@@ -218,7 +218,7 @@ const Home: React.FC = () => {
                   <h3 className="text-3xl font-black text-black dark:text-white mb-2">
                     {FOUNDER_BIO.name}
                   </h3>
-                  <p className="text-accent-gold font-bold text-sm mb-6 uppercase tracking-wider">
+                  <p className="text-accent-gold font-normal (400) text-sm mb-6 uppercase tracking-wider">
                     {FOUNDER_BIO.role}
                   </p>
 
@@ -254,7 +254,7 @@ const Home: React.FC = () => {
               <h2 className="text-accent-gold font-bold uppercase tracking-widest text-sm mb-3">
                 Trusted By
               </h2>
-              <h3 className="text-4xl font-extrabold text-black dark:text-white">Our Clients</h3>
+              <h3 className="text-4xl font-semibold tracking-tight text-black dark:text-white">Our Clients</h3>
               <div className="w-20 h-1 bg-accent-gold mx-auto mt-6"></div>
             </div>
 
