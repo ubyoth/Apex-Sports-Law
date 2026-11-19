@@ -29,20 +29,6 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop",
   },
-
-  {
-    id: "sports-governance",
-    title: "Sports Law",
-    subtitle: "Representation, Disputes, Governance & Commercial Rights",
-    icon: "sports_soccer",
-    description:
-      "We maintain a full boutique sports law practice serving athletes, coaches, agents, clubs, leagues, federations, and sports brands. We draft and negotiate playing, coaching, and agent agreements and advise on domestic and international transfers under FIFA and federation rules. We represent clients before disciplinary panels, the FIFA Football Tribunal, and the Court of Arbitration for Sport (CAS) in contract, wage, eligibility, and agent fee disputes. We counsel governing bodies on constitutions, club licensing, anti-doping, integrity, and safeguarding compliance. And we structure and protect the commercial value of sport through image rights, sponsorship and endorsement deals, media and broadcasting rights, merchandising, and esports partnerships.",
-    services: [],
-    imageUrl:
-      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png?q=80&w=2070&auto=format&fit=crop",
-    link: "/practices/sports",
-  },
-  
   {
     id: "dispute-resolution",
     title: "Dispute Resolution & Commercial Arbitration",
@@ -86,6 +72,18 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
     services: [],
     imageUrl:
       "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795008255/markus-winkler-9XfSFjcwGh0-unsplash_kmkg2s.jpg?q=80&w=2072&auto=format&fit=crop",
+  },
+  {
+    id: "sports-governance",
+    title: "Sports Law",
+    subtitle: "Representation, Disputes, Governance & Commercial Rights",
+    icon: "sports_soccer",
+    description:
+      "Alongside our commercial practice, we maintain a full boutique sports law practice serving athletes, coaches, agents, clubs, leagues, federations, and sports brands. We draft and negotiate playing, coaching, and agent agreements and advise on domestic and international transfers under FIFA and federation rules. We represent clients before disciplinary panels, the FIFA Football Tribunal, and the Court of Arbitration for Sport (CAS) in contract, wage, eligibility, and agent fee disputes. We counsel governing bodies on constitutions, club licensing, anti-doping, integrity, and safeguarding compliance. And we structure and protect the commercial value of sport through image rights, sponsorship and endorsement deals, media and broadcasting rights, merchandising, and esports partnerships.",
+    services: [],
+    imageUrl:
+      "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png?q=80&w=2070&auto=format&fit=crop",
+    link: "/practices/sports",
   },
 ];
 
@@ -165,12 +163,12 @@ const Practices: React.FC = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+          <h1 className="text-4xl md:text-6xl font-semibold text-white leading-tight">
             Strategic Legal <br />
             <span className="text-accent-gold">Counsel for Business</span>
           </h1>
 
-          <p className="max-w-3xl mx-auto text-xl text-slate-400 leading-relaxed font-light">
+          <p className="max-w-3xl mx-auto text-xl text-white leading-relaxed font-light">
             Apex Advocates is a full-service commercial law practice. We provide strategic legal
             counsel to businesses, institutions, and individuals across corporate advisory, dispute
             resolution, employment, regulatory compliance, intellectual property, and sports law.
@@ -191,11 +189,11 @@ const Practices: React.FC = () => {
             >
               {/* Text Column */}
               <div className="w-full lg:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-extrabold text-black dark:text-white mb-6 uppercase tracking-tight">
+                <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-6 tracking-tight">
                   {group.title}
                 </h2>
 
-                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8 font-light">
+                <p className="text-lg text-neutral-600 dark:text-white leading-relaxed mb-8 font-light">
                   {group.description}
                 </p>
 
@@ -205,7 +203,7 @@ const Practices: React.FC = () => {
                       <span className="material-icons text-accent-gold text-sm mt-1 transition-transform group-hover:scale-125">
                         verified
                       </span>
-                      <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">
+                      <span className="text-sm font-semibold text-neutral-800 dark:text-white">
                         {service}
                       </span>
                     </div>
@@ -254,10 +252,10 @@ const Practices: React.FC = () => {
       {/* Strategic Approach */}
       <section className="py-24 bg-slate-50 dark:bg-secondary-grey/5 border-y border-accent-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-accent-gold font-bold uppercase tracking-widest text-xs mb-4">
+          <h2 className="font-sans text-accent-gold font-bold uppercase tracking-widest text-xs mb-4">
             Our Methodology
           </h2>
-          <h3 className="text-4xl font-black text-black dark:text-white mb-16 uppercase tracking-tight">
+          <h3 className="text-4xl font-semibold text-black dark:text-white mb-16 tracking-tight">
             The Apex Advantage
           </h3>
 
@@ -288,10 +286,10 @@ const Practices: React.FC = () => {
                     {step.icon}
                   </span>
                 </div>
-                <h4 className="text-xl font-bold mb-4 text-black dark:text-white uppercase tracking-tight">
+                <h4 className="text-xl font-semibold mb-4 text-black dark:text-white tracking-tight">
                   {step.title}
                 </h4>
-                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed font-light">
+                <p className="text-neutral-600 dark:text-white text-sm leading-relaxed font-light">
                   {step.desc}
                 </p>
               </div>
@@ -303,10 +301,10 @@ const Practices: React.FC = () => {
       {/* Custom Inquiry CTA */}
       <section className="bg-black py-24 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-8">
-          <h2 className="text-4xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-4xl font-semibold text-white tracking-tight">
             Need Commercial Representation?
           </h2>
-          <p className="text-slate-400 text-lg font-light max-w-2xl mx-auto">
+          <p className="text-white text-lg font-light max-w-2xl mx-auto">
             Schedule a confidential consultation with us to discuss your needs.
           </p>
 
