@@ -105,11 +105,9 @@ const Home: React.FC = () => {
             <div className="max-w-2xl">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-snug mb-6">
                 Protecting Athletes. <br />
-                <span className="text-accent-gold">Resolving Disputes</span> <br />
+                <span className="text-accent-gold">Resolving Disputes.</span> <br />
                 Enhancing Compliance.
-              </h1>
-
-              
+              </h1>             
             </div>
           </div>
         </section>
