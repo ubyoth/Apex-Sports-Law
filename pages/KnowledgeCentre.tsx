@@ -70,7 +70,7 @@ function formatIsoDate(input?: string): string | undefined {
 }
 
 const KnowledgeCentre: React.FC = () => {
-  const POSTS_PER_CLICK = 4;
+  const POSTS_PER_CLICK = 6;
 
   const [visiblePosts, setVisiblePosts] = useState<number>(POSTS_PER_CLICK);
   const [bookmarkedPosts, setBookmarkedPosts] = useState<string[]>([]);
@@ -222,10 +222,7 @@ const KnowledgeCentre: React.FC = () => {
           </div>
 
           <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
-            <div className="max-w-3xl">
-              <p className="text-[#C3A66B] text-[10px] font-semibold uppercase tracking-[0.24em] mb-4">
-                Research & Perspectives
-              </p>
+            <div className="max-w-3xl">           
 
               <h1 className="text-3xl md:text-4xl lg:text-[2.8rem] font-semibold tracking-tight text-white mb-5">
                 Knowledge Centre
@@ -251,13 +248,10 @@ const KnowledgeCentre: React.FC = () => {
 
               {/* Legal Briefs Header */}
               <div className="flex items-end justify-between gap-4 border-b border-[#E9E6DE] pb-6">
-                <div>
-                  <p className="text-[#A88B4D] text-[10px] font-semibold uppercase tracking-[0.22em] mb-2">
-                    Insights & Analysis
-                  </p>
+                <div>              
 
                   <h2 className="text-2xl md:text-[1.8rem] font-semibold text-ink tracking-tight">
-                    Legal Briefs
+                    Insights & Analysis
                   </h2>
                 </div>
 
