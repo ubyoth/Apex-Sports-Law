@@ -151,10 +151,10 @@ const Practices: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           {/* Hero pill badge removed here */}
 
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight">
-            Strategic Counsel for <br />
-            <span className="text-accent-gold">Business, Industry & Governance</span>
-          </h1>
+   <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+  Strategic Legal <br />
+  <span className="text-accent-gold">Counsel for Sports</span>
+</h1>
 
           <p className="max-w-3xl mx-auto text-xl text-slate-400 leading-relaxed font-light">
             We focus exclusively on resolving sports-related disputes and protecting athletes’ rights, through litigation, arbitration and alternative dispute resolution methods.
