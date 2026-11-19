@@ -398,9 +398,7 @@ const KnowledgeCentre: React.FC = () => {
               <section className="pt-8 border-t border-[#E9E6DE]">
 
                 <div className="mb-7">
-                  <p className="text-[#A88B4D] text-[10px] font-semibold uppercase tracking-[0.22em] mb-2">
-                    Updates & Announcements
-                  </p>
+             
 
                   <h2 className="text-2xl md:text-[1.8rem] font-semibold text-ink tracking-tight">
                     Latest Firm News
