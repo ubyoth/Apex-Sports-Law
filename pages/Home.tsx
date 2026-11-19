@@ -46,7 +46,7 @@ const Home: React.FC = () => {
 
         <meta
           name="description"
-          content="Apex Advocates is a premier full-service law firm in Lagos, Nigeria, specializing in corporate advisory, commercial dispute resolution, labor law, and sports law."
+          content="Apex Advocates is a premier full-service law firm in Lagos, Nigeria, specializing in corporate advisory, commercial dispute resolution, labour and employment law, and sports law."
         />
 
         <link rel="canonical" href="https://apexsportslaw.com/" />
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
         />
         <meta
           property="og:description"
-          content="Full-service commercial law practice providing strategic legal counsel across corporate advisory, dispute resolution, employment, and sports law in Nigeria and Africa."
+          content="Full-service commercial law practice providing strategic legal counsel across corporate advisory, commercial dispute resolution, labour and employment law, and sports law in Nigeria and Africa."
         />
         <meta property="og:url" content="https://apexsportslaw.com/" />
         <meta property="og:image" content={OG_IMAGE} />
