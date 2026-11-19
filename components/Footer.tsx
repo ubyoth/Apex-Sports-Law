@@ -71,27 +71,32 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-[#BDBDBD] text-sm">
               <li>
                 <Link to="/practices" className="hover:text-[#D0B477] transition-colors duration-300">
-                  Corporate & Commercial
+                  Corporate & Commercial Advisory
                 </Link>
               </li>
               <li>
                 <Link to="/practices" className="hover:text-[#D0B477] transition-colors duration-300">
-                  Dispute Resolution
+                  Dispute Resolution & Commercial Arbitration
                 </Link>
               </li>
               <li>
                 <Link to="/practices" className="hover:text-[#D0B477] transition-colors duration-300">
-                  Labour & Employment
+                  Labour & Employment Law
                 </Link>
               </li>
               <li>
                 <Link to="/practices/sports" className="hover:text-[#D0B477] transition-colors duration-300">
-                  Sports Law & Governance
+                  Sports Law
                 </Link>
               </li>
               <li>
                 <Link to="/practices" className="hover:text-[#D0B477] transition-colors duration-300">
-                  Intellectual Property
+                  Intellectual Property & Brand Protection
+                </Link>
+              </li>
+              <li>
+                <Link to="/practices" className="hover:text-[#D0B477] transition-colors duration-300">
+                  Regulatory & Compliance Advisory
                 </Link>
               </li>
             </ul>
