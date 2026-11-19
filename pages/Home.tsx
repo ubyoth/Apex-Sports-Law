@@ -212,9 +212,6 @@ const Home: React.FC = () => {
               {/* Content Column */}
               <div className="w-full md:w-[70%] p-10 lg:p-14 flex flex-col justify-between">
                 <div>
-                  <span className="text-accent-gold text-xs font-black uppercase tracking-[0.3em] mb-3 block">
-                    Leadership & Counsel
-                  </span>
                   <h3 className="text-3xl font-black text-black dark:text-white mb-2">
                     {FOUNDER_BIO.name}
                   </h3>
@@ -247,31 +244,7 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Clients Section */}
-        <section className="py-24 bg-white dark:bg-black border-t border-accent-gold/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-accent-gold font-bold uppercase tracking-widest text-sm mb-3">
-                Trusted By
-              </h2>
-              <h3 className="text-4xl font-semibold tracking-tight text-black dark:text-white">Our Clients</h3>
-              <div className="w-20 h-1 bg-accent-gold mx-auto mt-6"></div>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
-              {[
-                "https://res.cloudinary.com/dq7vjblwd/image/upload/v1771517207/Teambonding_Nigeria_hi8tk4.png",
-                "https://res.cloudinary.com/dq7vjblwd/image/upload/v1771517004/images_urbidu.jpg",
-                "https://res.cloudinary.com/dq7vjblwd/image/upload/v1771517330/itslearningtime_nsyi60.png",
-                "https://res.cloudinary.com/dq7vjblwd/image/upload/v1771518667/saharan_titans_xmitsa.png",
-              ].map((logo, index) => (
-                <div key={index} className="flex items-center justify-center h-full">
-                  <img src={logo} alt={`Client ${index + 1}`} className="h-20 object-contain" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+       
 
         {/* CTA Section */}
         <section className="bg-black py-20 border-t border-accent-gold/20">
