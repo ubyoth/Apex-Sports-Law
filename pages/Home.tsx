@@ -130,9 +130,9 @@ const Home: React.FC = () => {
         </section>
 
         {/* Practice Areas Section (6 cards: 3 columns x 2 rows) */}
-        <section className="py-24 bg-white dark:bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+        <section className="py-20 bg-white dark:bg-black">
+          <div className="max-w-6xl mx-auto px-3 sm:px-5 lg:px-7">
+            <div className="text-center mb-14">
               <h3 className="text-4xl font-extrabold text-black dark:text-white">
                 Our Services
               </h3>
