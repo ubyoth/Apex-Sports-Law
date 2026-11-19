@@ -22,7 +22,6 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
   {
     id: "corporate-commercial",
     title: "Corporate & Commercial Advisory",
-    subtitle: "Entity Structuring, Compliance & Commercial Contracts",
     icon: "business_center",
     description:
       "We provide strategic counsel to startups and established enterprises navigating the Nigerian and broader African business landscape. From entity structuring and CAC compliance to shareholder agreements, mergers and acquisitions, investment transactions, and complex commercial contracting, we ensure complete risk mitigation at every stage of your business.",
@@ -33,7 +32,6 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
   {
     id: "dispute-resolution",
     title: "Dispute Resolution & Commercial Arbitration",
-    subtitle: "Litigation, Mediation & Arbitration",
     icon: "gavel",
     description:
       "We represent businesses, institutions, and individuals in commercial litigation, mediation, and domestic and international arbitration. Our disputes practice spans breach of contract, debt recovery, shareholder and partnership disputes, and enforcement of judgments and arbitral awards, with urgent injunctive relief where speed matters. We pursue negotiated resolution wherever it serves your interests and litigate decisively when it does not.",
@@ -44,7 +42,6 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
   {
     id: "labour-employment",
     title: "Labour & Employment Law",
-    subtitle: "Employment Contracts, Workplace Policy & Employment Disputes",
     icon: "groups",
     description:
       "We advise employers and senior executives on the full employment lifecycle: drafting employment contracts and executive agreements, building staff handbooks and workplace policies, and managing disciplinary processes, terminations, and redundancies in line with Nigerian labour law. We also represent clients in employment disputes, and advise on statutory obligations such as pensions and employee compensation.",
@@ -55,7 +52,6 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
   {
     id: "regulatory-compliance",
     title: "Regulatory & Compliance Advisory",
-    subtitle: "Licensing, Data Protection & Corporate Governance",
     icon: "policy",
     description:
       "We help businesses navigate the regulatory environment they operate in. Our compliance practice covers sector licensing and regulatory approvals, data protection, anti-money laundering and consumer protection obligations, corporate governance, and the design of internal compliance policies and programmes. We also represent clients in regulatory inquiries and enforcement matters, helping you stay compliant, avoid penalties, and protect your licence to operate.",
@@ -66,7 +62,6 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
   {
     id: "intellectual-property",
     title: "Intellectual Property & Brand Protection",
-    subtitle: "Trademarks, Copyrights & Commercial Licensing",
     icon: "verified_user",
     description:
       "We help businesses, creators, and innovators protect and monetize their intangible assets. Our practice covers trademark and copyright registration, brand clearance and portfolio management, licensing and franchising agreements, technology and software licensing, and infringement and anti-counterfeiting enforcement, so that your brand and ideas remain secure as you grow.",
@@ -77,10 +72,9 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
   {
     id: "sports-governance",
     title: "Sports Law",
-    subtitle: "Representation, Disputes, Governance & Commercial Rights",
     icon: "sports_soccer",
     description:
-      "Alongside our commercial practice, we maintain a full boutique sports law practice serving athletes, coaches, agents, clubs, leagues, federations, and sports brands. We draft and negotiate playing, coaching, and agent agreements and advise on domestic and international transfers under FIFA and federation rules. We represent clients before disciplinary panels, the FIFA Football Tribunal, and the Court of Arbitration for Sport (CAS) in contract, wage, eligibility, and agent fee disputes. We counsel governing bodies on constitutions, club licensing, anti-doping, integrity, and safeguarding compliance. And we structure and protect the commercial value of sport through image rights, sponsorship and endorsement deals, media and broadcasting rights, merchandising, and esports partnerships.",
+      "We maintain a full boutique sports law practice serving athletes, coaches, agents, clubs, leagues, federations, and sports brands. We draft and negotiate playing, coaching, and agent agreements and advise on domestic and international transfers under FIFA and federation rules. We represent clients before disciplinary panels, the FIFA Football Tribunal, and the Court of Arbitration for Sport (CAS) in contract, wage, eligibility, and agent fee disputes. We counsel governing bodies on constitutions, club licensing, anti-doping, integrity, and safeguarding compliance. And we structure and protect the commercial value of sport through image rights, sponsorship and endorsement deals, media and broadcasting rights, merchandising, and esports partnerships.",
     services: [],
     imageUrl:
       "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png?q=80&w=2070&auto=format&fit=crop",
@@ -271,17 +265,17 @@ const Practices: React.FC = () => {
               {
                 title: "Partner-Led Service",
                 desc: "Every matter is managed directly by our Principal Partner, ensuring rigorous accountability, strategic focus, and senior legal direction.",
-                icon: "person_outline",
+                
               },
               {
                 title: "Dispute Resolution First",
                 desc: "We deploy commercial negotiation and arbitration to resolve disputes efficiently, protecting enterprise value and avoiding prolonged litigation.",
-                icon: "handshake",
+                
               },
               {
                 title: "Commercial Pragmatism",
                 desc: "We provide clear, actionable risk assessment that empowers business leaders to execute strategic decisions with confidence.",
-                icon: "business_center",
+                
               },
             ].map((step) => (
               <div
@@ -311,10 +305,7 @@ const Practices: React.FC = () => {
           <div className="absolute -right-32 -top-40 h-[420px] w-[420px] rounded-full bg-[#B99A55]/10 blur-[130px]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-4xl space-y-7 px-4 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
-            Need Commercial Representation?
-          </h2>
+        <div className="relative z-10 mx-auto max-w-4xl space-y-7 px-4 text-center">          
           <p className="mx-auto max-w-2xl text-base font-light leading-8 text-neutral-300 md:text-lg">
             Schedule a confidential consultation with us to discuss your needs.
           </p>
