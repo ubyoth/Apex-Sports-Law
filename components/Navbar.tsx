@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-const navLinks = [
+  const navLinks = [
     { name: 'Home', path: '/' },
     // { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/practices' },
@@ -16,27 +16,32 @@ const navLinks = [
     { name: 'Contact', path: '/contact' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) =>
+    path === '/'
+      ? location.pathname === '/'
+      : location.pathname.startsWith(path);
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 dark:bg-black/95 border-b border-accent-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center gap-4 group">
-            <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-110">
+          <Link to="/" className="flex items-center gap-4">
+            <div className="w-12 h-12 flex items-center justify-center overflow-hidden shrink-0">
               <img
                 src="/logo.png"
                 alt="Apex Advocates Logo"
-                className="w-full h-full object-contain filter drop-shadow-[0_0_8px_rgba(212,175,55,0.3)]"
+                className="w-full h-full object-cover"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src =
+                  const img = e.target as HTMLImageElement;
+                  img.onerror = null;
+                  img.src =
                     'https://res.cloudinary.com/dq7vjblwd/image/upload/v1771280793/pngtree-high-quality-gold-medal-for-recognition-png-image_14451009_ptmpmx.png';
                 }}
               />
             </div>
             <div className="flex flex-col leading-none">
               <span className="text-xl font-extrabold tracking-tight text-primary dark:text-white uppercase">
-                Apex 
+                Apex
               </span>
               <span className="text-[10px] tracking-[0.2em] text-accent-gold font-semibold uppercase">
                 Advocates
@@ -74,6 +79,7 @@ const navLinks = [
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-primary dark:text-white"
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
             >
               <span className="material-icons text-3xl">
                 {isMobileMenuOpen ? 'close' : 'menu'}
