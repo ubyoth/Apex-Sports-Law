@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @config "./tailwind.config.js";
 
 @theme {
-  --font-sans: 'Marcellus', Georgia, serif;
-  --font-serif: 'Cinzel', Georgia, serif;
+  --font-sans: 'Archivo', system-ui, -apple-system, sans-serif;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -21,11 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Marcellus', Georgia, serif;
+  font-family: 'Archivo', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Cinzel', Georgia, serif;
 }
