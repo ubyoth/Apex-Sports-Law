@@ -121,9 +121,7 @@ const Contact: React.FC = () => {
                     <h3 className="text-xl font-semibold text-black dark:text-white mb-2">
                       Contact Us Directly
                     </h3>
-                    <p className="text-neutral-600 dark:text-neutral-200 leading-relaxed">
-                      Please email or call us directly for inquiries while the contact form is being updated.
-                    </p>
+              
                   </div>
                 </div>
 
