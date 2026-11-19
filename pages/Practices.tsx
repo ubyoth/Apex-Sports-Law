@@ -160,11 +160,7 @@ const Practices: React.FC = () => {
           <div className="absolute -right-32 -top-40 h-[600px] w-[600px] rounded-full bg-[#B99A55]/30 blur-[140px]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
-            Strategic Legal <br />
-            <span className="text-[#B99A55]">Counsel for Business</span>
-          </h1>
+        <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">   
 
           <p className="mx-auto mt-7 max-w-3xl text-base font-light leading-8 text-neutral-300 md:text-lg">
             Apex Advocates is a full-service commercial law practice. We provide strategic legal
