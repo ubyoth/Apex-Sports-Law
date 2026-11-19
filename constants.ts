@@ -99,7 +99,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   }
 ];
 
-export const SUCCESS_STORIES: SuccessStory[] = [
+export const OUR_WORK: SuccessStory[] = [
   {
     id: 'ss1',
     category: 'Sports Law',
