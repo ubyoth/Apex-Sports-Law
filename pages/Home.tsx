@@ -10,18 +10,33 @@ const FALLBACK_SERVICE_IMAGE =
 
 const SERVICE_IMAGES: Record<string, string> = {
   sports:
-    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099801/jason-charters-IorqsMssQH0-unsplash_khpbxl.jpg?q=80&w=2093&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2093&auto=format&fit=crop",
   compliance:
-    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099791/jakub-zerdzicki-fXlL5I0IvK0-unsplash_pydhio.jpg?q=80&w=2069&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80&w=2069&auto=format&fit=crop",
   "corporate-advisory":
-    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099793/adeolu-eletu-E7RLgUjjazc-unsplash_adbzf4.jpg?q=80&w=2069&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
   arbitration:
-    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099794/sasun-bughdaryan-FaTLrG5-ViE-unsplash_dy07yr.jpg?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
   labour:
-    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099801/jason-charters-IorqsMssQH0-unsplash_khpbxl.jpg?q=80&w=2070&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
   ip:
-    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099793/monineath-horn-wrF8Oft14sE-unsplash_ua0ob9.jpg?q=80&w=2072&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1453941403708-3c32160971fd?q=80&w=2072&auto=format&fit=crop",
 };
+
+const FOUNDER_PARAGRAPHS = [
+  "Yahaya Oruma Othman is the Founder and Principal Partner of Apex Advocates, a specialized sports and commercial law practice serving clients across Nigeria and Africa. Admitted to the Nigerian Bar in 2015 and an Associate of the Chartered Institute of Arbitrators (UK), he brings over a decade of private practice experience to the business and regulation of sport.",
+  "Yahaya advises athletes, coaches, clubs, federations, and corporate rights holders across sports regulation, athlete and intermediary contracts, commercial arbitration, intellectual property protection, and institutional governance. Drawing on a strong background in high-stakes litigation, employment disputes, and corporate transactions, he helps sporting stakeholders navigate complex regulatory regimes, structure endorsement and licensing deals, and resolve disputes efficiently before domestic and international tribunals.",
+  "He established Apex Advocates to deliver agile, specialized, and commercially grounded legal counsel tailored to the evolving sports ecosystem across Nigeria and the broader African continent.",
+];
+
+const FOUNDER_QUALIFICATIONS = [
+  "Master in International Sports Law (in view) – ISDE",
+  "Business of Sports Institute (BOI), Sports Business & Administration Course",
+  "LL.B, University of Jos",
+  "Barrister & Solicitor of the Supreme Court of Nigeria (2015)",
+  "Associate, Chartered Institute of Arbitrators (UK)",
+  "Member, Nigerian Bar Association (NBA)",
+];
 
 const Home: React.FC = () => {
   return (
@@ -120,7 +135,7 @@ const Home: React.FC = () => {
 
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20 md:mt-32">
             <div className="max-w-2xl">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-snug mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-snug mb-6">
                 Protecting Athletes. <br />
                 <span className="text-accent-gold">Resolving Disputes.</span> <br />
                 Enhancing Compliance.
@@ -130,9 +145,9 @@ const Home: React.FC = () => {
         </section>
 
         {/* Practice Areas Section (6 cards: 3 columns x 2 rows) */}
-        <section className="py-20 bg-white dark:bg-black">
-          <div className="max-w-6xl mx-auto px-3 sm:px-5 lg:px-7">
-            <div className="text-center mb-14">
+        <section className="py-24 bg-white dark:bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
               <h3 className="text-4xl font-extrabold text-black dark:text-white">
                 Our Services
               </h3>
@@ -206,20 +221,26 @@ const Home: React.FC = () => {
                   <p className="text-accent-gold font-bold text-sm mb-6 uppercase tracking-wider">
                     {FOUNDER_BIO.role}
                   </p>
-                  <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-8 font-light">
-                    {FOUNDER_BIO.bio}
-                  </p>
+
+                  <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed mb-8 font-light">
+                    {FOUNDER_PARAGRAPHS.map((paragraph, index) => (
+                      <p key={index}>{paragraph}</p>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="pt-6 border-t border-slate-100 dark:border-accent-gold/10 flex flex-wrap items-center justify-between gap-4">
-                  {/*
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center gap-3 bg-black dark:bg-accent-gold text-white dark:text-black px-8 py-3.5 rounded-xl font-black uppercase tracking-widest text-xs hover:gap-4 transition-all shadow-xl"
-                  >
-                    Read Full Bio <span className="material-icons">east</span>
-                  </Link>
-                  */}
+                <div className="pt-6 border-t border-slate-100 dark:border-accent-gold/10">
+                  <h4 className="text-accent-gold text-xs font-black uppercase tracking-[0.25em] mb-4">
+                    Qualifications & Credentials
+                  </h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5 text-sm text-slate-700 dark:text-slate-300">
+                    {FOUNDER_QUALIFICATIONS.map((item, index) => (
+                      <li key={index} className="flex items-start gap-2.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent-gold mt-2 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
