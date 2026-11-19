@@ -25,7 +25,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: 'corporate-advisory',
     title: 'Corporate & Commercial Advisory',
-    description: 'Strategic guidance for businesses, investors, and startups at every stage of growth.',
+    description: '',
     icon: 'business',
     services: [
       'Corporate restructuring and CAC regulatory compliance',
@@ -37,7 +37,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: 'arbitration',
     title: 'Dispute Resolution & Arbitration',
-    description: 'Partner-led commercial dispute resolution through strategic litigation, mediation, and arbitration.',
+    description: '',
     icon: 'balance',
     services: [
       'Domestic and international commercial arbitration',
@@ -49,7 +49,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: 'labour',
     title: 'Employment & Labour Law',
-    description: 'Protecting corporate rights and executive interests in the modern workspace.',
+    description: 'Contract Negotiation & Drafting',
     icon: 'gavel',
     services: [
       'Executive employment contract negotiation',
@@ -60,8 +60,8 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   },
   {
     id: 'sports',
-    title: 'Sports Law & Governance',
-    description: 'Specialized legal management for modern sports professionals, clubs, and governing bodies.',
+    title: 'Athlete, Coach & Agent Representation',
+    description: '',
     icon: 'sports_soccer',
     services: [
       'Athlete contracts and transfer negotiations',
@@ -72,14 +72,26 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   },
   {
     id: 'ip',
-    title: 'Intellectual Property & Brand Protection',
-    description: 'Securing and maximizing the commercial value of creative and corporate assets.',
+    title: 'Intellectual Property and Brand Protection',
+    description: '',
     icon: 'verified_user',
     services: [
       'Trademark registration and management',
       'Copyright protection and licensing structures',
       'Intellectual property enforcement',
       'Brand protection and digital asset management'
+    ]
+  },
+  {
+    id: 'compliance',
+    title: 'Regulatory and League Compliance',
+    description: '',
+    icon: 'policy',
+    services: [
+      'Sector-specific regulatory licensing and approvals',
+      'Corporate governance and board advisory',
+      'Data protection and privacy compliance (NDPA)',
+      'Internal compliance audits and risk mitigation'
     ]
   }
 ];
