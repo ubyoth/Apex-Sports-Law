@@ -135,10 +135,10 @@ const Practices: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-black font-sans">
       <Helmet>
-        <title>Full-Service Corporate, Dispute Resolution, IP & Sports Law | Apex Advocates</title>
+        <title>Full-Service Sports Law Firm | Apex Advocates</title>
         <meta
           name="description"
-          content="Discover Apex Advocates' comprehensive commercial practice areas in Lagos, Nigeria: Corporate Advisory, Dispute Resolution, Employment Law, Intellectual Property, and Sports Law."
+          content="Discover Apex Advocates' comprehensive commercial sports law practice in Lagos, Nigeria and across Africa."
         />
         <link rel="canonical" href={PAGE_URL} />
         <meta name="robots" content="index,follow" />
@@ -148,16 +148,16 @@ const Practices: React.FC = () => {
         <meta property="og:title" content="Full-Service Practice Areas | Apex Advocates" />
         <meta
           property="og:description"
-          content="Strategic legal counsel in Corporate Advisory, Dispute Resolution, Employment Law, Intellectual Property, and Sports Law in Nigeria and across Africa."
+          content="Strategic legal counsel in Sports Law in Nigeria and across Africa."
         />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:image" content={OG_IMAGE} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Full-Service Practice Areas | Apex Advocates" />
+        <meta name="twitter:title" content="Sports Law Practice Areas | Apex Advocates" />
         <meta
           name="twitter:description"
-          content="Strategic legal counsel in Corporate Advisory, Dispute Resolution, Employment Law, Intellectual Property, and Sports Law in Nigeria and across Africa."
+          content="Strategic legal counsel in Sports Law in Nigeria and across Africa."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
@@ -180,7 +180,7 @@ const Practices: React.FC = () => {
           </h1>
 
           <p className="max-w-3xl mx-auto text-xl text-slate-400 leading-relaxed font-light">
-            Apex Advocates provides legal representation across corporate transactions, labour disputes, intellectual property protection, and specialized sports regulation across Nigeria and Africa.
+            We focus exclusively on resolving sports-related disputes and protecting athletes’ rights, through litigation, arbitration and alternative dispute resolution methods.
           </p>
         </div>
       </header>
