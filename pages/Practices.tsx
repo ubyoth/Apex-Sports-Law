@@ -10,7 +10,6 @@ const OG_IMAGE = `${SITE_URL}/og/practice-areas.jpg`;
 type PracticeGroup = {
   id: string;
   title: string;
-  subtitle: string;
   icon: string;
   description: string;
   services: string[];
@@ -147,8 +146,12 @@ const Practices: React.FC = () => {
         />
         <meta name="twitter:image" content={OG_IMAGE} />
 
-        <script type="application/ld+json">{JSON.stringify(itemListJsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(orgJsonLd)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(itemListJsonLd)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(orgJsonLd)}
+        </script>
       </Helmet>
 
       {/* Services Hero */}
@@ -184,10 +187,6 @@ const Practices: React.FC = () => {
             >
               {/* Text Column */}
               <div className="w-full lg:w-7/12">
-                <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#A88B4D]">
-                  {group.subtitle}
-                </p>
-
                 <h2 className="mb-5 text-2xl font-semibold leading-tight tracking-tight text-[#202020] md:text-3xl lg:text-4xl">
                   {group.title}
                 </h2>
@@ -209,7 +208,7 @@ const Practices: React.FC = () => {
                   ))}
                 </div>
 
-                {group.link ? (
+                {group.link && (
                   <Link
                     to={group.link}
                     className="inline-flex items-center gap-3 border border-[#202020] bg-[#202020] px-6 py-3.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:border-[#A88B4D] hover:bg-[#A88B4D] hover:text-[#202020]"
@@ -217,8 +216,6 @@ const Practices: React.FC = () => {
                     Explore Dedicated Sports Practice
                     <span className="material-icons text-base">east</span>
                   </Link>
-                ) : (
-             
                 )}
               </div>
 
@@ -257,28 +254,20 @@ const Practices: React.FC = () => {
               {
                 title: "Partner-Led Service",
                 desc: "Every matter is managed directly by our Principal Partner, ensuring rigorous accountability, strategic focus, and senior legal direction.",
-                
               },
               {
                 title: "Dispute Resolution First",
                 desc: "We deploy commercial negotiation and arbitration to resolve disputes efficiently, protecting enterprise value and avoiding prolonged litigation.",
-                
               },
               {
                 title: "Commercial Pragmatism",
                 desc: "We provide clear, actionable risk assessment that empowers business leaders to execute strategic decisions with confidence.",
-                
               },
             ].map((step) => (
               <div
                 key={step.title}
                 className="group border border-[#E9E6DE] bg-[#FAF9F6] p-7 text-left transition-all duration-300 hover:border-[#B99A55] md:p-8"
               >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center border border-[#E9E6DE] bg-white transition-colors duration-300 group-hover:border-[#B99A55] group-hover:bg-[#B99A55]/10">
-                  <span className="material-icons text-2xl text-[#A88B4D]">
-                    {step.icon}
-                  </span>
-                </div>
                 <h4 className="mb-4 text-xl font-semibold tracking-tight text-[#202020]">
                   {step.title}
                 </h4>
@@ -297,7 +286,7 @@ const Practices: React.FC = () => {
           <div className="absolute -right-32 -top-40 h-[420px] w-[420px] rounded-full bg-[#B99A55]/10 blur-[130px]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-4xl space-y-7 px-4 text-center">          
+        <div className="relative z-10 mx-auto max-w-4xl space-y-7 px-4 text-center">
           <p className="mx-auto max-w-2xl text-base font-light leading-8 text-neutral-300 md:text-lg">
             Schedule a confidential consultation with us to discuss your needs.
           </p>
