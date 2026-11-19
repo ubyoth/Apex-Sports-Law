@@ -19,7 +19,7 @@ const SERVICE_IMAGES: Record<string, string> = {
   labour:
     "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
   ip:
-    "https://images.unsplash.com/photo-1453941403708-3c32160971fd?q=80&w=2072&auto=format&fit=crop",
+    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099793/monineath-horn-wrF8Oft14sE-unsplash_ua0ob9.jpg?q=80&w=2072&auto=format&fit=crop",
 };
 
 const FALLBACK_SERVICE_IMAGE =
@@ -226,7 +226,7 @@ const Home: React.FC = () => {
                 to="/practices"
                 className="inline-flex items-center justify-center gap-3 bg-[#202020] text-white px-7 py-3.5 font-semibold uppercase tracking-[0.14em] text-[10px] hover:bg-[#A88B4D] hover:text-white transition-colors duration-300"
               >
-                Read more about our services
+                Learn more about our services
                 <span className="material-icons text-base">
                   east
                 </span>
