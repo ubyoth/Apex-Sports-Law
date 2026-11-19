@@ -303,16 +303,7 @@ const Home: React.FC = () => {
         <section className="bg-black py-20 lg:py-24 relative overflow-hidden border-t border-accent-gold/20">
           <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-accent-gold/5 rounded-full blur-[140px] pointer-events-none" />
 
-          <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
-
-            <p className="text-accent-gold text-xs font-bold uppercase tracking-[0.25em] mb-5">
-              Legal Counsel & Representation
-            </p>
-
-            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6 tracking-tight">
-              Secure Your Legal Interests Today
-            </h2>
-
+          <div className="max-w-5xl mx-auto px-4 text-center relative z-10">         
             <p className="text-neutral-300 text-base md:text-lg font-light max-w-2xl mx-auto mb-10 leading-relaxed">
               Schedule a confidential consultation with our team to discuss
               your legal needs and explore how we can assist you.
