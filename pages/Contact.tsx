@@ -106,9 +106,7 @@ const Contact: React.FC = () => {
 
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-[#B99A55]">
-                Apex Advocates
-              </p>
+             
 
               <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white md:text-5xl lg:text-6xl">
                 Get in Touch with{" "}
