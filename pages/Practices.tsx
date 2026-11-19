@@ -20,18 +20,12 @@ type PracticeGroup = {
 const PRACTICE_GROUPS: PracticeGroup[] = [
   {
     id: "sports-governance",
-    title: "Sports Law & Regulatory Governance",
+    title: "Athlete, Coach & Agent Representation",
     subtitle: "Contracts, FIFA DRC Representation & Athlete Advisory",
     icon: "sports_soccer",
     description:
-      "We advise professional athletes, sports clubs, governing bodies, and commercial sponsors on complex sports regulations, transfer contracts, image rights, and representation before the FIFA Football Tribunal and CAS.",
+      "We provide end-to-end representation for athletes, coaches, and licensed agents across every stage of a sporting career. Our practice handles the drafting and negotiation of playing contracts, coaching agreements, termination clauses, and performance bonus structures. We also advise on domestic and international transfers, ensuring compliance with FIFA and local federation regulations regarding solidarity mechanisms, training compensation calculations, and player-agent representation agreements.",
     services: [
-      "Player Transfer & Representation Agreements",
-      "FIFA Tribunal & CAS Arbitration",
-      "Image Rights & Sponsorship Contracts",
-      "Club Governance & Academy Structuring",
-      "Regulatory & Disciplinary Defense",
-      "Sports Infrastructure & Event Licensing"
     ],
     imageUrl: "https://res.cloudinary.com/dq7vjblwd/image/upload/v1779473746/businessman-signing-sports-contract-with-soccer-ball-desk_1235831-54791_ivilyz.png?q=80&w=2070&auto=format&fit=crop",
     link: "/practices/sports"
@@ -40,15 +34,12 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
   {
     id: "corporate-commercial",
     title: "Corporate & Commercial Advisory",
-    subtitle: "Enterprise Governance, M&A & Regulatory Compliance",
+    subtitle: "",
     icon: "business_center",
     description:
       "We provide strategic counsel to startups and established enterprises navigating the Nigerian and broader African business landscape. From entity structuring and CAC compliance to complex commercial contracting, we ensure complete risk mitigation.",
     services: [
-      "Corporate Structuring & Governance",
-      "Regulatory Compliance & CAC Filings",
-      "Commercial Contract Drafting & Negotiation",
-      "Joint Ventures & Strategic Partnerships"
+      
     ],
     imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop",
   },
@@ -56,28 +47,19 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
     id: "dispute-resolution",
     title: "Dispute Resolution & Commercial Arbitration",
     subtitle: "Litigation, Mediation & International Arbitration",
-    icon: "gavel",
     description:
-      "When commercial disputes arise, our focus is swift, partner-led resolution that preserves enterprise value and business relationships.",
+      "We represent athletes, clubs, agents, and governing bodies before domestic disciplinary panels, federation chambers like the FIFA Football Tribunal, and the Court of Arbitration for Sport (CAS). Our disputes practice spans unilateral contract terminations, unpaid wages, agent fee disputes, and selection or eligibility challenges, backed by urgent injunctive relief, defamation defense, and online abuse takedowns during tournaments and transfer windows.",
     services: [
-      "Domestic & International Arbitration",
-      "Alternative Dispute Resolution (ADR)",
-      "Contractual Breach & Enforcement",
-      "Shareholder & Partnership Disputes"
     ],
     imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: "labour-employment",
-    title: "Labour & Employment Law",
-    subtitle: "Workplace Governance, Executive Contracts & Advisory",
-    icon: "badge",
+    title: "Regulatory & League Compliance",
+    subtitle: "",
     description:
-      "We advise employers, boards, and senior executives on complex labor issues, trade union engagements, and National Industrial Court litigation. Our practice ensures robust compliance with Nigerian labor laws while crafting executive compensation packages and employment policies.",
+      "We counsel federations, leagues, national sports commissions, and clubs on drafting constitutions, bylaws, ethics codes, and club licensing frameworks. We also manage compliance with World Anti-Doping Agency (WADA) codes, match-fixing and anti-corruption protocols, athlete safeguarding policies, salary caps, and Financial Fair Play sustainability criteria.",
     services: [
-      "Workplace Policy & Employee Handbooks",
-      "Trade Union & Collective Bargaining",
-      "Executive Employment Agreements",
     ],
     imageUrl: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop",
   },
@@ -85,14 +67,9 @@ const PRACTICE_GROUPS: PracticeGroup[] = [
     id: "intellectual-property",
     title: "Intellectual Property & Brand Protection",
     subtitle: "Trademarks, Copyrights & Commercial Licensing",
-    icon: "verified_user",
     description:
-      "We secure and maximize the commercial value of creative and corporate assets. From trademark portfolios and copyright enforcement to complex licensing and digital asset management, we protect brand integrity across domestic and international markets.",
+      "We help talent, clubs, and corporate partners monetize and protect sports assets by structuring image rights companies, negotiating brand ambassador endorsements, and managing Name, Image, and Likeness (NIL) deals. Our practice also covers kit supply agreements, stadium naming rights, merchandising licenses, ambush marketing protection, broadcasting and streaming/OTT licensing, anti-piracy enforcement, and esports partnerships.",
     services: [
-      "Trademark Registration & Portfolio Management",
-      "Copyright Protection & Licensing Structures",
-      "Intellectual Property Infringement Enforcement",
-      "Image Rights & Brand Commercialization"
     ],
     imageUrl: "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795008255/markus-winkler-9XfSFjcwGh0-unsplash_kmkg2s.jpg?q=80&w=2072&auto=format&fit=crop",
   },
@@ -313,10 +290,10 @@ const Practices: React.FC = () => {
       <section className="bg-black py-24 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10 space-y-8">
           <h2 className="text-4xl font-black text-white uppercase tracking-tight">
-            Ready for Strategic Commercial Representation?
+            Need Commercial Representation?
           </h2>
           <p className="text-slate-400 text-lg font-light max-w-2xl mx-auto">
-            Schedule a confidential consultation with us to discuss your corporate, dispute resolution, IP, or sports advisory needs.
+            Schedule a confidential consultation with us to discuss your needs.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
