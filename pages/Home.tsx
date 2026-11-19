@@ -226,7 +226,7 @@ const Home: React.FC = () => {
                 to="/practices"
                 className="inline-flex items-center justify-center gap-3 bg-[#202020] text-white px-7 py-3.5 font-semibold uppercase tracking-[0.14em] text-[10px] hover:bg-[#A88B4D] hover:text-white transition-colors duration-300"
               >
-                View All Services
+                Read more about our services
                 <span className="material-icons text-base">
                   east
                 </span>
