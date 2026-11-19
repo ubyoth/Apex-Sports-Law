@@ -5,6 +5,23 @@ import { PRACTICE_AREAS, FOUNDER_BIO } from "../constants";
 
 const SITE_URL = "https://apexsportslaw.com";
 const OG_IMAGE = `${SITE_URL}/og/default.jpg`;
+const FALLBACK_SERVICE_IMAGE =
+  "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop";
+
+const SERVICE_IMAGES: Record<string, string> = {
+  sports:
+    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099794/sasun-bughdaryan-FaTLrG5-ViE-unsplash_dy07yr.jpg?q=80&w=2093&auto=format&fit=crop",
+  compliance:
+    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099791/jakub-zerdzicki-fXlL5I0IvK0-unsplash_pydhio.jpg?q=80&w=2069&auto=format&fit=crop",
+  "corporate-advisory":
+    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099793/adeolu-eletu-E7RLgUjjazc-unsplash_adbzf4.jpg?q=80&w=2069&auto=format&fit=crop",
+  arbitration:
+    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099794/sasun-bughdaryan-FaTLrG5-ViE-unsplash_dy07yr.jpg?q=80&w=2070&auto=format&fit=crop",
+  labour:
+    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099801/jason-charters-IorqsMssQH0-unsplash_khpbxl.jpg?q=80&w=2070&auto=format&fit=crop",
+  ip:
+    "https://res.cloudinary.com/dq7vjblwd/image/upload/v1795099793/monineath-horn-wrF8Oft14sE-unsplash_ua0ob9.jpg?q=80&w=2072&auto=format&fit=crop",
+};
 
 const Home: React.FC = () => {
   return (
@@ -112,7 +129,7 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Practice Areas Section (6 cards: 3 columns x 2 rows on desktop) */}
+        {/* Practice Areas Section (6 cards: 3 columns x 2 rows) */}
         <section className="py-24 bg-white dark:bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -122,38 +139,34 @@ const Home: React.FC = () => {
               <div className="w-20 h-1 bg-accent-gold mx-auto mt-6"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {PRACTICE_AREAS.slice(0, 6).map((area) => (
-                <div
-                  key={area.id}
-                  className="group p-8 bg-slate-50 dark:bg-secondary-grey/50 rounded-xl border border-transparent hover:border-accent-gold/20 transition-all hover:shadow-2xl hover:shadow-accent-gold/5 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="w-14 h-14 bg-accent-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent-gold transition-colors shrink-0">
-                      <span className="material-icons text-accent-gold group-hover:text-black">
-                        {area.icon}
-                      </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+              {PRACTICE_AREAS.slice(0, 6).map((area) => {
+                const targetPath =
+                  area.id === "sports" ? "/practices/sports" : `/practices#${area.id}`;
+                const imageSrc = SERVICE_IMAGES[area.id] || FALLBACK_SERVICE_IMAGE;
+
+                return (
+                  <Link
+                    key={area.id}
+                    to={targetPath}
+                    className="group block text-left"
+                  >
+                    <div className="aspect-[16/9] w-full overflow-hidden bg-slate-100 dark:bg-secondary-grey">
+                      <img
+                        src={imageSrc}
+                        alt={area.title}
+                        className="w-full h-full object-cover grayscale transition-transform duration-500 group-hover:scale-105"
+                      />
                     </div>
 
-                    <h4 className="text-xl font-bold mb-6 text-black dark:text-white">
+                    <div className="w-10 h-1.5 bg-accent-gold mt-0 mb-3"></div>
+
+                    <h4 className="text-lg font-medium text-slate-700 dark:text-slate-200 group-hover:text-accent-gold transition-colors">
                       {area.title}
                     </h4>
-
-                    {area.description?.trim() && (
-                      <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-                        {area.description}
-                      </p>
-                    )}
-                  </div>
-
-                  <Link
-                    to={area.id === "sports" ? "/practices/sports" : `/practices#${area.id}`}
-                    className="text-accent-gold font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all mt-auto"
-                  >
-                    Learn More <span className="material-icons text-sm">arrow_forward</span>
                   </Link>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="mt-16 text-center">
