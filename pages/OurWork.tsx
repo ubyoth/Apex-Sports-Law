@@ -1,13 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { SUCCESS_STORIES } from '../constants';
+import { OUR_WORK } from '../constants';
 
 const SITE_URL = "https://apexsportslaw.com";
-const PAGE_URL = `${SITE_URL}/success-stories`;
+const PAGE_URL = `${SITE_URL}/our-work`;
 const OG_IMAGE = `${SITE_URL}/og/default.jpg`;
 
-const SuccessStories: React.FC = () => {
+const OurWork: React.FC = () => {
   const pageJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemPage",
@@ -16,7 +16,7 @@ const SuccessStories: React.FC = () => {
     description: "Explore how Apex Advocates delivers legal outcomes in corporate advisory, dispute resolution, employment law, and sports law across Africa.",
     mainEntity: {
       "@type": "ItemList",
-      itemListElement: SUCCESS_STORIES.map((story, index) => ({
+      itemListElement: OUR_WORK.map((story, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: story.title,
@@ -78,7 +78,7 @@ const SuccessStories: React.FC = () => {
         {/* Grid */}
         <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {SUCCESS_STORIES.map((story) => (
+            {OUR_WORK.map((story) => (
               <div 
                 key={story.id} 
                 className="bg-white dark:bg-secondary-grey/20 rounded-2xl overflow-hidden shadow-2xl border border-slate-100 dark:border-accent-gold/10 flex flex-col group hover:border-accent-gold/30 transition-all duration-500"
@@ -140,4 +140,4 @@ const SuccessStories: React.FC = () => {
   );
 };
 
-export default SuccessStories;
+export default OurWork;
