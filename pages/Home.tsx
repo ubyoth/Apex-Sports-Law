@@ -150,10 +150,7 @@ const Home: React.FC = () => {
 
           <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 w-full pt-12">
             <div className="max-w-3xl">
-              <p className="text-[#C3A66B] text-[11px] font-semibold uppercase tracking-[0.24em] mb-5">
-                Apex Advocates
-              </p>
-
+           
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-semibold tracking-tight text-white leading-[1.16] mb-7">
                 Protecting Athletes.
                 <br />
@@ -174,18 +171,9 @@ const Home: React.FC = () => {
           <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
 
             <div className="text-center mb-12 lg:mb-14">
-              <p className="text-[#A88B4D] text-[10px] font-semibold uppercase tracking-[0.24em] mb-3">
-                What We Do
-              </p>
-
               <h2 className="text-3xl md:text-[2.35rem] font-semibold tracking-tight text-ink">
                 Our Services
               </h2>
-
-              <p className="text-sm md:text-base text-muted max-w-xl mx-auto mt-4 leading-relaxed">
-                Legal counsel and representation across commercial,
-                regulatory and sports-related matters.
-              </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-10 lg:gap-y-12">
@@ -324,16 +312,11 @@ const Home: React.FC = () => {
           <div className="absolute top-0 right-0 w-[380px] h-[380px] bg-[#B99A55]/[0.06] rounded-full blur-[130px] pointer-events-none" />
 
           <div className="max-w-5xl mx-auto px-5 text-center relative z-10">
-            <p className="text-[#C3A66B] text-[10px] font-semibold uppercase tracking-[0.24em] mb-4">
-              Start a Conversation
-            </p>
-
-            <h2 className="text-2xl md:text-3xl lg:text-4xl text-white font-semibold tracking-tight mb-5">
-              Legal Support Starts with a Conversation.
-            </h2>
+        
+       
 
             <p className="text-neutral-300 text-sm md:text-base font-light max-w-2xl mx-auto mb-9 leading-relaxed">
-              Schedule a confidential consultation with our team to discuss
+              Schedule a consultation with our team to discuss
               your legal needs and explore how we can assist you.
             </p>
 
