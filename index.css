@@ -1,11 +1,156 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
 @import "tailwindcss";
 @config "./tailwind.config.js";
+
+/* =========================================================
+   TYPOGRAPHY AND DESIGN TOKENS
+   ========================================================= */
 
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+  /* Warm neutral palette */
+  --color-warm-50: #FAF9F6;
+  --color-warm-100: #F4F2ED;
+  --color-warm-200: #E9E6DE;
+  --color-warm-300: #D9D5CA;
+
+  /* Refined text colours */
+  --color-ink: #202020;
+  --color-ink-soft: #454545;
+  --color-muted: #737373;
+
+  /* Restrained gold accent */
+  --color-gold-soft: #B99A55;
+  --color-gold-muted: #A88B4D;
 }
+
+/* =========================================================
+   GLOBAL RESET AND DOCUMENT STYLING
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: #FFFFFF;
+  color: #202020;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: inherit;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+h1 {
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  letter-spacing: -0.025em;
+}
+
+h3,
+h4 {
+  letter-spacing: -0.015em;
+}
+
+p {
+  line-height: 1.8;
+}
+
+/* =========================================================
+   LINKS AND INTERACTIONS
+   ========================================================= */
+
+a {
+  text-decoration: none;
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    border-color 250ms ease;
+}
+
+/* Accessible keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-gold-muted);
+  outline-offset: 4px;
+}
+
+/* Restrained text selection */
+::selection {
+  background-color: #EDE4D0;
+  color: #202020;
+}
+
+/* =========================================================
+   WARM NEUTRAL SURFACES
+   Use these classes for selected sections instead of
+   introducing gold backgrounds or decorative borders.
+   ========================================================= */
+
+.bg-warm {
+  background-color: var(--color-warm-50);
+}
+
+.bg-warm-soft {
+  background-color: var(--color-warm-100);
+}
+
+.text-ink {
+  color: var(--color-ink);
+}
+
+.text-ink-soft {
+  color: var(--color-ink-soft);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.border-warm {
+  border-color: var(--color-warm-200);
+}
+
+/* =========================================================
+   IMAGE PRESENTATION
+   ========================================================= */
+
+img {
+  max-width: 100%;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+/* =========================================================
+   SCROLLBAR UTILITIES
+   ========================================================= */
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -16,17 +161,21 @@
   scrollbar-width: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
 
-body {
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-serif);
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
